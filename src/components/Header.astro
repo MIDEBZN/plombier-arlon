@@ -32,15 +32,17 @@ const currentPath = Astro.url.pathname;
   <div class="h-20 max-w-[1240px] mx-auto px-margin sm:px-margin-md flex items-center justify-between gap-space-md">
     <!-- Brand Logo -->
     <a href="/" class="flex items-center gap-3 shrink-0 group">
-      <img 
-        src="/images/logo.webp" 
-        alt="Plombier Arlon" 
-        width="44" 
-        height="44" 
-        class="w-11 h-11 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" 
-        fetchpriority="high"
-        decoding="async"
-      />
+      <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center p-1 shadow-md group-hover:scale-105 transition-transform overflow-hidden">
+        <img 
+          src="/images/logo.webp" 
+          alt="Plombier Arlon" 
+          width="44" 
+          height="44" 
+          class="w-full h-full object-contain" 
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
       <div class="flex flex-col">
         <span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold leading-none">PLOMBIER ARLON</span>
         <span class="font-label-sm text-[11px] tracking-wider text-outline uppercase font-semibold mt-1">Artisan Sanitaire • 6700 Arlon</span>

@@ -1,5 +1,5 @@
 ---
-// QuickQuoteForm.astro: Diagnostic interactive lead card from Stitch UI
+// QuickQuoteForm.astro: FormSubmit.co integrated diagnostic form sending to midebzn@gmail.com
 ---
 
 <div class="bg-surface-container-lowest text-on-surface rounded-xl shadow-2xl p-space-md sm:p-space-lg border border-outline-variant/30" id="quick-quote">
@@ -16,10 +16,21 @@
     Décrivez votre problème. Notre technicien d'astreinte vous rappelle sous 5 minutes.
   </p>
 
-  <form class="mt-space-md flex flex-col gap-3.5" onsubmit="event.preventDefault(); alert('Merci ! Votre demande a été transmise à notre artisan d\'astreinte à Arlon. Nous vous appelons dans quelques minutes.');">
+  <form 
+    action="https://formsubmit.co/midebzn@gmail.com" 
+    method="POST" 
+    class="mt-space-md flex flex-col gap-3.5"
+  >
+    <!-- FormSubmit Configuration -->
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="Nouvelle Demande d'Intervention - Plombier Arlon" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="text" name="_honey" style="display:none" />
+
     <div>
       <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Votre Nom & Prénom *</label>
       <input 
+        name="nom"
         class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
         placeholder="Ex : Jean Dupont" 
         required 
@@ -30,6 +41,7 @@
     <div>
       <label class="block font-label-sm text-label-sm text-secondary font-extrabold mb-1">Numéro de Téléphone (Rappel immédiat) *</label>
       <input 
+        name="telephone"
         class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#bb0027] border border-secondary/30 transition-all font-semibold" 
         placeholder="0470 00 00 00 ou +32 ..." 
         required 
@@ -41,8 +53,9 @@
       <div>
         <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Commune / Code Postal *</label>
         <input 
+          name="commune"
           class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
-          placeholder="Ex : 6700 Arlon, Weyler..." 
+          placeholder="Ex : 6700 Arlon, Messancy..." 
           required 
           type="text"
         />
@@ -50,14 +63,17 @@
 
       <div>
         <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Type d'Intervention</label>
-        <select class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all">
-          <option value="urgence">Dépannage d'urgence (Fuite, Inondation)</option>
-          <option value="debouchage">Débouchage WC / Canalisation / Égout</option>
-          <option value="fuite">Recherche de fuite non destructive</option>
-          <option value="adoucisseur">Adoucisseur d'eau / Traitement calcaire</option>
-          <option value="boiler">Chauffe-eau / Boiler en panne</option>
-          <option value="salledebain">Rénovation salle de bain / Sanitaire</option>
-          <option value="autre">Autre travaux de plomberie</option>
+        <select 
+          name="service"
+          class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all"
+        >
+          <option value="Urgence fuite d'eau">Dépannage d'urgence (Fuite, Inondation)</option>
+          <option value="Débouchage canalisation / WC">Débouchage WC / Canalisation / Égout</option>
+          <option value="Recherche de fuite non destructive">Recherche de fuite non destructive</option>
+          <option value="Adoucisseur / Calcaire">Adoucisseur d'eau / Traitement calcaire</option>
+          <option value="Panne chauffe-eau / boiler">Chauffe-eau / Boiler en panne</option>
+          <option value="Rénovation salle de bain">Rénovation salle de bain / Sanitaire</option>
+          <option value="Autre demande">Autre travaux de plomberie</option>
         </select>
       </div>
     </div>
@@ -65,6 +81,7 @@
     <div>
       <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Description Rapide du Problème</label>
       <textarea 
+        name="description"
         class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
         placeholder="Précisez la nature de la panne (ex: fuite sous l'évier, WC qui déborde...)" 
         rows="2"
@@ -72,7 +89,7 @@
     </div>
 
     <button 
-      class="w-full h-12 mt-1 bg-secondary hover:bg-secondary-container text-white font-label-md text-label-md rounded-lg shadow-lg flex items-center justify-center gap-space-xs transition-all font-bold" 
+      class="w-full h-12 mt-1 bg-secondary hover:bg-secondary-container text-white font-label-md text-label-md rounded-lg shadow-lg flex items-center justify-center gap-space-xs transition-all font-bold cursor-pointer" 
       type="submit"
     >
       <span>Envoyer ma demande d'intervention</span>
@@ -85,7 +102,7 @@
       </p>
       <p class="text-[11px] text-outline flex items-center justify-center gap-1">
         <span class="material-symbols-outlined text-[13px]">lock</span>
-        Vos données restent 100% confidentielles. Zéro démarchage intempestif.
+        Vos données sont transmises de façon sécurisée à midebzn@gmail.com.
       </p>
     </div>
   </form>

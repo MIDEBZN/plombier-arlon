@@ -1,0 +1,101 @@
+---
+// WhatsAppChatWidget.astro: Floating live chat widget connecting directly to WhatsApp (0472 90 20 10)
+---
+
+<div id="whatsapp-widget" class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 font-sans">
+  
+  <!-- Popup Chat Bubble Box -->
+  <div 
+    id="whatsapp-chat-box" 
+    class="hidden mb-3 w-[310px] sm:w-[340px] bg-white rounded-2xl shadow-2xl border border-outline-variant/30 overflow-hidden transform transition-all duration-300 origin-bottom-right"
+  >
+    <!-- Widget Header -->
+    <div class="bg-[#075E54] text-white p-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-lg">
+            <span class="material-symbols-outlined text-[24px]">plumbing</span>
+          </div>
+          <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-[#25D366] border-2 border-[#075E54] animate-pulse"></span>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm leading-tight">Plombier Arlon - Support</h4>
+          <p class="text-[11px] text-white/80">Artisan en ligne • Répond en 3 min</p>
+        </div>
+      </div>
+      <button 
+        id="close-chat-box" 
+        type="button" 
+        aria-label="Fermer la fenêtre de chat" 
+        class="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+      >
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Chat Message Content -->
+    <div class="p-4 bg-[#ECE5DD] bg-opacity-70 space-y-3 text-xs text-on-surface">
+      <div class="bg-white p-3 rounded-xl rounded-tl-none shadow-sm max-w-[90%] space-y-1">
+        <p class="font-semibold text-primary text-[11px]">Artisan Plombier d'Astreinte :</p>
+        <p class="text-on-surface-variant leading-relaxed">
+          Bonjour ! 👋 Vous avez une fuite d'eau, un WC bouché ou besoin d'un devis rapide à Arlon ?
+        </p>
+        <p class="text-on-surface-variant leading-relaxed font-medium">
+          📸 Envoyez-nous directement une photo de votre problème pour un pré-diagnostic immédiat !
+        </p>
+        <span class="text-[9px] text-outline block text-right mt-1">À l'instant • Vu ✓✓</span>
+      </div>
+    </div>
+
+    <!-- Call-to-action button to WhatsApp -->
+    <div class="p-3 bg-white border-t border-outline-variant/20">
+      <a 
+        href="https://wa.me/32472902010?text=Bonjour,%20j'ai%20besoin%20d'une%20intervention%20de%20plomberie%20%C3%A0%20Arlon,%20voici%20mon%20probl%C3%A8me:" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all text-xs"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.632.062-1.921-.476-1.554-.648-2.545-2.222-2.622-2.325-.078-.103-.627-.834-.627-1.591 0-.756.396-1.127.536-1.282.14-.155.307-.193.41-.193.103 0 .207.002.298.006.095.004.223-.036.35.267.13.31.442 1.077.481 1.155.04.078.066.17.013.275-.052.103-.078.17-.155.26-.078.092-.164.204-.234.275-.078.078-.16.162-.069.317.091.156.404.668.868 1.08 1.157 1.026 1.458 1.134 1.666 1.238.207.103.328.087.45-.052.12-.138.517-.604.656-.811.138-.207.276-.172.466-.103.19.069 1.207.569 1.414.672.207.103.345.155.397.241.052.086.052.5-.092.905z"/>
+        </svg>
+        <span>Ouvrir WhatsApp en direct</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating Trigger Button -->
+  <button 
+    id="toggle-whatsapp-btn" 
+    type="button" 
+    aria-label="Discuter sur WhatsApp" 
+    class="flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl hover:shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:scale-105 transition-all duration-300 group cursor-pointer"
+  >
+    <div class="relative">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.632.062-1.921-.476-1.554-.648-2.545-2.222-2.622-2.325-.078-.103-.627-.834-.627-1.591 0-.756.396-1.127.536-1.282.14-.155.307-.193.41-.193.103 0 .207.002.298.006.095.004.223-.036.35.267.13.31.442 1.077.481 1.155.04.078.066.17.013.275-.052.103-.078.17-.155.26-.078.092-.164.204-.234.275-.078.078-.16.162-.069.317.091.156.404.668.868 1.08 1.157 1.026 1.458 1.134 1.666 1.238.207.103.328.087.45-.052.12-.138.517-.604.656-.811.138-.207.276-.172.466-.103.19.069 1.207.569 1.414.672.207.103.345.155.397.241.052.086.052.5-.092.905z"/>
+      </svg>
+      <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-red-600 text-white rounded-full text-[9px] font-extrabold flex items-center justify-center animate-bounce">
+        1
+      </span>
+    </div>
+    <span class="hidden sm:inline font-bold text-xs tracking-wide">
+      WhatsApp en Direct
+    </span>
+  </button>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-whatsapp-btn');
+  const chatBox = document.getElementById('whatsapp-chat-box');
+  const closeBtn = document.getElementById('close-chat-box');
+
+  if (toggleBtn && chatBox && closeBtn) {
+    toggleBtn.addEventListener('click', () => {
+      chatBox.classList.toggle('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      chatBox.classList.add('hidden');
+    });
+  }
+</script>

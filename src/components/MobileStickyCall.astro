@@ -1,7 +1,8 @@
 ---
-// MobileStickyCall.astro: Docked bottom bar strictly on mobile viewport
+// MobileStickyCall.astro: Sticky click-to-call buttons for mobile (bottom dock) & desktop (floating bottom-left pill)
 ---
 
+<!-- Mobile Docked Sticky Bar (< 640px) -->
 <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-outline-variant/30 shadow-[0_-4px_16px_rgba(0,0,0,0.12)] p-2.5">
   <div class="grid grid-cols-2 gap-2">
     <!-- WhatsApp Photo Diagnostic -->
@@ -15,7 +16,7 @@
       <span>WhatsApp Photo</span>
     </a>
 
-    <!-- Direct Call Hotline -->
+    <!-- Direct 1-Click Call Hotline -->
     <a 
       href="tel:+32472902010" 
       class="flex items-center justify-center gap-1.5 bg-secondary text-white font-extrabold text-xs py-3 px-2 rounded-lg shadow-md animate-pulse hover:bg-secondary-container transition-colors"
@@ -24,4 +25,25 @@
       <span>Appeler (24/7)</span>
     </a>
   </div>
+</div>
+
+<!-- Desktop Sticky Floating Click-to-Call Pill (>= 640px) -->
+<div class="hidden sm:block fixed bottom-6 left-6 z-50 font-sans">
+  <a 
+    href="tel:+32472902010" 
+    class="flex items-center gap-3 bg-secondary hover:bg-secondary-container text-white px-5 py-3.5 rounded-full shadow-2xl hover:shadow-[0_8px_25px_rgba(200,16,46,0.45)] hover:scale-105 transition-all duration-300 group border-2 border-white/20"
+  >
+    <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-white/20 group-hover:bg-white/30 transition-colors">
+      <span class="material-symbols-outlined text-[20px] text-white">phone_in_talk</span>
+      <span class="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 border border-secondary animate-ping"></span>
+    </div>
+    <div class="flex flex-col text-left">
+      <span class="text-[10px] uppercase font-bold tracking-wider text-white/90 leading-tight">
+        Urgence 24/7 • Arrivée 30 min
+      </span>
+      <span class="font-headline-sm text-base font-extrabold text-white tracking-tight leading-none mt-0.5">
+        0472 90 20 10
+      </span>
+    </div>
+  </a>
 </div>

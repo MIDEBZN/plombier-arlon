@@ -1,0 +1,232 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { blogArticles } from '../../data/blogArticles';
+
+const currentPath = Astro.url.pathname;
+const featuredArticle = blogArticles[0];
+const categories = ['Tous', 'Tarifs', 'Urgences', 'Débouchage', 'Fuites', 'Chauffage & Eau'];
+---
+
+<Layout
+  title="Blog & Guides Plomberie Arlon : Tarifs 2026, Urgences & Conseils d'Artisan"
+  description="Guides pratiques et grilles tarifaires de plomberie à Arlon : prix 2026, débouchage, détection de fuite, chauffe-eau et aides en Wallonie. Conseils d'experts agréés."
+>
+  <!-- Hero Section -->
+  <section class="bg-primary text-white pt-32 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md relative z-10 space-y-6">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-surface-container-highest">
+        <a href="/" class="hover:underline">Accueil</a>
+        <span>/</span>
+        <span class="text-white font-semibold">Blog & Guides</span>
+      </nav>
+
+      <div class="max-w-3xl space-y-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-white font-bold text-xs uppercase tracking-widest shadow-sm">
+          <span class="material-symbols-outlined text-[16px]">menu_book</span>
+          <span>Conseils & Tarifs Officiels 2026</span>
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Guides Plomberie & Dépannage à Arlon
+        </h1>
+        <p class="text-surface-container-highest text-base sm:text-lg leading-relaxed">
+          Retrouvez les réponses claires de nos maîtres artisans plombiers sur les coûts réels des interventions, les démarches d'urgence et la réglementation en Province de Luxembourg.
+        </p>
+      </div>
+
+      <!-- Quick Emergency Bar -->
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="tel:0465286577" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-5 py-3 rounded-xl font-extrabold text-sm shadow-md transition-all">
+          <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+          <span>Standard d'Urgence 24/7 : 0465 28 65 77</span>
+        </a>
+        <span class="text-xs text-surface-container-high hidden sm:inline">
+          • Intervention sous 30 min sur Arlon et communes voisines
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cornerstone Article -->
+  <section class="py-12 bg-surface">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md">
+      
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-secondary">
+          Article Pilier à la Une
+        </h2>
+        <span class="text-xs text-on-surface-variant font-medium">Mis à jour Septembre 2026</span>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-3xl border border-outline-variant/40 overflow-hidden shadow-lg hover:shadow-xl transition-shadow grid grid-cols-1 lg:grid-cols-12">
+        
+        <!-- Left: Badge & Visual Accent -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-primary via-primary-container to-[#001530] p-8 sm:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-4 relative z-10">
+            <span class="px-3 py-1 bg-secondary text-white rounded-full text-xs font-black uppercase tracking-wider inline-block">
+              {featuredArticle.category} • Guide Complet
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black leading-tight text-white">
+              {featuredArticle.title}
+            </h3>
+            <p class="text-surface-container-highest text-sm leading-relaxed">
+              Taux horaire officiel en Wallonie, forfaits de débouchage, majorations nuit/week-end et astuces pour la TVA à 6 %.
+            </p>
+          </div>
+
+          <div class="pt-8 border-t border-white/10 flex items-center justify-between text-xs text-surface-container-high relative z-10">
+            <span class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">schedule</span>
+              {featuredArticle.readingTime} de lecture
+            </span>
+            <span class="flex items-center gap-1 text-emerald-400 font-bold">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Vérifié par Artisan Agréé
+            </span>
+          </div>
+
+          <!-- Decorative background circles -->
+          <div class="absolute -bottom-16 -right-16 w-56 h-56 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+        </div>
+
+        <!-- Right: Excerpt & Highlights -->
+        <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/30 text-xs text-on-surface leading-relaxed">
+              <span class="font-bold text-primary block mb-1">Extrait du guide :</span>
+              {featuredArticle.geoAnswer}
+            </div>
+
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              {featuredArticle.excerpt}
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              {featuredArticle.secondaryKeywords.slice(0, 4).map(kw => (
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">
+                  #{kw}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap items-center justify-between gap-4">
+            <a 
+              href={`/blog/${featuredArticle.slug}`}
+              class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all group"
+            >
+              <span>Lire le guide complet des tarifs</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+
+            <a href="tel:0465286577" class="text-secondary font-bold text-xs hover:underline inline-flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">call</span>
+              <span>Devis immédiat : 0465 28 65 77</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- All Articles List -->
+  <section class="py-16 bg-surface-container-lowest border-t border-outline-variant/30">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-10">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-outline-variant/30 pb-6">
+        <div>
+          <h2 class="text-2xl font-extrabold text-primary">Tous nos articles & guides</h2>
+          <p class="text-xs text-on-surface-variant mt-1">Classés par thématique et pertinence locale pour Arlon</p>
+        </div>
+
+        <!-- Category Tags -->
+        <div class="flex flex-wrap gap-2">
+          {categories.map((cat, idx) => (
+            <button class={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${idx === 0 ? 'bg-primary text-white' : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-container'}`}>
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogArticles.map(article => (
+          <article class="bg-white rounded-2xl border border-outline-variant/40 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+            <div class="p-6 space-y-4">
+              <div class="flex items-center justify-between text-xs">
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-bold">
+                  {article.category}
+                </span>
+                <span class="text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">schedule</span>
+                  {article.readingTime}
+                </span>
+              </div>
+
+              <h3 class="text-lg font-bold text-primary group-hover:text-secondary transition-colors leading-snug">
+                <a href={`/blog/${article.slug}`}>
+                  {article.title}
+                </a>
+              </h3>
+
+              <p class="text-xs text-on-surface-variant leading-relaxed line-clamp-3">
+                {article.excerpt}
+              </p>
+            </div>
+
+            <div class="p-6 pt-0 border-t border-outline-variant/20 flex items-center justify-between text-xs text-on-surface-variant mt-4">
+              <span class="font-medium text-slate-500">Par {article.author.name}</span>
+              <a href={`/blog/${article.slug}`} class="font-bold text-primary hover:text-secondary inline-flex items-center gap-1">
+                <span>Lire</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </article>
+        ))}
+
+        <!-- Teaser Cards for Upcoming Topics in the Cluster -->
+        <div class="bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant/60 p-6 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-xs inline-block">
+              Urgences 24/7
+            </span>
+            <h3 class="text-lg font-bold text-primary">
+              Quel plombier intervient en urgence 24h/24 à Arlon ?
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Découvrez nos protocoles d'astreinte nocturne et week-end : délai moyen de 24 minutes, matériel de secours embarqué et zones couvertes.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs">
+            <span class="text-on-surface-variant italic">Disponible d'astreinte</span>
+            <a href="tel:0465286577" class="font-bold text-secondary hover:underline">Appel direct 24/7</a>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant/60 p-6 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-xs inline-block">
+              Débouchage
+            </span>
+            <h3 class="text-lg font-bold text-primary">
+              Combien coûte un débouchage de WC ou canalisation à Arlon ?
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Guide comparatif des méthodes : furet mécanique, ventouse à vide et camion hydrocureur haute pression à 200 bars.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs">
+            <span class="text-on-surface-variant italic">Conseils pratiques</span>
+            <a href="/services/debouchage" class="font-bold text-primary hover:underline">Service Débouchage</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

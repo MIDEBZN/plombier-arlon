@@ -1,0 +1,334 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { blogArticles, type BlogArticle } from '../../data/blogArticles';
+
+export function getStaticPaths() {
+  return blogArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: BlogArticle;
+}
+
+const { article } = Astro.props;
+const siteUrl = 'https://plombier-arlon.be';
+const canonicalUrl = `${siteUrl}/blog/${article.slug}`;
+
+// JSON-LD Structured Data: Article + FAQPage + BreadcrumbList
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      'isPartOf': {
+        '@type': 'WebPage',
+        '@id': canonicalUrl,
+      },
+      'headline': article.h1,
+      'description': article.metaDescription,
+      'inLanguage': 'fr-BE',
+      'mainEntityOfPage': canonicalUrl,
+      'datePublished': `${article.publishDate}T08:00:00+02:00`,
+      'dateModified': `${article.updatedDate}T12:00:00+02:00`,
+      'author': {
+        '@type': 'Organization',
+        'name': 'Plombier Arlon',
+        'url': siteUrl,
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'Plombier Arlon',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': `${siteUrl}/images/logo.png`,
+        },
+      },
+      'image': `${siteUrl}/images/og-plombier-arlon.webp`,
+      'keywords': [article.primaryKeyword, ...article.secondaryKeywords].join(', '),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${canonicalUrl}#breadcrumb`,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Accueil',
+          'item': siteUrl,
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Blog & Guides',
+          'item': `${siteUrl}/blog`,
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': article.title,
+          'item': canonicalUrl,
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonicalUrl}#faq`,
+      'mainEntity': article.faq.map((item) => ({
+        '@type': 'Question',
+        'name': item.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': item.answer,
+        },
+      })),
+    },
+  ],
+};
+---
+
+<Layout
+  title={article.metaTitle}
+  description={article.metaDescription}
+>
+  <!-- Inject Schema.org Graph in Head -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} is:inline slot="head" />
+
+  <!-- Breadcrumbs & Hero Header -->
+  <header class="bg-primary text-white pt-32 pb-14 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+    <div class="max-w-[1040px] mx-auto px-margin sm:px-margin-md relative z-10 space-y-6">
+      <!-- Breadcrumbs -->
+      <nav class="flex flex-wrap items-center gap-2 text-xs text-surface-container-highest" aria-label="Fil d'Ariane">
+        <a href="/" class="hover:underline">Accueil</a>
+        <span>/</span>
+        <a href="/blog" class="hover:underline">Blog & Guides</a>
+        <span>/</span>
+        <span class="text-white font-medium truncate max-w-xs">{article.category}</span>
+      </nav>
+
+      <!-- Category & Meta Tags -->
+      <div class="flex flex-wrap items-center gap-3 text-xs">
+        <span class="px-3 py-1 rounded-full bg-secondary text-white font-bold uppercase tracking-wider">
+          {article.category}
+        </span>
+        <span class="text-surface-container-highest flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">schedule</span>
+          Lecture {article.readingTime}
+        </span>
+        <span class="text-surface-container-highest flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+          Mis à jour le 16 Septembre 2026
+        </span>
+        <span class="text-emerald-400 font-semibold flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">verified</span>
+          Artisan Agréé Arlon
+        </span>
+      </div>
+
+      <!-- Main H1 Title -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+        {article.h1}
+      </h1>
+
+      <p class="text-surface-container-highest text-base sm:text-lg leading-relaxed max-w-3xl">
+        {article.excerpt}
+      </p>
+
+      <!-- Author Attribution -->
+      <div class="pt-4 flex items-center gap-3 border-t border-white/10">
+        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center overflow-hidden border border-white/20 p-1">
+          <img src={article.author.avatar} alt="Logo Artisan Plombier Arlon" width="36" height="36" class="w-full h-full object-contain" />
+        </div>
+        <div class="text-xs">
+          <p class="font-bold text-white">{article.author.name}</p>
+          <p class="text-surface-container-high">{article.author.role}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body & Sidebar -->
+  <main class="py-12 lg:py-16 bg-surface">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Sticky Table of Contents & Quick Navigation (Desktop) -->
+        <aside class="hidden lg:block lg:col-span-4 sticky top-28 space-y-6">
+          
+          <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-4">
+            <h3 class="font-bold text-primary text-sm uppercase tracking-wider flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">format_list_bulleted</span>
+              <span>Sommaire de l'article</span>
+            </h3>
+            
+            <nav class="space-y-2 text-xs">
+              {article.tableOfContents.map((item) => (
+                <a 
+                  href={`#${item.id}`}
+                  class="block py-1.5 text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all leading-snug border-l-2 border-transparent hover:border-secondary pl-2"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <!-- Quick Emergency Call Box -->
+          <div class="bg-primary text-white p-6 rounded-2xl shadow-md space-y-4 text-center">
+            <span class="inline-flex p-3 rounded-full bg-secondary/20 text-secondary mx-auto">
+              <span class="material-symbols-outlined text-[28px]">phone_in_talk</span>
+            </span>
+            <div class="space-y-1">
+              <p class="font-black text-lg">Urgence Plomberie Arlon</p>
+              <p class="text-xs text-surface-container-highest">Arrivée en 30 minutes garantie</p>
+            </div>
+            <a 
+              href="tel:0465286577"
+              class="block w-full py-3 px-4 bg-secondary hover:bg-secondary-container text-white rounded-xl font-black text-sm shadow-md transition-all"
+            >
+              0465 28 65 77
+            </a>
+            <p class="text-[11px] text-surface-container-high">
+              Devis écrit préalable • Tarifs officiels sans surprise
+            </p>
+          </div>
+
+          <!-- Surrounding Communes Links -->
+          <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 space-y-3">
+            <h4 class="font-bold text-primary text-xs uppercase tracking-wider">
+              📍 Communes Desservies
+            </h4>
+            <div class="flex flex-wrap gap-1.5 text-[11px]">
+              {article.relatedLocations.map((loc) => (
+                <a 
+                  href={loc.url}
+                  class="px-2.5 py-1 bg-surface-container-low hover:bg-primary hover:text-white rounded-md transition-colors text-on-surface-variant font-medium"
+                >
+                  {loc.name} ({loc.time})
+                </a>
+              ))}
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Right: Article Content -->
+        <div class="lg:col-span-8 space-y-10">
+
+          <!-- Table of Contents (Mobile view) -->
+          <div class="lg:hidden bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 space-y-3">
+            <p class="font-bold text-primary text-sm flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">list</span>
+              <span>Sommaire rapide</span>
+            </p>
+            <div class="space-y-1.5 text-xs">
+              {article.tableOfContents.map((item) => (
+                <a href={`#${item.id}`} class="block text-primary hover:underline py-1">
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Rendered Rich Article Body -->
+          <div class="prose prose-lg max-w-none prose-headings:font-extrabold prose-headings:text-primary prose-a:text-secondary hover:prose-a:underline">
+            <Fragment set:html={article.contentHtml} />
+          </div>
+
+          <!-- FAQ Accordion Section for Featured Snippets & Voice Search -->
+          <section id="faq-prix-plombier" class="pt-8 border-t border-outline-variant/40 space-y-6">
+            <div class="space-y-2">
+              <span class="text-secondary font-bold text-xs uppercase tracking-widest">Questions Fréquentes</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
+                8. Vos questions sur les tarifs de plomberie à Arlon (FAQ)
+              </h2>
+              <p class="text-sm text-on-surface-variant">
+                Réponses directes et transparentes rédigées par nos maîtres artisans pour vous aider à estimer votre budget.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              {article.faq.map((item, idx) => (
+                <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-2">
+                  <h3 class="font-bold text-base sm:text-lg text-primary flex items-start gap-2">
+                    <span class="text-secondary font-black text-sm mt-0.5">Q{idx + 1}.</span>
+                    <span>{item.question}</span>
+                  </h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed pl-6">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <!-- Relevant Service Pages Navigation Cards -->
+          <section class="pt-8 border-t border-outline-variant/40 space-y-4">
+            <h3 class="text-base font-bold text-primary uppercase tracking-wider">
+              🛠️ Nos Services Connexes à Arlon & Province de Luxembourg
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {article.relatedServices.map((srv) => (
+                <a 
+                  href={srv.url}
+                  class="p-4 rounded-xl bg-white border border-outline-variant/40 hover:border-primary transition-all shadow-sm flex flex-col justify-between space-y-2 group"
+                >
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-primary group-hover:text-secondary transition-colors">
+                      {srv.title}
+                    </span>
+                    <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary font-semibold rounded-full">
+                      {srv.badge}
+                    </span>
+                  </div>
+                  <span class="text-xs text-on-surface-variant group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span>En savoir plus</span> &rarr;
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <!-- Final Emergency Call to Action Block -->
+          <div class="p-8 rounded-3xl bg-primary text-white space-y-6 shadow-xl relative overflow-hidden">
+            <div class="space-y-2 relative z-10">
+              <span class="text-secondary font-extrabold text-xs uppercase tracking-widest">Besoin d'un dépannage immédiat ?</span>
+              <h3 class="text-2xl sm:text-3xl font-black">Intervention d'Urgence sous 30 minutes à Arlon</h3>
+              <p class="text-surface-container-highest text-sm max-w-xl">
+                Fuite d'eau, canalisation bouchée, panne de chauffe-eau ou dégât des eaux ? Notre technicien d'astreinte est disponible immédiatement avec matériel complet et devis préalable gratuit.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 relative z-10 pt-2">
+              <a 
+                href="tel:0465286577"
+                class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-7 py-4 rounded-xl font-black text-sm shadow-lg transition-all"
+              >
+                <span class="material-symbols-outlined text-[20px]">call</span>
+                <span>Ligne d'urgence : 0465 28 65 77</span>
+              </a>
+              
+              <a 
+                href="https://wa.me/32465286577"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-xl font-bold text-sm shadow-md transition-all"
+              >
+                <span>WhatsApp Devis Photo</span>
+              </a>
+            </div>
+
+            <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -76,6 +76,12 @@ const currentPath = Astro.url.pathname;
         À Propos
       </a>
       <a 
+        href="/blog" 
+        class={`transition-colors py-2 ${currentPath.startsWith('/blog') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        Blog & Tarifs
+      </a>
+      <a 
         href="/contact" 
         class={`transition-colors py-2 ${currentPath.startsWith('/contact') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
       >
@@ -121,15 +127,16 @@ const currentPath = Astro.url.pathname;
       <a href="/services" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Nos Services</a>
       <a href="/locations" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Zones d'Intervention (Arlon & Luxembourg)</a>
       <a href="/about" class="py-2 border-b border-surface-container hover:text-primary transition-colors">À Propos de l'Artisan</a>
+      <a href="/blog" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Blog & Guides Tarifs</a>
       <a href="/contact" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Contact & Devis Gratuit</a>
     </nav>
     <div class="pt-4 mt-2 flex flex-col gap-2.5">
       <a 
-        href="tel:+32472902010" 
+        href="tel:0465286577" 
         class="w-full bg-secondary hover:bg-secondary-container text-white font-bold py-3 rounded-lg text-center shadow-md flex items-center justify-center gap-2"
       >
         <span class="material-symbols-outlined text-[20px]">call</span>
-        Appeler le 0472 90 20 10 (24h/24)
+        Appeler le 0465 28 65 77 (24h/24)
       </a>
       <a 
         href="/contact" 

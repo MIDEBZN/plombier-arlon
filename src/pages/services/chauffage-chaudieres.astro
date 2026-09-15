@@ -1,0 +1,325 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Chauffagiste Arlon (6700) | Dépannage Chaudière, Entretien Gaz/Mazout & Boiler"
+  description="Chauffagiste agréé à Arlon. Dépannage urgent 7j/7 de chaudières gaz et mazout, entretien légal obligatoire Région Wallonne, remplacement de boiler et désembouage. Appelez le 0472 90 20 10."
+  canonicalPath="/services/chauffage-chaudieres"
+>
+  <!-- Schema.org Service JSON-LD -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dépannage & Entretien Chaudière Arlon",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Plombier Arlon",
+      "telephone": "+32472902010",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue des Faubourgs 14",
+        "addressLocality": "Arlon",
+        "postalCode": "6700",
+        "addressCountry": "BE"
+      }
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Arlon"},
+      {"@type": "AdministrativeArea", "name": "Bonnert"},
+      {"@type": "AdministrativeArea", "name": "Weyler"},
+      {"@type": "AdministrativeArea", "name": "Habay"},
+      {"@type": "AdministrativeArea", "name": "Messancy"}
+    ],
+    "serviceType": "Heating and Boiler Services",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "120.00",
+      "description": "Entretien annuel réglementaire chaudière avec attestation dès 120 €"
+    }
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-5 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold uppercase tracking-wider border border-secondary/30">
+        <span class="material-symbols-outlined text-[16px]">mode_heat</span>
+        <span>Technicien Chauffagiste Agréé Région Wallonne</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Chauffagiste à Arlon : Chaudières, Boilers & Radiateurs
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        Chaudière en panne en plein hiver, radiateurs qui ne chauffent plus, manque d'eau chaude ou besoin de votre attestation légale d'entretien annuel ? Nos chauffagistes qualifiés interviennent 7j/7 sur Arlon et toute la province.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold shadow-lg transition-all text-sm sm:text-base">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Dépannage Chauffage : 0472 90 20 10</span>
+        </a>
+        <a href="#quote-section" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold border border-white/20 transition-all text-sm">
+          <span>Prendre RDV pour entretien</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <section class="py-16 bg-surface space-y-16">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+
+      <!-- 1. What's included -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Nos Prestations Chauffage</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Ce Qui Est Inclus dans Nos Services de Chauffage & Chaudières
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base">
+            De la maintenance réglementaire au dépannage d'urgence sur toutes marques (Vaillant, Bulex, Viessmann, ACV...).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">build_circle</span>
+            <h3 class="font-bold text-base text-primary">Dépannage d'Urgence 7j/7</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Diagnostic immédiat de panne, réarmement de sécurité, changement de thermocouple, circulateur ou vase d'expansion défectueux.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">fact_check</span>
+            <h3 class="font-bold text-base text-primary">Entretien Annuel Réglementaire</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Nettoyage complet du corps de chauffe, brûleur, électrodes, contrôle de tirage et délivrance des attestations officielles de contrôle et combustion (Wallonie).</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">water_heater</span>
+            <h3 class="font-bold text-base text-primary">Remplacement & Détartrage Boiler</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Fourniture et raccordement de chauffe-eau électrique, thermodynamique ou gaz. Remplacement d'anode magnésium et résistance stéatite.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">thermostat</span>
+            <h3 class="font-bold text-base text-primary">Régulation & Vannes Thermostatiques</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Pose de thermostats intelligents programmables, sondes extérieures, répartiteurs de chauffe et vannes thermostatiques de radiateurs.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">invert_colors</span>
+            <h3 class="font-bold text-base text-primary">Désembouage Réseau de Radiateurs</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Nettoyage hydrodynamique du circuit fermé pour éliminer boues et limailles responsables de radiateurs froids et bruits de tuyauterie.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">install_mobile</span>
+            <h3 class="font-bold text-base text-primary">Nouvelle Installation Chaudière / PAC</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Installation complète de chaudière gaz à condensation haute performance ou pompe à chaleur avec dimensionnement thermique précis.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Common problems we solve -->
+      <div class="space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Pannes Chauffage Fréquentes</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Les Dysfonctionnements de Chauffage Que Nous Réparons à Arlon
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">1</div>
+            <h3 class="font-bold text-base text-primary">Chaudière en Code Défaut</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Voyant rouge, code erreur F28, F22 ou F75 (Bulex/Vaillant), chaudière qui refuse de démarrer par grand froid.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">2</div>
+            <h3 class="font-bold text-base text-primary">Plus d'Eau Chaude Sanitaire</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Eau tiède ou froide à la douche. Échangeur à plaques entartré par la dureté de l'eau d'Arlon ou résistance brûlée.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">3</div>
+            <h3 class="font-bold text-base text-primary">Radiateurs Froids en Bas</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Seul le haut du radiateur chauffe, claquements sonores ou radiateurs du deuxième étage complètement glacés.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">4</div>
+            <h3 class="font-bold text-base text-primary">Groupe de Sécurité qui Fuit</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Écoulement continu sous le ballon d'eau chaude ou le boiler, surpression hydraulique ou membrane de sécurité entartrée.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Our process (step by step) -->
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/40 space-y-8">
+        <div class="space-y-2 text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Méthode de Travail</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Comment se Déroule une Réparation ou un Entretien de Chauffage ?
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">1</span>
+            <h3 class="font-bold text-sm text-primary">Contrôle de Sécurité</h3>
+            <p class="text-xs text-on-surface-variant">Vérification de l'alimentation électrique, étanchéité de l'arrivée de gaz ou mazout et évacuation des fumées.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">2</span>
+            <h3 class="font-bold text-sm text-primary">Diagnostic de Panne</h3>
+            <p class="text-xs text-on-surface-variant">Lecture des codes d'erreur, test des sondes NTC, du circulateur, de la vanne 3 voies et de la pression d'eau.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">3</span>
+            <h3 class="font-bold text-sm text-primary">Nettoyage & Réglage</h3>
+            <p class="text-xs text-on-surface-variant">Dépoussiérage et brossage des brûleurs, détartrage des échangeurs et contrôle des électrodes d'allumage.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">4</span>
+            <h3 class="font-bold text-sm text-primary">Test de Combustion</h3>
+            <p class="text-xs text-on-surface-variant">Mesure du rendement, du taux de CO/CO2 au banc électronique pour garantir un fonctionnement économique et sans danger.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">5</span>
+            <h3 class="font-bold text-sm text-primary">Attestation Légale</h3>
+            <p class="text-xs text-on-surface-variant">Remise de l'attestation officielle de contrôle et de combustion conforme aux exigences légales de la Région Wallonne.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Why choose us -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold text-secondary uppercase tracking-widest">Habilitations & Marques</span>
+            <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+              Pourquoi Confier Votre Chauffage à Nos Artisans Arlonais ?
+            </h2>
+            <div class="space-y-3 text-sm text-on-surface-variant">
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Agréments Wallons certifiés (G1, G2, L) :</strong> Techniciens habilités à délivrer les certificats de conformité obligatoires pour votre assurance et votre bail locatif.</span>
+              </p>
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Partenaire multimarques :</strong> Réparation avec pièces constructeur d'origine pour Vaillant, Bulex, Viessmann, ACV, Junkers/Bosch, De Dietrich et Atlantic.</span>
+              </p>
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Économies d'énergie réelles :</strong> Un entretien annuel et un désembouage réduisent votre consommation d'énergie de 10 à 15% dès le premier mois.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-surface-container-low p-6 sm:p-8 rounded-2xl border border-outline-variant/30 text-center space-y-4">
+            <span class="text-xs font-bold text-outline uppercase tracking-wider">Entretien Annuel Chaudière</span>
+            <p class="text-3xl font-extrabold text-primary">Dès 120 € <span class="text-xs font-normal text-on-surface-variant">attestation comprise</span></p>
+            <p class="text-xs text-on-surface-variant">Obligatoire tous les ans (mazout) ou tous les 2 ans (gaz) en Wallonie.</p>
+            <a href="tel:+32472902010" class="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3.5 px-4 rounded-xl font-bold text-sm shadow-md transition-all">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+              <span>Prendre Rendez-vous : 0472 90 20 10</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. FAQs -->
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Vos Questions</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Foire Aux Questions : Chauffage & Chaudières en Wallonie
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>L'entretien de chaudière est-il légalement obligatoire à Arlon ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Oui, selon la législation wallonne en vigueur, le contrôle périodique est obligatoire : tous les ans pour les chaudières au mazout ou à combustible solide (pellets, bois), et tous les 2 ou 3 ans pour les chaudières au gaz (selon leur puissance). En cas d'incendie, votre assureur exigera l'attestation de moins d'un an.
+            </p>
+          </details>
+
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>Pourquoi mon boiler s'entartre-t-il si vite à Arlon ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              L'eau distribuée à Arlon est très calcaire (dureté supérieure à 32 degrés français). Lorsque l'eau chauffe à plus de 55°C, les minéraux de calcium et magnésium précipitent et forment une gangue de calcaire solide autour de la résistance. Sans détartrage régulier ou adoucisseur, la consommation électrique augmente de 20% et la cuve risque de percer.
+            </p>
+          </details>
+
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>Que faire si ma chaudière perd régulièrement de la pression ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Si vous devez rajouter de l'eau plus d'une fois tous les deux mois, il y a une anomalie. Cela provient généralement soit de la membrane du vase d'expansion qui est dégonflée ou poreuse, soit d'une micro-fuite sur le circuit fermé des radiateurs. Nous testons le vase d'expansion et le réseau sous pression.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 6. Emergency availability & 7. Service area details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-primary text-white p-8 rounded-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-secondary-fixed text-xs font-bold uppercase">
+            <span class="material-symbols-outlined text-[16px]">ac_unit</span> Hiver Sans Panne
+          </div>
+          <h3 class="font-headline-md text-xl sm:text-2xl font-bold">Dépannage Chauffage Prioritaire 7j/7</h3>
+          <p class="text-surface-container-highest text-sm leading-relaxed">
+            Pendant la saison de chauffe (octobre à avril), nos techniciens chauffagistes assurent des permanences tout le week-end pour ne jamais vous laisser sans chauffage ni eau chaude par grand froid.
+          </p>
+          <div class="pt-2">
+            <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3 px-5 rounded-xl font-extrabold text-sm shadow-md transition-all">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+              <span>Urgence Chauffage : 0472 90 20 10</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/40 space-y-4">
+          <div class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[16px]">local_shipping</span> Zones Chauffage Couvertes
+          </div>
+          <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary">Intervention Chauffage</h3>
+          <ul class="text-xs sm:text-sm text-on-surface-variant space-y-2">
+            <li><strong>Grand Arlon :</strong> Centre, Bonnert, Weyler, Fouches, Stockem, Autelbas, Toernich.</li>
+            <li><strong>Province Sud-Luxembourg :</strong> Habay, Léglise, Tintigny, Étalle, Messancy, Aubange.</li>
+            <li><strong>Transfrontalier :</strong> Dépannage rapide à Steinfort et Capellen.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quote form -->
+      <div id="quote-section">
+        <QuickQuoteForm />
+      </div>
+
+    </div>
+  </section>
+</Layout>

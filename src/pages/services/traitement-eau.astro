@@ -1,0 +1,325 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Adoucisseur d'Eau Arlon (6700) | Traitement Calcaire (+32 °fH) BWT & Filtration"
+  description="Installateur agréé d'adoucisseurs d'eau à Arlon. Protégez votre maison du calcaire arlonais (+32 °fH) avec BWT et Van Marcke. Analyse de dureté gratuite, pose avec by-pass et détartrage. Tél : 0472 90 20 10."
+  canonicalPath="/services/traitement-eau"
+>
+  <!-- Schema.org Service JSON-LD -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Installation Adoucisseur d'Eau & Traitement Calcaire Arlon",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Plombier Arlon",
+      "telephone": "+32472902010",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue des Faubourgs 14",
+        "addressLocality": "Arlon",
+        "postalCode": "6700",
+        "addressCountry": "BE"
+      }
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Arlon"},
+      {"@type": "AdministrativeArea", "name": "Bonnert"},
+      {"@type": "AdministrativeArea", "name": "Weyler"},
+      {"@type": "AdministrativeArea", "name": "Messancy"},
+      {"@type": "AdministrativeArea", "name": "Habay"}
+    ],
+    "serviceType": "Water Softener & Water Treatment",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "1450.00",
+      "description": "Adoucisseur d'eau volumétrique haute performance fourni et posé dès 1 450 €"
+    }
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-5 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold uppercase tracking-wider border border-secondary/30">
+        <span class="material-symbols-outlined text-[16px]">water_drop</span>
+        <span>Spécialiste Calcaire Régional • Dureté Arlon +32 °fH</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Traitement de l'Eau & Adoucisseurs à Arlon
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        L'eau distribuée dans le bassin d'Arlon compte parmi les plus dures de Belgique (+32 °fH). Traces blanches, canalisations entartrées, surconsommation énergétique et électroménagers prématurément hors service ? Nos adoucisseurs volumétriques certifiés Belgaqua éliminent 100% du calcaire.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold shadow-lg transition-all text-sm sm:text-base">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Conseil Adoucisseur : 0472 90 20 10</span>
+        </a>
+        <a href="#quote-section" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold border border-white/20 transition-all text-sm">
+          <span>Test de dureté gratuit à domicile</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <section class="py-16 bg-surface space-y-16">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+
+      <!-- 1. What's included -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Gamme Complète</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Ce Qui Est Inclus dans Notre Solution de Traitement de l'Eau
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base">
+            Une installation dans les règles de l'art conforme aux normes Belgaqua et CSTC.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">science</span>
+            <h3 class="font-bold text-base text-primary">Analyse & Titrage TH Gratuit</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Mesure précise à domicile de la dureté réelle de votre eau en degrés français (°fH) avant toute recommandation.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">water_damage</span>
+            <h3 class="font-bold text-base text-primary">Adoucisseur Volumétrique BWT / EcoWater</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Appareil dernière génération intelligent régénérant la résine selon le volume consommé pour une consommation minime de sel et d'eau.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">filter_alt</span>
+            <h3 class="font-bold text-base text-primary">Pré-Filtration Anti-Sédiments (25 µm)</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Pose d'un filtre amont autonettoyant avec manomètre pour bloquer sable, rouille et particules en suspension venant du réseau public.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">tune</span>
+            <h3 class="font-bold text-base text-primary">By-Pass & Clapet Anti-Retour Agréé</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Raccordement hydraulique avec vanne de dérivation by-pass (pour arrosage jardin sans eau adoucie) et clapet anti-pollution Belgaqua.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">healing</span>
+            <h3 class="font-bold text-base text-primary">Détartrage Curatif Initial</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Nettoyage chimique doux de la résistance de votre boiler et des mousseurs de robinets pour repartir sur une installation saine.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <span class="material-symbols-outlined text-secondary text-[26px]">support_agent</span>
+            <h3 class="font-bold text-base text-primary">Mise en Service & Suivi Annuel</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Réglage de la dureté de consigne (8 à 12 °fH), sac de sel haute pureté offert et contrat de maintenance annuel disponible.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Common problems we solve -->
+      <div class="space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Les Ravages du Calcaire</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Pourquoi le Calcaire à Arlon Détruit Vos Appareils Sanitaires
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">1</div>
+            <h3 class="font-bold text-base text-primary">Boilers Percés Prématurément</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">À Arlon, un chauffe-eau non protégé s'accumule de 15 à 30 kg de tartre en 3 ans, entraînant une surchauffe et la corrosion de la cuve.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">2</div>
+            <h3 class="font-bold text-base text-primary">+20% sur la Facture d'Électricité</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Seulement 1 millimètre de calcaire sur une résistance agit comme un isolant thermique et augmente la consommation électrique de 10 à 15%.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">3</div>
+            <h3 class="font-bold text-base text-primary">Traces Blanches Indélébiles</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Parois de douche incrustées de calcaire impossible à frotter, vaisselle terne, robinets ternis et mousseurs de robinet bouchés.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="h-10 w-10 rounded-xl bg-red-50 text-secondary flex items-center justify-center font-bold">4</div>
+            <h3 class="font-bold text-base text-primary">Peau Sèche & Démangeaisons</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">L'eau très dure tiraille la peau après la douche, assèche le cuir chevelu, favorise l'eczéma chez les enfants et rend le linge rêche.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Our process (step by step) -->
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/40 space-y-8">
+        <div class="space-y-2 text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Installation Méthodique</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Comment se Déroule la Pose d'un Adoucisseur d'Eau ?
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">1</span>
+            <h3 class="font-bold text-sm text-primary">Test de Titrage</h3>
+            <p class="text-xs text-on-surface-variant">Prélèvement au robinet et analyse précise par gouttes réactives pour connaître le TH exact de votre habitation.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">2</span>
+            <h3 class="font-bold text-sm text-primary">Dimensionnement</h3>
+            <p class="text-xs text-on-surface-variant">Calcul du volume de résine nécessaire (ex : 15L ou 22L) selon le nombre d'habitants et vos habitudes de consommation.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">3</span>
+            <h3 class="font-bold text-sm text-primary">Raccordement</h3>
+            <p class="text-xs text-on-surface-variant">Pose en cave ou garage sur l'arrivée générale avec vanne by-pass, filtre à sédiments et évacuation de saumure sécurisée.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">4</span>
+            <h3 class="font-bold text-sm text-primary">Mise en Eau & Réglage</h3>
+            <p class="text-xs text-on-surface-variant">Désinfection de la résine, programmation de la vanne électronique et réglage précis de la dureté résiduelle recommandée (10 °fH).</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <span class="h-8 w-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">5</span>
+            <h3 class="font-bold text-sm text-primary">Explication & Sacs</h3>
+            <p class="text-xs text-on-surface-variant">Démonstration du fonctionnement, remise du manuel et fourniture d'une réserve de sel adoucisseur certifié EN 973 Type A.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Why choose us -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold text-secondary uppercase tracking-widest">Agrément & Économies</span>
+            <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+              Pourquoi Choisir Notre Entreprise pour Votre Adoucisseur ?
+            </h2>
+            <div class="space-y-3 text-sm text-on-surface-variant">
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Conformité sanitaire Belgaqua :</strong> Tous nos appareils et résines cationiques sont strictement homologués pour préserver la potabilité de l'eau.</span>
+              </p>
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Connaissance intime de l'eau d'Arlon :</strong> Nous adaptons les cycles de régénération aux spécificités géologiques de la Lorraine belge (forte concentration de calcaire liasique).</span>
+              </p>
+              <p class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+                <span><strong>Rentabilité prouvée en 3 à 4 ans :</strong> Réduction de 50% de vos produits d'entretien et lessive, prolongation de la durée de vie de vos électroménagers et baisse d'énergie.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-surface-container-low p-6 sm:p-8 rounded-2xl border border-outline-variant/30 text-center space-y-4">
+            <span class="text-xs font-bold text-outline uppercase tracking-wider">Pack Adoucisseur Volumétrique Clé en Main</span>
+            <p class="text-3xl font-extrabold text-primary">Dès 1 450 € <span class="text-xs font-normal text-on-surface-variant">fourni et raccordé</span></p>
+            <p class="text-xs text-on-surface-variant">By-pass, pré-filtre, mise en service et sac de sel inclus.</p>
+            <a href="tel:+32472902010" class="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3.5 px-4 rounded-xl font-bold text-sm shadow-md transition-all">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+              <span>Demander Mon Diagnostic : 0472 90 20 10</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. FAQs -->
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Foire Aux Questions</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Vos Questions sur le Traitement de l'Eau à Arlon
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>L'eau adoucie reste-t-elle potable et bonne pour la santé ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Oui, tout à fait. L'adoucisseur échange simplement les ions calcium et magnésium contre une quantité infime d'ions sodium, largement inférieure au seuil limite européen fixé pour l'eau potable. Nous laissons toujours une dureté résiduelle de confort (environ 10 °fH) pour un goût agréable et une minéralité équilibrée.
+            </p>
+          </details>
+
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>Combien coûte l'entretien annuel et le sel d'un adoucisseur ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Pour une famille de 4 personnes à Arlon, la consommation de sel régénérant est d'environ 3 à 4 sacs de 25 kg par an, soit un budget de sel d'environ 40 à 50 € par an. L'entretien annuel (désinfection de résine, contrôle de dureté et nettoyage de crépine) coûte une centaine d'euros et garantit une longévité de 15 à 20 ans pour l'appareil.
+            </p>
+          </details>
+
+          <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
+            <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
+              <span>Quelle est la différence entre un système magnétique anti-tartre et un vrai adoucisseur au sel ?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Les systèmes magnétiques ou électroniques ne retirent aucun calcaire de l'eau : ils modifient temporairement la cristallisation du calcaire (aragonite), mais le calcaire reste dans l'eau et dépose des traces blanches dès que l'eau sèche. Seul un véritable adoucisseur à résine échangeuse d'ions capte et évacue physiquement le calcaire vers l'égout.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 6. Emergency availability & 7. Service area details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-primary text-white p-8 rounded-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-secondary-fixed text-xs font-bold uppercase">
+            <span class="material-symbols-outlined text-[16px]">water_ph</span> Diagnostic Calcaire
+          </div>
+          <h3 class="font-headline-md text-xl sm:text-2xl font-bold">Visite & Test TH Gratuit</h3>
+          <p class="text-surface-container-highest text-sm leading-relaxed">
+            Vous constatez des traces blanches ou une baisse de pression d'eau chaude ? Nous venons tester votre eau et inspecter votre installation gratuitement et sans engagement sur tout le grand Arlon.
+          </p>
+          <div class="pt-2">
+            <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3 px-5 rounded-xl font-extrabold text-sm shadow-md transition-all">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+              <span>Prendre RDV Test Gratuit : 0472 90 20 10</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/40 space-y-4">
+          <div class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[16px]">location_on</span> Zones Très Calcaires
+          </div>
+          <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary">Intervention Adoucisseurs</h3>
+          <ul class="text-xs sm:text-sm text-on-surface-variant space-y-2">
+            <li><strong>Bassin d'Arlon (+32 °fH) :</strong> Bonnert, Weyler, Viville, Schoppach, Stockem, Sterpenich.</li>
+            <li><strong>Sud-Luxembourg :</strong> Messancy, Aubange, Habay, Attert, Étalle, Saint-Léger.</li>
+            <li><strong>Corridor Grand-Duché :</strong> Steinfort, Capellen, Windhof, Mamer.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quote form -->
+      <div id="quote-section">
+        <QuickQuoteForm />
+      </div>
+
+    </div>
+  </section>
+</Layout>

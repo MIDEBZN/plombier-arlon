@@ -4,7 +4,7 @@ import { blogArticles } from '../../data/blogArticles';
 
 const currentPath = Astro.url.pathname;
 const featuredArticle = blogArticles[0];
-const categories = ['Tous', 'Tarifs', 'Urgences', 'Débouchage', 'Fuites', 'Chauffage & Eau'];
+const categories = ['Tous', 'Tarifs', 'Urgences', 'Débouchage', 'Fuites', 'Chauffage & Eau', 'Rénovation'];
 ---
 
 <Layout
@@ -188,43 +188,6 @@ const categories = ['Tous', 'Tarifs', 'Urgences', 'Débouchage', 'Fuites', 'Chau
             </div>
           </article>
         ))}
-
-        <!-- Teaser Cards for Upcoming Topics in the Cluster -->
-        <div class="bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant/60 p-6 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-xs inline-block">
-              Urgences 24/7
-            </span>
-            <h3 class="text-lg font-bold text-primary">
-              Quel plombier intervient en urgence 24h/24 à Arlon ?
-            </h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Découvrez nos protocoles d'astreinte nocturne et week-end : délai moyen de 24 minutes, matériel de secours embarqué et zones couvertes.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs">
-            <span class="text-on-surface-variant italic">Disponible d'astreinte</span>
-            <a href="tel:0465286577" class="font-bold text-secondary hover:underline">Appel direct 24/7</a>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant/60 p-6 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-xs inline-block">
-              Débouchage
-            </span>
-            <h3 class="text-lg font-bold text-primary">
-              Combien coûte un débouchage de WC ou canalisation à Arlon ?
-            </h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Guide comparatif des méthodes : furet mécanique, ventouse à vide et camion hydrocureur haute pression à 200 bars.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs">
-            <span class="text-on-surface-variant italic">Conseils pratiques</span>
-            <a href="/services/debouchage" class="font-bold text-primary hover:underline">Service Débouchage</a>
-          </div>
-        </div>
       </div>
 
     </div>

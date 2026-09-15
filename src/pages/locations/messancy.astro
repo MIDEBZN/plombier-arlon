@@ -1,0 +1,321 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Plombier Messancy (6780) | Dépannage Urgence 24/7 & Débouchage en 15-20 Min"
+  description="Plombier à Messancy (6780), Wolkrange, Bébange et Habergy. Dépannage d'urgence en 15 à 20 min depuis Arlon : fuite d'eau, débouchage WC, adoucisseur calcaire et boiler. Tél : 0472 90 20 10."
+  canonicalPath="/locations/messancy"
+>
+  <!-- Schema.org LocalBusiness / Plumber -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Plombier Messancy - Dépannage d'Urgence",
+    "telephone": "+32472902010",
+    "url": "https://plombier-arlon.be/locations/messancy",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue des Faubourgs 14",
+      "addressLocality": "Arlon",
+      "postalCode": "6700",
+      "addressCountry": "BE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.5931,
+      "longitude": 5.8172
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Messancy"},
+      {"@type": "AdministrativeArea", "name": "Wolkrange"},
+      {"@type": "AdministrativeArea", "name": "Bébange"},
+      {"@type": "AdministrativeArea", "name": "Habergy"},
+      {"@type": "AdministrativeArea", "name": "Turpange"},
+      {"@type": "AdministrativeArea", "name": "Longeau"}
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }]
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-5 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold uppercase tracking-wider border border-secondary/30">
+        <span class="material-symbols-outlined text-[16px]">location_on</span>
+        <span>Commune de Messancy (6780) • Arrivée en 15 à 20 Minutes</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Artisan Plombier à Messancy : Dépannage 24/7 & Travaux Sanitaires
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        Vous résidez à Messancy, Wolkrange, Bébange ou Habergy ? Nos camionnettes d'intervention basées à la sortie Sud d'Arlon rejoignent votre domicile en <strong>moins de 20 minutes chrono</strong> via la N81 pour toute fuite d'eau, canalisation bouchée ou panne de chauffe-eau.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold shadow-lg transition-all text-sm sm:text-base">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Urgence Messancy : 0472 90 20 10</span>
+        </a>
+        <a href="#quote-section" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold border border-white/20 transition-all text-sm">
+          <span>Devis gratuit immédiat</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <section class="py-16 bg-surface space-y-16">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+
+      <!-- 1. Local service area details -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Couverture Communale 6780</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Détails de Notre Zone d'Intervention à Messancy
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Située à seulement 9 kilomètres de notre atelier arlonais, la commune de Messancy bénéficie d'une priorité d'astreinte absolue 24h/24 et 7j/7.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Messancy Centre & Gare</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Rue Grande, Rue de la Gare, Rue des Chasseurs Ardennais. Dépannage rapide en maisons de village et lotissements récents.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 15 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Wolkrange & Bébange</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Axe N883 vers Arlon et Toernich. Villas individuelles, fermes rénovées et résidences familiales.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 12-15 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Habergy & Guelff</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Secteur vallonné semi-rural. Entretien de fosses septiques, traitement d'eau calcaire et dépannage chaudières.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 18-20 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Turpange & Longeau</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Zone résidentielle proche d'Aubange. Remplacement de boilers entartrés et réparations de canalisations sanitaires.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 15-20 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Zone Commerciale Cora Messancy</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Intervention d'urgence pour commerces, restaurants et galeries commerciales : débouchage bacs à graisse et sanitaires publics.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 12 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">water_drop</span>
+              <span>Dureté de l'Eau à Messancy (+32 °fH)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">L'eau distribuée par la SWDE à Messancy est extrêmement calcaire. Nous sommes spécialisés dans la pose d'adoucisseurs d'eau BWT.</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full inline-block">Spécialité locale</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Driving directions from major landmarks -->
+      <div class="space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Accès Rapide & Proximité Immédiate</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Itinéraires d'Accès Depuis les Points de Repère Majeurs
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Grâce à notre positionnement stratégique à Arlon, nos véhicules évitent les embouteillages frontaliers en empruntant les axes directs :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis Rond-Point Cora</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">12 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Via la <strong>N81 Express</strong> depuis le carrefour Weyler / Arlon Sud. Accès direct en 12 minutes à la zone commerciale et aux lotissements limitrophes.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 7,5 km • Axe rapide 4 voies fluide hors heures de pointe.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis la Gare de Messancy</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">15 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Trajet via <strong>Wolkrange et la route de Weyler</strong>, contournant le centre commercial pour rejoindre directement les quartiers résidentiels du centre de Messancy.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 9,2 km • Idéal pour interventions en maisons unifamiliales.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis Habergy / Guelff</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">18 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Descente directe depuis <strong>Toernich via la N883</strong>. Accès sans encombre aux fermettes et habitations rurales sans passer par la nationale N81.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 11 km • Camionnettes tout-temps équipées pour l'hiver.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Neighborhood-specific content -->
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/40 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Typologie d'Habitat</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Spécificités Plomberie des Quartiers de Messancy
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Messancy se caractérise par une grande diversité d'habitations, des lotissements récents abritant des travailleurs frontaliers luxembourgeois jusqu'aux bâtisses en pierre du pays :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">domain</span>
+              <span>Pavillons & Villas de Frontaliers (Années 2000-2025)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Nombreuses villas équipées de planchers chauffants, chaudières à condensation et douches italiennes. <strong>Problème récurrent :</strong> le calcaire de Messancy entartre les vannes thermostatiques et bouche les échangeurs de chaudière. Nous y installons des adoucisseurs BWT avec réglage précis pour préserver les garanties constructeurs.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">cottage</span>
+              <span>Fermettes & Bâtisses Anciennes à Wolkrange / Habergy</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Maisons traditionnelles avec canalisations d'évacuation en grès ou fonte et fosses septiques individuelles. <strong>Interventions fréquentes :</strong> curage haute pression contre les racines pénétrantes, remplacement de tuyauteries en plomb par du multicouche et dégel de conduites en hiver.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Local competitor comparison -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Comparatif Objectif</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Artisan Local Arlon-Messancy vs Plateformes Distantes
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base">
+            À Messancy, méfiez-vous des annonces sponsorisées de plateformes basées à plus de 160 km :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-2xl bg-emerald-50/60 border-2 border-emerald-500/40 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-emerald-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Plombier Arlon (Pour Messancy)</h3>
+                <span class="text-xs text-emerald-700 font-semibold">Atelier à 9 km (Rue des Faubourgs 14, Arlon)</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Arrivée en 15 à 20 min :</strong> Véhicules en rotation constante sur l'axe N81.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Frais de déplacement locaux :</strong> Forfait modique dès 50 € sans surfacturation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Expertise calcaire locale :</strong> Connaissance de l'eau SWDE de Messancy.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-rose-50/50 border-2 border-rose-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-rose-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">warning</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Intermédiaires Web (Bruxelles / Liège)</h3>
+                <span class="text-xs text-rose-700 font-semibold">Sous-traitants envoyés depuis 170 km</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>2h à 3h d'attente :</strong> Bloqués dans le trafic de la E411 en provenance du Nord.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Frais de route exorbitants :</strong> Jusqu'à 200 € facturés rien que pour le déplacement.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Aucun SAV :</strong> Techniciens éphémères introuvables en cas de fuite résiduelle.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Emergency Call Banner -->
+      <div class="bg-gradient-to-r from-primary to-primary-container text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Intervention Immédiate à Messancy</span>
+          <h3 class="font-headline-md text-2xl font-bold">Un problème de plomberie chez vous à Messancy ?</h3>
+          <p class="text-surface-container-highest text-sm">Appelez notre standard d'astreinte : un plombier qualifié prend immédiatement la route.</p>
+        </div>
+        <a href="tel:+32472902010" class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3.5 px-6 rounded-xl font-extrabold text-sm shadow-md transition-all shrink-0">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>0472 90 20 10</span>
+        </a>
+      </div>
+
+      <!-- Quote form -->
+      <div id="quote-section">
+        <QuickQuoteForm />
+      </div>
+
+    </div>
+  </section>
+</Layout>

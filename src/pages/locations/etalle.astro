@@ -1,0 +1,321 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Plombier Étalle & Tintigny (6740) | Dépannage Plomberie & Chauffage 24/7 en 20-25 Min"
+  description="Plombier à Étalle (6740), Sainte-Marie-sur-Semois, Vance et Tintigny. Dépannage d'urgence en 20 min depuis Arlon : débouchage égout, fuite d'eau, chaudière et boiler. Tél : 0472 90 20 10."
+  canonicalPath="/locations/etalle"
+>
+  <!-- Schema.org LocalBusiness / Plumber -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Plombier Étalle & Tintigny - Dépannage d'Urgence",
+    "telephone": "+32472902010",
+    "url": "https://plombier-arlon.be/locations/etalle",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue des Faubourgs 14",
+      "addressLocality": "Arlon",
+      "postalCode": "6700",
+      "addressCountry": "BE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.6739,
+      "longitude": 5.6022
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Étalle"},
+      {"@type": "AdministrativeArea", "name": "Sainte-Marie-sur-Semois"},
+      {"@type": "AdministrativeArea", "name": "Vance"},
+      {"@type": "AdministrativeArea", "name": "Villers-sur-Semois"},
+      {"@type": "City", "name": "Tintigny"},
+      {"@type": "AdministrativeArea", "name": "Bellefontaine"}
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }]
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-5 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold uppercase tracking-wider border border-secondary/30">
+        <span class="material-symbols-outlined text-[16px]">location_on</span>
+        <span>Étalle & Tintigny (6740) • Arrivée en 20 à 25 Minutes via N83</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Artisan Plombier à Étalle & Tintigny : Dépannage 24/7
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        À Étalle, Sainte-Marie-sur-Semois, Vance, Villers-sur-Semois ou Tintigny, bénéficiez de l'intervention prioritaire de nos artisans plombiers et chauffagistes. Arrivée sous 20 minutes depuis Arlon pour vos urgences de fuites, débouchages et pannes de chauffe-eau.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold shadow-lg transition-all text-sm sm:text-base">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Urgence Étalle : 0472 90 20 10</span>
+        </a>
+        <a href="#quote-section" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold border border-white/20 transition-all text-sm">
+          <span>Devis gratuit immédiat</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <section class="py-16 bg-surface space-y-16">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+
+      <!-- 1. Local service area details -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Couverture Gaumaise (6740)</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Détails de Notre Périmètre de Service à Étalle & Tintigny
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Située sur l'axe N83 menant à Virton, la commune d'Étalle est reliée en ligne droite à Arlon par une voie rapide fluide.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Étalle Centre & Semois</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Rue du Moulin, Rue de Virton, quartiers bordant la Semois. Dépannage fuite, réparation tuyauteries et sanitaires.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 20 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Vance</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Premier village de la commune en venant d'Arlon (axe N83). Débouchage express de canalisations et adoucisseurs d'eau.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 12-15 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Sainte-Marie-sur-Semois</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Village gaumais typique le long de la Semois. Remplacement de boilers entartrés et rénovation complète de salles de bain.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 22 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Villers-sur-Semois & Fratin</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Fermettes réhabilitées et pavillons récents. Entretien de chaudières gaz/mazout et détartrage de chauffe-eau.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 22-25 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Tintigny & Bellefontaine</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Commune limitrophe couverte quotidiennement : débouchage haute pression de collecteurs et vidange de fosses septiques.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 25 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">water_drop</span>
+              <span>Dureté de l'Eau & Nappes Alluviales</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Variation de la dureté de l'eau entre le calcaire d'Arlon et les grès gaumais. Diagnostic personnalisé sur place.</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full inline-block">Test TH gratuit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Driving directions from major landmarks -->
+      <div class="space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Axes & Points de Repère</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Itinéraires d'Accès Rapide à Étalle Depuis les Grands Repères
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Trajet direct sans détour au départ de notre atelier d'Arlon :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis la N83 / Vance</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">12 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Via la <strong>Route de Virton (N83)</strong> en quittant Arlon par la Rue de Virton. Traversée de Vance en 12 minutes seulement.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 11 km • Axe principal très roulant.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis l'Église d'Étalle</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">20 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Arrivée au carrefour central d'Étalle (croisement Semois / N83). Accès immédiat aux habitations du village et aux berges de la Semois.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 17 km • Camionnette équipée d'urgence 24/7.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis Sainte-Marie / Tintigny</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">24 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Poursuite sur la <strong>N83 et N879</strong> pour desservir la vallée de la Semois jusqu'à Tintigny et Rossignol sans ralentissement.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 21 km • Détection de fuite et dépannage chaudière.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Neighborhood-specific content -->
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/40 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Typologie Gaumaise</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Spécificités Plomberie des Habitations d'Étalle & de la Semois
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            La proximité de la rivière Semois et l'architecture en grès oolithique de Gaume génèrent des besoins particuliers :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">water</span>
+              <span>Habitations Bordant la Semois & Risque d'Inondation</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              En période de crues hivernales, les caves et sous-sols proches de la rivière peuvent subir des remontées d'eau ou refoulements d'égouts. <strong>Solutions préconisées :</strong> pose de clapets anti-retour agréés Belgaqua et pompes de relevage submersibles pour protéger votre sous-sol.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">cottage</span>
+              <span>Maisons Anciennes en Grès & Bâtisses Gaumaises</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Murs épais en pierre locale avec circuits de plomberie d'origine. <strong>Interventions régulières :</strong> détection non destructive par thermographie infrarouge FLIR pour repérer les fuites sans devoir buriner les pierres d'époque, et mise aux normes complète des arrivées d'eau en multicouche isolé.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Local competitor comparison -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Comparatif Régional</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Artisan Local d'Arlon vs Plateformes Web Distantes
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base">
+            À Étalle, ne tombez pas dans le piège des plates-formes de mise en relation basées au nord du pays :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-2xl bg-emerald-50/60 border-2 border-emerald-500/40 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-emerald-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Plombier Arlon (Pour Étalle)</h3>
+                <span class="text-xs text-emerald-700 font-semibold">Atelier à 17 km d'Étalle</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Arrivée en 20 min par la N83 :</strong> Trajet direct sans péage ni détour.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Tarification forfaitaire claire :</strong> Devis écrit validé avant les travaux.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Véhicule hydrocureur autonome :</strong> Débouchage haute pression 200 bars.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-rose-50/50 border-2 border-rose-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-rose-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">warning</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Courtiers Web de Bruxelles / Liège</h3>
+                <span class="text-xs text-rose-700 font-semibold">Techniciens à 160 km d'Étalle</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>2h à 3h de route :</strong> Temps d'intervention inacceptable en cas d'inondation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Surcoût kilométrique énorme :</strong> Jusqu'à 220 € rien que pour le trajet.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Techniciens sans agrément local :</strong> Aucune garantie de conformité CSTC.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Emergency Call Banner -->
+      <div class="bg-gradient-to-r from-primary to-primary-container text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Astreinte 24/7 à Étalle</span>
+          <h3 class="font-headline-md text-2xl font-bold">Une fuite d'eau ou un WC bouché à Étalle ?</h3>
+          <p class="text-surface-container-highest text-sm">Nos artisans d'astreinte interviennent en moins de 20 minutes.</p>
+        </div>
+        <a href="tel:+32472902010" class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3.5 px-6 rounded-xl font-extrabold text-sm shadow-md transition-all shrink-0">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>0472 90 20 10</span>
+        </a>
+      </div>
+
+      <!-- Quote form -->
+      <div id="quote-section">
+        <QuickQuoteForm />
+      </div>
+
+    </div>
+  </section>
+</Layout>

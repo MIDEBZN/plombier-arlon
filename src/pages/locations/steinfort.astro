@@ -1,0 +1,320 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Plombier Steinfort & Frontière Luxembourg | Dépannage Urgence 24/7 en 15-20 Min"
+  description="Plombier à Steinfort (L-8401), Capellen, Windhof et Kleinbettingen. Dépannage d'urgence 24/7 à 10 min de la frontière arlonaise : fuite d'eau, débouchage WC, boiler. Tarifs belges très avantageux. Tél : +32 472 90 20 10."
+  canonicalPath="/locations/steinfort"
+>
+  <!-- Schema.org LocalBusiness / Plumber -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Plombier Steinfort & Frontière Luxembourg - Dépannage d'Urgence",
+    "telephone": "+32472902010",
+    "url": "https://plombier-arlon.be/locations/steinfort",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue des Faubourgs 14",
+      "addressLocality": "Arlon",
+      "postalCode": "6700",
+      "addressCountry": "BE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.6597,
+      "longitude": 5.9142
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Steinfort"},
+      {"@type": "City", "name": "Capellen"},
+      {"@type": "AdministrativeArea", "name": "Windhof"},
+      {"@type": "AdministrativeArea", "name": "Kleinbettingen"},
+      {"@type": "City", "name": "Mamer"}
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }]
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container relative overflow-hidden">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-5 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold uppercase tracking-wider border border-secondary/30">
+        <span class="material-symbols-outlined text-[16px]">handshake</span>
+        <span>Service Transfrontalier Belgique - Luxembourg • Arrivée en 15 à 20 Min</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Plombier à Steinfort, Capellen & Windhof : Dépannage 24/7
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        Vous résidez au Grand-Duché de Luxembourg ou sur le corridor frontalier ? Nos camionnettes basées à Arlon franchissent quotidiennement la frontière de Sterpenich pour intervenir à <strong>Steinfort, Kleinbettingen, Windhof, Capellen et Mamer</strong> avec des tarifs artisans belges très avantageux.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="tel:+32472902010" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold shadow-lg transition-all text-sm sm:text-base">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Appeler le +32 472 90 20 10</span>
+        </a>
+        <a href="#quote-section" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold border border-white/20 transition-all text-sm">
+          <span>Devis gratuit frontalier</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <section class="py-16 bg-surface space-y-16">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+
+      <!-- 1. Local service area details -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Couverture Frontalière (Grand-Duché)</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Détails de Notre Périmètre de Service à Steinfort & Environs
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Située à seulement 12 kilomètres de notre atelier d'Arlon via l'autoroute E411/A6, la commune de Steinfort et ses environs bénéficient d'un accès ultra-rapide sans surcoût abusif.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Steinfort Centre (L-8401)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Route d'Arlon, Rue de Koerich, quartier de la piscine et centre village. Dépannage fuite d'eau urgente, WC suspendus et sanitaires.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 15 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Windhof & Ecoparc</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Zoning d'activités, bureaux d'entreprises, commerces et résidences. Débouchage haute pression de colonnes et révision de chaudières.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 18 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Capellen (L-8308)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Centre de Capellen, complexe OTAN (NSPA), résidences de standing et lotissements. Remplacement de boilers et adoucisseurs.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 20 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Kleinbettingen (Gare)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Quartier de la gare CFL internationale et moulin de Kleinbettingen. Détection non destructive de fuite par caméra thermique.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 15 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              <span>Mamer (L-8201)</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Secteur résidentiel haut de gamme et École Européenne. Rénovation de salles de bain clés en main et mise en conformité plomberie.</p>
+            <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Délai : 22-25 min</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">receipt_long</span>
+              <span>Facturation Conforme Déductible</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Factures officielles avec numéro de TVA intracommunautaire conforme aux exigences des compagnies d'assurance luxembourgeoises (Foyer, Lalux, AXA Lux).</p>
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full inline-block">Agréé Assurances LUX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Driving directions from major landmarks -->
+      <div class="space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Accès Autoroutier Direct</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Itinéraires d'Accès Rapide Depuis les Grands Repères Frontaliers
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Grâce à l'axe autoroutier E411 (Belgique) devenant l'autoroute A6 (Luxembourg) à Sterpenich, l'accès est direct :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis le Poste de Sterpenich</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">5 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Dès le passage de la frontière, sortie immédiate <strong>Sortie 1 Steinfort</strong> sur l'A6. Entrée directe dans le centre de Steinfort en moins de 5 minutes.
+            </p>
+            <p class="text-[11px] text-outline">Distance totale depuis Arlon : 12 km via E411.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis le Rond-Point de Windhof</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">18 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Via la <strong>Sortie 1 ou Sortie 2 (Mamer/Capellen)</strong> de l'A6. Accès rapide au rond-point de Windhof, à ses zones tertiaires et aux habitations limitrophes de Koerich.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 15 km • Camionnettes équipées pièces multimarques.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-base text-primary">Depuis Capellen & Gare</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">20 min</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Accès direct par la <strong>N6 (Route d'Arlon luxembourgeoise)</strong> reliant directement Steinfort à Capellen et Mamer sans passer par l'échangeur encombré.
+            </p>
+            <p class="text-[11px] text-outline">Distance : 17 km • Dépannage urgent chauffe-eau & sanitaires.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Neighborhood-specific content -->
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/40 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Contexte Résidentiel Grand-Ducal</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Spécificités Plomberie des Résidences à Steinfort & Capellen
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Le canton de Capellen se caractérise par des constructions modernes et un niveau d'équipement exigeant :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">apartment</span>
+              <span>Résidences Récentes & Standing Haut de Gamme</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Immeubles neufs et maisons contemporaines équipés de sanitaires encastrés (Geberit, Grohe, Hansgrohe) et pompes à chaleur. <strong>Interventions courantes :</strong> détection non destructive de fuite d'eau sans abîmer les parquets massifs ou carrelages grands formats, et réparation de systèmes de chasse encastrés.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-outline-variant/30 space-y-3">
+            <h3 class="font-bold text-base text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">water_ph</span>
+              <span>Traitement de l'Eau & Adoucisseurs au Grand-Duché</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Tout comme à Arlon, l'eau de la région frontalière occidentale du Luxembourg est très dure. <strong>Nos prestations :</strong> fourniture, pose et entretien annuel d'adoucisseurs d'eau écologiques BWT avec livraison de sel certifié pour prolonger la durée de vie des appareils ménagers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Local competitor comparison -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-xs font-bold text-secondary uppercase tracking-widest">Avantage Tarifaire Majeur</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Pourquoi les Résidents Luxembourgeois Choisissent Plombier Arlon ?
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base">
+            Au Grand-Duché, les tarifs horaires de dépannage de plomberie dépassent fréquemment les 150 à 200 € de l'heure :
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-2xl bg-emerald-50/60 border-2 border-emerald-500/40 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-emerald-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Plombier Arlon (Pour Steinfort / Capellen)</h3>
+                <span class="text-xs text-emerald-700 font-semibold">Artisan frontalier à 12 km de Steinfort</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Tarifs artisans belges compétitifs :</strong> Jusqu'à 40% moins cher que les dépanneurs de Luxembourg-Ville.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Arrivée en 15 à 20 min :</strong> Sortie immédiate autoroute A6 via Sterpenich.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">check_circle</span>
+                <span><strong>Facture officielle acceptée :</strong> Reconnue par les assurances Foyer, Lalux et AXA Luxembourg.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-rose-50/50 border-2 border-rose-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="p-2 bg-rose-500 text-white rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">warning</span>
+              </span>
+              <div>
+                <h3 class="font-bold text-base text-primary">Dépanneurs de Luxembourg-Ville</h3>
+                <span class="text-xs text-rose-700 font-semibold">Pratiques tarifaires luxembourgeoises</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Tarifs horaires exorbitants :</strong> Main-d'œuvre facturée entre 150 € et 250 € HT/heure.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Bouchons autoroutiers :</strong> Techniciens bloqués dans le trafic depuis Luxembourg-Ville vers l'Ouest.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-rose-500 text-[18px] shrink-0 mt-0.5">cancel</span>
+                <span><strong>Délais de rendez-vous longs :</strong> Carnets de commandes saturés sur plusieurs semaines.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Emergency Call Banner -->
+      <div class="bg-gradient-to-r from-primary to-primary-container text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Urgence Plomberie Frontalière</span>
+          <h3 class="font-headline-md text-2xl font-bold">Un dégât des eaux ou une canalisation bouchée à Steinfort ?</h3>
+          <p class="text-surface-container-highest text-sm">Appelez notre standard d'astreinte : nous franchissons la frontière sous 15 minutes.</p>
+        </div>
+        <a href="tel:+32472902010" class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white py-3.5 px-6 rounded-xl font-extrabold text-sm shadow-md transition-all shrink-0">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>+32 472 90 20 10</span>
+        </a>
+      </div>
+
+      <!-- Quote form -->
+      <div id="quote-section">
+        <QuickQuoteForm />
+      </div>
+
+    </div>
+  </section>
+</Layout>

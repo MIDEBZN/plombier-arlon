@@ -1,0 +1,92 @@
+---
+// QuickQuoteForm.astro: Diagnostic interactive lead card from Stitch UI
+---
+
+<div class="bg-surface-container-lowest text-on-surface rounded-xl shadow-2xl p-space-md sm:p-space-lg border border-outline-variant/30" id="quick-quote">
+  <div class="flex items-center justify-between gap-space-xs">
+    <h2 class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold">
+      Besoin d'un Plombier ?
+    </h2>
+    <span class="flex items-center gap-1 bg-secondary/10 text-secondary text-[11px] font-extrabold px-2.5 py-1 rounded-full border border-secondary/20">
+      <span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span> ARRIVÉE RAPIDE
+    </span>
+  </div>
+
+  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+    Décrivez votre problème. Notre technicien d'astreinte vous rappelle sous 5 minutes.
+  </p>
+
+  <form class="mt-space-md flex flex-col gap-3.5" onsubmit="event.preventDefault(); alert('Merci ! Votre demande a été transmise à notre artisan d\'astreinte à Arlon. Nous vous appelons dans quelques minutes.');">
+    <div>
+      <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Votre Nom & Prénom *</label>
+      <input 
+        class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
+        placeholder="Ex : Jean Dupont" 
+        required 
+        type="text"
+      />
+    </div>
+
+    <div>
+      <label class="block font-label-sm text-label-sm text-secondary font-extrabold mb-1">Numéro de Téléphone (Rappel immédiat) *</label>
+      <input 
+        class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#bb0027] border border-secondary/30 transition-all font-semibold" 
+        placeholder="0470 00 00 00 ou +32 ..." 
+        required 
+        type="tel"
+      />
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+      <div>
+        <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Commune / Code Postal *</label>
+        <input 
+          class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
+          placeholder="Ex : 6700 Arlon, Weyler..." 
+          required 
+          type="text"
+        />
+      </div>
+
+      <div>
+        <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Type d'Intervention</label>
+        <select class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all">
+          <option value="urgence">Dépannage d'urgence (Fuite, Inondation)</option>
+          <option value="debouchage">Débouchage WC / Canalisation / Égout</option>
+          <option value="fuite">Recherche de fuite non destructive</option>
+          <option value="adoucisseur">Adoucisseur d'eau / Traitement calcaire</option>
+          <option value="boiler">Chauffe-eau / Boiler en panne</option>
+          <option value="salledebain">Rénovation salle de bain / Sanitaire</option>
+          <option value="autre">Autre travaux de plomberie</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Description Rapide du Problème</label>
+      <textarea 
+        class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
+        placeholder="Précisez la nature de la panne (ex: fuite sous l'évier, WC qui déborde...)" 
+        rows="2"
+      ></textarea>
+    </div>
+
+    <button 
+      class="w-full h-12 mt-1 bg-secondary hover:bg-secondary-container text-white font-label-md text-label-md rounded-lg shadow-lg flex items-center justify-center gap-space-xs transition-all font-bold" 
+      type="submit"
+    >
+      <span>Envoyer ma demande d'intervention</span>
+      <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+    </button>
+
+    <div class="text-center pt-2 space-y-1">
+      <p class="font-body-sm text-xs text-on-surface-variant">
+        Besoin d'une réponse immédiate ? <a class="text-secondary font-bold hover:underline" href="tel:+32472902010">Appelez le 0472 90 20 10</a>
+      </p>
+      <p class="text-[11px] text-outline flex items-center justify-center gap-1">
+        <span class="material-symbols-outlined text-[13px]">lock</span>
+        Vos données restent 100% confidentielles. Zéro démarchage intempestif.
+      </p>
+    </div>
+  </form>
+</div>

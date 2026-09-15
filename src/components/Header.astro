@@ -1,0 +1,147 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_4px_18px_rgba(0,0,0,0.08)] bg-surface-container-lowest">
+  <!-- Top Emergency Bar -->
+  <div class="bg-primary-container text-on-primary px-margin sm:px-margin-md py-space-xs hidden sm:block">
+    <div class="max-w-[1240px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-sm">
+      <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-surface-container-highest">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+        </span>
+        <span class="font-semibold text-white">Dépannage d'urgence 24h/24 & 7j/7 • Arlon & Environs • Arrivée garantie en 30 minutes</span>
+      </div>
+
+      <div class="flex items-center gap-space-md font-label-sm text-label-sm">
+        <div class="flex items-center gap-1 text-amber-400">
+          <span>★★★★★</span>
+          <span class="text-white font-medium text-xs ml-1">4.9/5 (180+ avis Google vérifiés)</span>
+        </div>
+        <div class="h-3.5 w-[1px] bg-white/20 hidden md:block"></div>
+        <a class="flex items-center gap-1.5 font-label-md text-label-md text-white bg-secondary px-3 py-1 rounded-md hover:bg-secondary-container transition-colors font-bold shadow-sm" href="tel:+32472902010">
+          <span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+          <span>Ligne d'Urgence : 0472 90 20 10</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <div class="h-20 max-w-[1240px] mx-auto px-margin sm:px-margin-md flex items-center justify-between gap-space-md">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 shrink-0 group">
+      <div class="w-11 h-11 rounded-xl bg-primary text-white flex items-center justify-center shadow-md group-hover:bg-primary-container transition-colors">
+        <span class="material-symbols-outlined text-[26px]">plumbing</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold leading-none">PLOMBIER ARLON</span>
+        <span class="font-label-sm text-[11px] tracking-wider text-outline uppercase font-semibold mt-1">Artisan Sanitaire • 6700 Arlon</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-6 font-label-md text-label-md">
+      <a 
+        href="/" 
+        class={`transition-colors py-2 ${currentPath === '/' ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        Accueil
+      </a>
+      <a 
+        href="/services" 
+        class={`transition-colors py-2 ${currentPath.startsWith('/services') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        Services
+      </a>
+      <a 
+        href="/locations" 
+        class={`transition-colors py-2 ${currentPath.startsWith('/locations') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        Zones d'Intervention
+      </a>
+      <a 
+        href="/about" 
+        class={`transition-colors py-2 ${currentPath.startsWith('/about') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        À Propos
+      </a>
+      <a 
+        href="/contact" 
+        class={`transition-colors py-2 ${currentPath.startsWith('/contact') ? 'text-primary font-extrabold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary font-semibold'}`}
+      >
+        Contact & Devis
+      </a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <div class="hidden xl:flex flex-col items-end text-right">
+        <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline flex items-center gap-1.5 font-semibold">
+          <span class="h-2 w-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Artisan en service
+        </span>
+        <a class="font-label-phone text-label-phone text-primary hover:text-secondary transition-colors font-extrabold tracking-tight" href="tel:+32472902010">
+          0472 90 20 10
+        </a>
+      </div>
+
+      <a 
+        class="inline-flex items-center justify-center gap-1.5 font-label-md text-label-md text-white bg-secondary hover:bg-secondary-container px-4 py-2.5 rounded-lg shadow-md transition-all font-bold"
+        href="tel:+32472902010"
+      >
+        <span class="material-symbols-outlined text-[18px]">call</span>
+        <span>SOS 24/7</span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button 
+        id="mobile-menu-toggle"
+        type="button" 
+        aria-label="Ouvrir le menu de navigation"
+        class="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container-low transition-colors"
+      >
+        <span class="material-symbols-outlined text-[28px]" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-t border-outline-variant/30 px-6 py-5 shadow-xl">
+    <nav class="flex flex-col gap-3 font-semibold text-base text-on-surface">
+      <a href="/" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Accueil</a>
+      <a href="/services" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Nos Services</a>
+      <a href="/locations" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Zones d'Intervention (Arlon & Luxembourg)</a>
+      <a href="/about" class="py-2 border-b border-surface-container hover:text-primary transition-colors">À Propos de l'Artisan</a>
+      <a href="/contact" class="py-2 border-b border-surface-container hover:text-primary transition-colors">Contact & Devis Gratuit</a>
+    </nav>
+    <div class="pt-4 mt-2 flex flex-col gap-2.5">
+      <a 
+        href="tel:+32472902010" 
+        class="w-full bg-secondary hover:bg-secondary-container text-white font-bold py-3 rounded-lg text-center shadow-md flex items-center justify-center gap-2"
+      >
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        Appeler le 0472 90 20 10 (24h/24)
+      </a>
+      <a 
+        href="/contact" 
+        class="w-full bg-primary text-white font-bold py-3 rounded-lg text-center shadow-md hover:bg-primary-container transition-colors"
+      >
+        Demander un devis sans engagement
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  if (toggleBtn && menu && menuIcon) {
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = menu.classList.toggle('hidden');
+      menuIcon.textContent = isHidden ? 'menu' : 'close';
+    });
+  }
+</script>

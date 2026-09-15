@@ -1,0 +1,125 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyCall from '../components/MobileStickyCall.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  schemaType?: string;
+}
+
+const { 
+  title, 
+  description, 
+  canonicalPath = '',
+  schemaType = 'Plumber'
+} = Astro.props;
+
+const siteUrl = 'https://plombier-arlon.be';
+const canonicalUrl = `${siteUrl}${canonicalPath ? canonicalPath : Astro.url.pathname}`;
+
+// Complete local business schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "@id": `${siteUrl}/#organization`,
+  "name": "Plombier Arlon",
+  "legalName": "Plombier Arlon SRL",
+  "url": siteUrl,
+  "telephone": "+32472902010",
+  "email": "contact@plombier-arlon.be",
+  "priceRange": "€€",
+  "vatID": "BE0799456123",
+  "image": `${siteUrl}/images/plombier-arlon-camionnette.webp`,
+  "logo": `${siteUrl}/images/logo.png`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue des Faubourgs 14",
+    "addressLocality": "Arlon",
+    "postalCode": "6700",
+    "addressRegion": "Province de Luxembourg",
+    "addressCountry": "BE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.6833,
+    "longitude": 5.8167
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Arlon" },
+    { "@type": "AdministrativeArea", "name": "Bonnert" },
+    { "@type": "AdministrativeArea", "name": "Weyler" },
+    { "@type": "AdministrativeArea", "name": "Stockem" },
+    { "@type": "AdministrativeArea", "name": "Messancy" },
+    { "@type": "AdministrativeArea", "name": "Aubange" },
+    { "@type": "AdministrativeArea", "name": "Habay" },
+    { "@type": "AdministrativeArea", "name": "Attert" },
+    { "@type": "City", "name": "Steinfort" },
+    { "@type": "City", "name": "Capellen" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "184",
+    "bestRating": "5"
+  }
+};
+---
+
+<!DOCTYPE html>
+<html lang="fr-BE" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:site_name" content="Plombier Arlon" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+
+  <body class="bg-background font-sans text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+    <Header />
+    
+    <!-- Main content with top offset for fixed header -->
+    <main class="w-full flex-grow pt-20 sm:pt-28">
+      <slot />
+    </main>
+
+    <Footer />
+    <MobileStickyCall />
+  </body>
+</html>

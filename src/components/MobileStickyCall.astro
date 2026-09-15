@@ -1,0 +1,27 @@
+---
+// MobileStickyCall.astro: Docked bottom bar strictly on mobile viewport
+---
+
+<div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-outline-variant/30 shadow-[0_-4px_16px_rgba(0,0,0,0.12)] p-2.5">
+  <div class="grid grid-cols-2 gap-2">
+    <!-- WhatsApp Photo Diagnostic -->
+    <a 
+      href="https://wa.me/32472902010?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20%C3%A0%20Arlon,%20voici%20la%20photo%20de%20mon%20probl%C3%A8me:" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center justify-center gap-1.5 bg-[#25D366] text-white font-bold text-xs py-3 px-2 rounded-lg shadow-sm hover:opacity-90 transition-opacity"
+    >
+      <span class="material-symbols-outlined text-[18px]">chat</span>
+      <span>WhatsApp Photo</span>
+    </a>
+
+    <!-- Direct Call Hotline -->
+    <a 
+      href="tel:+32472902010" 
+      class="flex items-center justify-center gap-1.5 bg-secondary text-white font-extrabold text-xs py-3 px-2 rounded-lg shadow-md animate-pulse hover:bg-secondary-container transition-colors"
+    >
+      <span class="material-symbols-outlined text-[18px]">call</span>
+      <span>Appeler (24/7)</span>
+    </a>
+  </div>
+</div>

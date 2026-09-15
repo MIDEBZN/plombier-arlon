@@ -1,0 +1,537 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrustBar from '../components/TrustBar.astro';
+import QuickQuoteForm from '../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Plombier Arlon (6700) | Dépannage d'Urgence 24/7 & Artisan Agréé"
+  description="Plombier à Arlon disponible 24h/24 et 7j/7. Dépannage d'urgence en 30 min, réparation de fuite d'eau, débouchage canalisation, adoucisseur calcaire et boiler. Devis gratuit au 0472 90 20 10."
+  canonicalPath="/"
+>
+  <!-- 1. HERO SECTION -->
+  <section class="relative w-full bg-primary overflow-hidden text-white py-12 lg:py-16">
+    <!-- Subtle Background Ambient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary-container to-primary/90 z-0"></div>
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-[1240px] mx-auto px-margin sm:px-margin-md">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Hero Copy (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-5">
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 w-fit border border-white/15">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+            </span>
+            <span class="font-label-sm text-xs text-white uppercase tracking-wider font-extrabold">
+              Artisan Plombier Local • Arlon (6700) & Environs
+            </span>
+          </div>
+
+          <!-- Main H1 -->
+          <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] font-extrabold tracking-tight text-white">
+            Votre Artisan Plombier à Arlon : <span class="text-secondary-fixed-dim">Dépannage 24/7</span> & Plomberie Locale
+          </h1>
+
+          <!-- Lead Subtitle -->
+          <p class="font-body-lg text-base sm:text-lg text-surface-container-highest max-w-2xl leading-relaxed">
+            Intervention d'urgence garantie en <strong>30 à 45 minutes</strong> pour fuite d'eau, canalisation bouchée, WC bloqué ou chauffe-eau en panne. Devis gratuit préalable et tarifs transparents sans mauvaise surprise.
+          </p>
+
+          <!-- Social Proof -->
+          <div class="flex flex-wrap items-center gap-3 py-1">
+            <div aria-label="Note 5 étoiles" class="flex text-amber-400 text-lg leading-none">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="font-label-md text-sm text-white font-bold">4.9/5 sur Google</span>
+            <span class="text-surface-container-high text-xs">(Plus de 180 avis vérifiés de clients à Arlon)</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 px-2 py-0.5 rounded text-xs text-white font-medium">
+              <span class="material-symbols-outlined text-[14px] text-emerald-400">verified</span> Agréé CSTC & Assurances
+            </span>
+          </div>
+
+          <!-- Trust Checkmarks -->
+          <ul class="flex flex-col gap-2.5 text-sm sm:text-base text-surface-container-highest">
+            <li class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
+              <span class="font-semibold text-white">Dépannage d'urgence jour & nuit (nuits, week-ends et jours fériés)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
+              <span class="font-semibold text-white">Tarifs forfaitaires annoncés avant intervention (aucun frais caché)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-secondary text-[22px] shrink-0">check_circle</span>
+              <span class="font-semibold text-white">Rapport technique officiel fourni pour votre assurance habitation</span>
+            </li>
+          </ul>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a 
+              class="inline-flex flex-col items-center justify-center bg-secondary hover:bg-secondary-container text-white px-6 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-all font-bold"
+              href="tel:+32472902010"
+            >
+              <span class="flex items-center gap-2 font-label-phone text-lg">
+                <span class="material-symbols-outlined text-[24px]">call</span>
+                <span>0472 90 20 10</span>
+              </span>
+              <span class="text-[10px] tracking-wider uppercase text-white/90 font-semibold -mt-0.5">Ligne d'Urgence Immédiate (24/7)</span>
+            </a>
+
+            <a 
+              class="inline-flex items-center justify-center font-label-md text-sm text-white bg-white/10 hover:bg-white/20 px-6 py-4 rounded-lg shadow-md border border-white/20 transition-all font-bold"
+              href="#quick-quote"
+            >
+              Demander un devis en ligne
+            </a>
+          </div>
+
+          <div class="text-surface-container-high text-xs flex flex-wrap items-center gap-2 pt-1">
+            <span>✓ Devis 100% gratuit</span>
+            <span>•</span>
+            <span>✓ Entreprise artisanale locale</span>
+            <span>•</span>
+            <span>✓ Garantie décennale belge</span>
+          </div>
+        </div>
+
+        <!-- Right Lead Form (5 cols) -->
+        <div class="lg:col-span-5 w-full">
+          <QuickQuoteForm />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST PILLARS BAR -->
+  <TrustBar />
+
+  <!-- 3. WATER HARDNESS / CALCAIRE BANNER (THE ARLON UNFAIR ADVANTAGE) -->
+  <section class="w-full bg-gradient-to-r from-surface-container-high to-surface-container-low py-12 border-b border-outline-variant/30">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md">
+      <div class="bg-white rounded-2xl p-6 sm:p-10 border border-outline-variant/40 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-extrabold text-xs uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[16px]">water_drop</span> Spécificité Régionale : Lorraine Belge
+          </span>
+          <h2 class="font-headline-md text-2xl sm:text-3xl text-primary font-bold tracking-tight">
+            L'eau d'Arlon est très calcaire (+32 °fH) : Protégez vos installations sanitaires
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            La dureté élevée de l'eau à Arlon (calcaire et craie) bouche les robinetteries, perfore les boilers et augmente votre facture énergétique de 20%. Nous sommes spécialistes de l'installation et de l'entretien d'adoucisseurs d'eau (BWT, Van Marcke) à Arlon.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 w-full lg:w-auto">
+          <a 
+            href="/services#adoucisseur" 
+            class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-white px-6 py-3.5 rounded-lg font-bold text-sm shadow-md transition-all text-center"
+          >
+            <span>Découvrir nos adoucisseurs</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+          <a 
+            href="tel:+32472902010" 
+            class="inline-flex items-center justify-center gap-2 bg-surface-container-low hover:bg-surface-container text-primary border border-outline-variant/50 px-6 py-3.5 rounded-lg font-bold text-sm transition-all text-center"
+          >
+            <span class="material-symbols-outlined text-[18px]">call</span>
+            <span>Conseil gratuit adoucisseur</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES SHOWCASE -->
+  <section class="py-16 lg:py-24 bg-surface">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Nos Domaines d'Expertise</span>
+        <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-extrabold tracking-tight">
+          Services Complets de Plomberie & Chauffage à Arlon
+        </h2>
+        <p class="text-on-surface-variant text-base">
+          De la réparation de fuite en pleine nuit à la rénovation complète de salle de bain, découvrez nos prestations artisanales garanties.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Emergency & Leaks -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">emergency</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">Intervention &lt; 30 min</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Dépannage Plomberie d'Urgence 24/7</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Tuyau percé, fuite sous évier, robinet cassé, compteur d'eau qui s'emballe ou dégât des eaux. Intervention immédiate jour et nuit.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Recherche de fuite non destructive</li>
+              <li class="flex items-center gap-1.5">✓ Dégel de canalisation en hiver</li>
+              <li class="flex items-center gap-1.5">✓ Rapport pour remboursement assurance</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#depannage" class="text-sm font-bold text-secondary hover:text-secondary-container flex items-center gap-1">
+              En savoir plus sur l'urgence <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Drain Unblocking -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">water</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Haute Pression</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Débouchage & Curage de Canalisations</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              WC bouché, évier engorgé, douche refoulante, sterput ou chambre de visite bloquée. Élimination radicale des bouchons par hydrocurage.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Passage caméra vidéo endoscopique</li>
+              <li class="flex items-center gap-1.5">✓ Curage haute pression jusqu'à l'égout</li>
+              <li class="flex items-center gap-1.5">✓ Débouchage sanibroyeur et WC suspendu</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#debouchage" class="text-sm font-bold text-primary hover:text-primary-container flex items-center gap-1">
+              En savoir plus sur le débouchage <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Water Heater -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">mode_heat</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Eau Chaude Sanitaire</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Chauffe-Eau & Boiler</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Boiler qui fuit, eau tiède, groupe de sécurité défaillant ou résistance entartrée. Remplacement sous 24h et détartrage complet.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Boilers électriques & thermodynamiques</li>
+              <li class="flex items-center gap-1.5">✓ Marques agréées : Atlantic, Bulex, ACV</li>
+              <li class="flex items-center gap-1.5">✓ Détartrage de cuve et résistance stéatite</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#boiler" class="text-sm font-bold text-primary hover:text-primary-container flex items-center gap-1">
+              En savoir plus sur les boilers <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Water Softeners -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">filter_alt</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Solution Anti-Calcaire</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Adoucisseurs d'Eau</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Installation sur-mesure d'adoucisseurs avec ou sans sel pour protéger vos tuyauteries et robinetteries du calcaire arlonais.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Marques de pointe BWT et Van Marcke</li>
+              <li class="flex items-center gap-1.5">✓ Entretien annuel et livraison de sel</li>
+              <li class="flex items-center gap-1.5">✓ Test gratuit de dureté d'eau à domicile</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#adoucisseur" class="text-sm font-bold text-primary hover:text-primary-container flex items-center gap-1">
+              En savoir plus sur l'adoucisseur <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5: Leak Detection -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">search</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Caméra Thermique</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Recherche de Fuite Invisible</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Localisation au millimètre des fuites encastrées dans les dalles, chapes et cloisons sans aucune casse inutile de votre habitation.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Détection acoustique et gaz traceur</li>
+              <li class="flex items-center gap-1.5">✓ Inspection thermographique infrarouge</li>
+              <li class="flex items-center gap-1.5">✓ Dossier complet pour votre assureur</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#fuites" class="text-sm font-bold text-primary hover:text-primary-container flex items-center gap-1">
+              En savoir plus sur les fuites <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6: Bathroom Renovation -->
+        <div class="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]">bathtub</span>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-primary uppercase tracking-wider">Chantiers Clé en Main</span>
+              <h3 class="font-headline-sm text-xl font-bold text-primary">Rénovation de Salle de Bain</h3>
+            </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Transformation complète : remplacement de baignoire par douche à l'italienne, pose de WC suspendu Geberit, robinetterie Grohe.
+            </p>
+            <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/30">
+              <li class="flex items-center gap-1.5">✓ Étanchéité certifiée normes CSTC</li>
+              <li class="flex items-center gap-1.5">✓ Meubles vasques et robinetterie design</li>
+              <li class="flex items-center gap-1.5">✓ Devis détaillé gratuit sous 24h</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-4">
+            <a href="/services#renovation" class="text-sm font-bold text-primary hover:text-primary-container flex items-center gap-1">
+              En savoir plus sur la rénovation <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. TRANSPARENT PRICING GRID -->
+  <section class="py-16 bg-surface-container-lowest border-y border-outline-variant/30">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Zéro Mauvaise Surprise</span>
+        <h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-extrabold tracking-tight">
+          Grille Tarifaire Claire & Devis Validé Avant Travaux
+        </h2>
+        <p class="text-on-surface-variant text-sm sm:text-base">
+          Contrairement aux plateformes opaques, nous appliquons des tarifs d'artisan local réglementés et transparents.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-surface rounded-xl p-6 border border-outline-variant/50 space-y-4">
+          <div class="border-b border-outline-variant/40 pb-4">
+            <span class="text-xs font-bold text-primary uppercase">Dépannage Rapide</span>
+            <h3 class="font-headline-sm text-xl font-bold text-primary mt-1">Forfait Déplacement Arlon</h3>
+            <p class="text-3xl font-extrabold text-primary mt-2">Dès 50 € <span class="text-xs font-normal text-on-surface-variant">HTVA</span></p>
+          </div>
+          <ul class="text-sm text-on-surface-variant space-y-2">
+            <li>✓ Déplacement sur toute l'entité d'Arlon (6700)</li>
+            <li>✓ Diagnostic complet sur place par l'artisan</li>
+            <li>✓ Devis gratuit écrit avant tout coup de clé</li>
+          </ul>
+        </div>
+
+        <div class="bg-primary text-white rounded-xl p-6 border border-primary-container shadow-xl space-y-4 relative">
+          <span class="absolute -top-3 right-4 bg-secondary text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            Le Plus Demandé
+          </span>
+          <div class="border-b border-white/15 pb-4">
+            <span class="text-xs font-bold text-secondary-fixed uppercase">Débouchage Garanti</span>
+            <h3 class="font-headline-sm text-xl font-bold text-white mt-1">Débouchage Machine & Caméra</h3>
+            <p class="text-3xl font-extrabold text-white mt-2">Dès 110 € <span class="text-xs font-normal text-surface-container-high">HTVA</span></p>
+          </div>
+          <ul class="text-sm text-surface-container-highest space-y-2">
+            <li>✓ Débouchage mécanique ou hydrocurage haute pression</li>
+            <li>✓ Inspection caméra de contrôle incluse</li>
+            <li>✓ Garantie d'écoulement parfait 12 mois</li>
+          </ul>
+        </div>
+
+        <div class="bg-surface rounded-xl p-6 border border-outline-variant/50 space-y-4">
+          <div class="border-b border-outline-variant/40 pb-4">
+            <span class="text-xs font-bold text-primary uppercase">Prise en Charge Assurance</span>
+            <h3 class="font-headline-sm text-xl font-bold text-primary mt-1">Recherche de Fuite Précise</h3>
+            <p class="text-3xl font-extrabold text-primary mt-2">100% Remboursable <span class="text-xs font-normal text-on-surface-variant">via assurance</span></p>
+          </div>
+          <ul class="text-sm text-on-surface-variant space-y-2">
+            <li>✓ Caméra thermique infrarouge & gaz traceur</li>
+            <li>✓ Aucune démolition de mur ou chape</li>
+            <li>✓ Rapport officiel pour votre compagnie d'assurance</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. SERVICE AREAS SECTION -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md">
+      <div class="bg-surface-container-lowest rounded-2xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
+        
+        <div class="max-w-3xl space-y-3">
+          <span class="text-secondary font-bold text-xs uppercase tracking-widest">Proximité Réelle</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-extrabold tracking-tight">
+            Intervention d'Urgence en 30 Minutes sur Tout le District d'Arlon
+          </h2>
+          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            Nos véhicules d'intervention sont basés au cœur d'Arlon. Nous garantissons une arrivée ultra-rapide sur l'ensemble des sections communales, du Sud-Luxembourg et du corridor frontalier luxembourgeois.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
+          
+          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+              Entité d'Arlon (6700)
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Arlon Centre, Bonnert, Weyler, Stockem, Heinsch, Toernich, Viville, Guirsch, Autelbas, Sampont, Fouches.
+            </p>
+            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 20 à 30 min</span>
+          </div>
+
+          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+              Communes Sud-Luxembourg
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Messancy, Aubange, Athus, Habay-la-Neuve, Attert, Etalle, Martelange, Léglise, Virton.
+            </p>
+            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 30 à 45 min</span>
+          </div>
+
+          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
+            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+              Frontière Luxembourg
+            </h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Steinfort, Capellen, Windhof, Kleinbettingen, Mamer, Hobscheid (Tarifs avantageux artisans belges).
+            </p>
+            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 20 à 35 min</span>
+          </div>
+
+        </div>
+
+        <div class="pt-2 text-center">
+          <a href="/locations" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors">
+            <span>Consulter la liste détaillée des codes postaux desservis</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. REVIEWS & TESTIMONIALS -->
+  <section class="py-16 bg-surface-container-low border-t border-outline-variant/30">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Avis Clients Vérifiés</span>
+        <h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-extrabold tracking-tight">
+          Ce que Disent les Habitants d'Arlon & Environs
+        </h2>
+        <p class="text-on-surface-variant text-sm">
+          La satisfaction de nos voisins est notre meilleure carte de visite. Note moyenne de 4.9/5 sur Google.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "Appelé un dimanche matin à 8h pour une fuite importante dans notre buanderie à Bonnert. Le plombier est arrivé en 25 minutes avec le matériel pour remplacer le raccord en cuivre fendu. Travail soigné et tarif annoncé respecté au centime près !"
+          </p>
+          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+            <span class="font-bold text-primary">Marc V.</span>
+            <span class="text-outline">Bonnert (Arlon)</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "Nous avons fait installer un adoucisseur BWT après avoir subi le calcaire d'Arlon pendant des années. Conseil parfait de l'artisan, installation très propre et explications claires sur l'entretien du sel. Très satisfait du résultat."
+          </p>
+          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+            <span class="font-bold text-primary">Nathalie D.</span>
+            <span class="text-outline">Weyler (Arlon)</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-sm text-on-surface-variant italic leading-relaxed">
+            "Habitant à Steinfort juste de l'autre côté de la frontière, les plombiers luxembourgeois me demandaient un délai de 3 jours. Plombier Arlon est venu déboucher notre colonne principale le jour même à un tarif deux fois moins cher. Impeccable !"
+          </p>
+          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+            <span class="font-bold text-primary">Julien B.</span>
+            <span class="text-outline">Steinfort (Frontière)</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. FINAL EMERGENCY CALLOUT -->
+  <section class="py-14 bg-primary text-white">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md text-center space-y-6">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-white font-extrabold text-xs uppercase tracking-wider">
+        <span class="h-2 w-2 rounded-full bg-white animate-ping"></span> Techniciens d'Astreinte Disponibles
+      </span>
+      <h2 class="font-headline-lg text-2xl sm:text-4xl font-extrabold text-white tracking-tight max-w-3xl mx-auto">
+        Une Fuite d'Eau ou une Panne Imprévue à Arlon ?
+      </h2>
+      <p class="text-surface-container-highest max-w-xl mx-auto text-sm sm:text-base">
+        Nos artisans sont en route. Ne laissez pas un problème sanitaire s'aggraver. Contactez notre ligne directe immédiate.
+      </p>
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="tel:+32472902010" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white px-8 py-4 rounded-xl font-extrabold text-lg shadow-xl hover:scale-105 transition-all"
+        >
+          <span class="material-symbols-outlined text-[24px]">call</span>
+          <span>Appeler le 0472 90 20 10</span>
+        </a>
+        <a 
+          href="/contact" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-4 rounded-xl font-bold text-base transition-all"
+        >
+          Demander un devis en ligne
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrustBar from '../components/TrustBar.astro';
+import QuickQuoteForm from '../components/QuickQuoteForm.astro';
+---
+
+<Layout 
+  title="Contact Plombier Arlon (6700) | Téléphone Urgence 24/7 & Devis Gratuit"
+  description="Contactez Plombier Arlon au 0472 90 20 10 pour tout dépannage urgent 24h/24 ou demandez votre devis gratuit en ligne. Atelier Rue des Faubourgs 14, 6700 Arlon. Diagnostic photo WhatsApp."
+  canonicalPath="/contact"
+>
+  <!-- Page Header -->
+  <section class="bg-primary text-white py-12 lg:py-16 border-b border-primary-container">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 w-fit text-xs font-bold uppercase tracking-wider text-secondary-fixed">
+        <span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+        <span>Standard d'Urgence Ouvert 24h/24 & 7j/7</span>
+      </div>
+      <h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Contactez Votre Plombier à Arlon
+      </h1>
+      <p class="text-surface-container-highest max-w-3xl text-base sm:text-lg leading-relaxed">
+        Une fuite d'eau, un débouchage urgent ou un projet de rénovation sanitaire ? Joignez directement un artisan plombier disponible immédiatement sur l'entité d'Arlon et le Sud-Luxembourg.
+      </p>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Contact Section -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-16">
+      
+      <!-- Contact Channels Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Emergency Phone -->
+        <div class="bg-white p-6 rounded-2xl border-2 border-secondary/30 shadow-sm space-y-4 hover:border-secondary transition-all">
+          <div class="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined text-[28px]">phone_in_talk</span>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Urgence 24h/24 & 7j/7</span>
+            <h2 class="font-bold text-lg text-primary mt-1">Appel Direct</h2>
+            <p class="text-xs text-on-surface-variant mt-1">Ligne prioritaire pour fuite d'eau, panne de chauffe-eau ou WC bouché.</p>
+          </div>
+          <a href="tel:+32472902010" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-secondary text-white font-extrabold text-sm hover:bg-secondary-container transition-all shadow-md">
+            0472 90 20 10
+          </a>
+        </div>
+
+        <!-- WhatsApp Photo -->
+        <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-4 hover:border-primary/40 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[28px]">chat</span>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Diagnostic Rapide</span>
+            <h2 class="font-bold text-lg text-primary mt-1">Photo WhatsApp</h2>
+            <p class="text-xs text-on-surface-variant mt-1">Envoyez une photo ou vidéo de votre fuite ou chaudière pour une pré-estimation immédiate.</p>
+          </div>
+          <a href="https://wa.me/32472902010?text=Bonjour,%20voici%20la%20photo%20de%20mon%20problème%20de%20plomberie%20à%20Arlon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-all shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            <span>Envoyer Photo</span>
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-4 hover:border-primary/40 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[28px]">mail</span>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-wider">Devis & Projets</span>
+            <h2 class="font-bold text-lg text-primary mt-1">Courrier Électronique</h2>
+            <p class="text-xs text-on-surface-variant mt-1">Pour vos projets de rénovation de salle de bain ou demandes de régies immobilières.</p>
+          </div>
+          <a href="mailto:contact@plombier-arlon.be" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-surface-container-high text-primary font-bold text-xs hover:bg-surface-container-highest transition-all break-all">
+            contact@plombier-arlon.be
+          </a>
+        </div>
+
+        <!-- Physical Address -->
+        <div class="bg-white p-6 rounded-2xl border border-outline-variant/40 shadow-sm space-y-4 hover:border-primary/40 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[28px]">location_on</span>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-wider">Atelier & Dépôt</span>
+            <h2 class="font-bold text-lg text-primary mt-1">Adresse Locale</h2>
+            <p class="text-xs text-on-surface-variant mt-1">Rue des Faubourgs 14<br />6700 Arlon, Belgique</p>
+          </div>
+          <div class="text-[11px] text-outline pt-2 border-t border-surface-container">
+            Immatriculation BCE : BE 0799.456.123
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Form & Details Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Local Info & What to do in emergency -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <div class="space-y-3">
+            <h2 class="font-headline-md text-2xl font-bold text-primary">
+              Que Faire en Attendant Notre Plombier ?
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              En cas de dégât des eaux ou fuite importante dans votre maison ou appartement à Arlon, adoptez immédiatement les gestes de sécurité suivants :
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-outline-variant/40 shadow-sm">
+              <span class="h-7 w-7 rounded-full bg-secondary text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
+              <div>
+                <p class="text-sm font-bold text-primary">Fermez la vanne d'arrêt générale</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Elle se trouve généralement près de votre compteur d'eau (SWDE) en cave ou garage.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-outline-variant/40 shadow-sm">
+              <span class="h-7 w-7 rounded-full bg-secondary text-white font-bold text-xs flex items-center justify-center shrink-0">2</span>
+              <div>
+                <p class="text-sm font-bold text-primary">Coupez l'électricité si l'eau ruisselle</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Évitez tout risque de court-circuit si l'eau s'infiltre près des prises ou du tableau électrique.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-outline-variant/40 shadow-sm">
+              <span class="h-7 w-7 rounded-full bg-secondary text-white font-bold text-xs flex items-center justify-center shrink-0">3</span>
+              <div>
+                <p class="text-sm font-bold text-primary">Prenez des photos avant d'éponger</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Ces photos seront indispensables pour constituer votre dossier auprès de votre compagnie d'assurance.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-outline-variant/40 shadow-sm">
+              <span class="h-7 w-7 rounded-full bg-secondary text-white font-bold text-xs flex items-center justify-center shrink-0">4</span>
+              <div>
+                <p class="text-sm font-bold text-primary">Appelez notre équipe au 0472 90 20 10</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Un technicien d'astreinte se met immédiatement en route vers votre adresse à Arlon.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map simulation / Local visual card -->
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-sm text-primary">Rayon d'Action Arlon & Sud-Luxembourg</span>
+              <span class="text-xs bg-primary/10 text-primary font-bold px-2 py-0.5 rounded-full">Zone 6700</span>
+            </div>
+            <div class="w-full h-44 rounded-xl bg-slate-200 overflow-hidden relative border border-outline-variant/30 flex items-center justify-center">
+              <!-- SVG map visual representing Arlon and surrounding network -->
+              <svg class="w-full h-full object-cover" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="200" fill="#E2E8F0"/>
+                <path d="M50 100 Q 150 50, 200 100 T 350 100" stroke="#CBD5E1" stroke-width="8"/>
+                <path d="M100 20 Q 200 100, 250 180" stroke="#CBD5E1" stroke-width="6"/>
+                <path d="M200 100 L 380 40" stroke="#94A3B8" stroke-width="4" stroke-dasharray="4 4"/>
+                <circle cx="200" cy="100" r="45" fill="#C8102E" fill-opacity="0.12" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <circle cx="200" cy="100" r="8" fill="#14345F"/>
+                <circle cx="200" cy="100" r="4" fill="#FFFFFF"/>
+                <text x="212" y="104" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="bold" fill="#14345F">Arlon 6700 (Atelier)</text>
+                <text x="310" y="38" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="bold" fill="#64748B">Frontière Luxembourg (12 km)</text>
+                <text x="40" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#64748B">Habay / Leglise</text>
+                <text x="180" y="185" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#64748B">Messancy / Aubange</text>
+              </svg>
+            </div>
+            <p class="text-xs text-outline text-center">
+              Couverture immédiate : Grand Arlon, Messancy, Aubange, Habay, Attert, Étalle et corridor frontière Steinfort.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right: Diagnostic Form -->
+        <div class="lg:col-span-7">
+          <QuickQuoteForm />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

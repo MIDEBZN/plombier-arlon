@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import TrustBar from '../components/TrustBar.astro';
 import QuickQuoteForm from '../components/QuickQuoteForm.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import ResponseTimeStats from '../components/ResponseTimeStats.astro';
 ---
 
 <Layout 
@@ -26,6 +28,9 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
   </section>
 
   <TrustBar />
+
+  <!-- Response Time & Performance Stats -->
+  <ResponseTimeStats />
 
   <!-- Story & Local Roots -->
   <section class="py-16 bg-surface">
@@ -206,6 +211,9 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
           </div>
         </div>
       </div>
+
+      <!-- Trust Badges & Accreditations -->
+      <TrustBadges />
 
       <!-- Contact & Quote Form Section -->
       <div id="contact-form" class="pt-8">

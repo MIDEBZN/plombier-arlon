@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import TrustBar from '../components/TrustBar.astro';
 import QuickQuoteForm from '../components/QuickQuoteForm.astro';
+import ReviewBadges from '../components/ReviewBadges.astro';
+import ResponseTimeStats from '../components/ResponseTimeStats.astro';
+import ServiceAreaMap from '../components/ServiceAreaMap.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import CustomerTestimonials from '../components/CustomerTestimonials.astro';
 ---
 
 <Layout 
@@ -110,6 +115,12 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
 
   <!-- 2. TRUST PILLARS BAR -->
   <TrustBar />
+
+  <!-- REVIEW BADGES & MULTI-PLATFORM VERIFICATION -->
+  <ReviewBadges />
+
+  <!-- RESPONSE TIME STATS & PERFORMANCE METRICS -->
+  <ResponseTimeStats />
 
   <!-- 3. WATER HARDNESS / CALCAIRE BANNER (THE ARLON UNFAIR ADVANTAGE) -->
   <section class="w-full bg-gradient-to-r from-surface-container-high to-surface-container-low py-12 border-b border-outline-variant/30">
@@ -388,122 +399,14 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
     </div>
   </section>
 
-  <!-- 6. SERVICE AREAS SECTION -->
-  <section class="py-16 bg-surface">
-    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md">
-      <div class="bg-surface-container-lowest rounded-2xl p-8 sm:p-12 border border-outline-variant/40 shadow-sm space-y-8">
-        
-        <div class="max-w-3xl space-y-3">
-          <span class="text-secondary font-bold text-xs uppercase tracking-widest">Proximité Réelle</span>
-          <h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-extrabold tracking-tight">
-            Intervention d'Urgence en 30 Minutes sur Tout le District d'Arlon
-          </h2>
-          <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
-            Nos véhicules d'intervention sont basés au cœur d'Arlon. Nous garantissons une arrivée ultra-rapide sur l'ensemble des sections communales, du Sud-Luxembourg et du corridor frontalier luxembourgeois.
-          </p>
-        </div>
+  <!-- 6. SERVICE AREA MAP & DISPATCH ZONES -->
+  <ServiceAreaMap />
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
-          
-          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
-            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-              Entité d'Arlon (6700)
-            </h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Arlon Centre, Bonnert, Weyler, Stockem, Heinsch, Toernich, Viville, Guirsch, Autelbas, Sampont, Fouches.
-            </p>
-            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 20 à 30 min</span>
-          </div>
+  <!-- 7. TRUST BADGES & OFFICIAL ACCREDITATIONS -->
+  <TrustBadges />
 
-          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
-            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-              Communes Sud-Luxembourg
-            </h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Messancy, Aubange, Athus, Habay-la-Neuve, Attert, Etalle, Martelange, Léglise, Virton.
-            </p>
-            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 30 à 45 min</span>
-          </div>
-
-          <div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/30 space-y-2">
-            <h3 class="font-bold text-primary text-base flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-              Frontière Luxembourg
-            </h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Steinfort, Capellen, Windhof, Kleinbettingen, Mamer, Hobscheid (Tarifs avantageux artisans belges).
-            </p>
-            <span class="text-[11px] font-bold text-emerald-600 block pt-1">Arrivée en 20 à 35 min</span>
-          </div>
-
-        </div>
-
-        <div class="pt-2 text-center">
-          <a href="/locations" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors">
-            <span>Consulter la liste détaillée des codes postaux desservis</span>
-            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. REVIEWS & TESTIMONIALS -->
-  <section class="py-16 bg-surface-container-low border-t border-outline-variant/30">
-    <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-10">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Avis Clients Vérifiés</span>
-        <h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-extrabold tracking-tight">
-          Ce que Disent les Habitants d'Arlon & Environs
-        </h2>
-        <p class="text-on-surface-variant text-sm">
-          La satisfaction de nos voisins est notre meilleure carte de visite. Note moyenne de 4.9/5 sur Google.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
-          <div class="flex text-amber-400 text-sm">★★★★★</div>
-          <p class="text-sm text-on-surface-variant italic leading-relaxed">
-            "Appelé un dimanche matin à 8h pour une fuite importante dans notre buanderie à Bonnert. Le plombier est arrivé en 25 minutes avec le matériel pour remplacer le raccord en cuivre fendu. Travail soigné et tarif annoncé respecté au centime près !"
-          </p>
-          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
-            <span class="font-bold text-primary">Marc V.</span>
-            <span class="text-outline">Bonnert (Arlon)</span>
-          </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
-          <div class="flex text-amber-400 text-sm">★★★★★</div>
-          <p class="text-sm text-on-surface-variant italic leading-relaxed">
-            "Nous avons fait installer un adoucisseur BWT après avoir subi le calcaire d'Arlon pendant des années. Conseil parfait de l'artisan, installation très propre et explications claires sur l'entretien du sel. Très satisfait du résultat."
-          </p>
-          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
-            <span class="font-bold text-primary">Nathalie D.</span>
-            <span class="text-outline">Weyler (Arlon)</span>
-          </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-outline-variant/40 shadow-sm space-y-3">
-          <div class="flex text-amber-400 text-sm">★★★★★</div>
-          <p class="text-sm text-on-surface-variant italic leading-relaxed">
-            "Habitant à Steinfort juste de l'autre côté de la frontière, les plombiers luxembourgeois me demandaient un délai de 3 jours. Plombier Arlon est venu déboucher notre colonne principale le jour même à un tarif deux fois moins cher. Impeccable !"
-          </p>
-          <div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-xs">
-            <span class="font-bold text-primary">Julien B.</span>
-            <span class="text-outline">Steinfort (Frontière)</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
+  <!-- 8. CUSTOMER TESTIMONIALS & VERIFIED GOOGLE REVIEWS -->
+  <CustomerTestimonials />
 
   <!-- 8. FINAL EMERGENCY CALLOUT -->
   <section class="py-14 bg-primary text-white">

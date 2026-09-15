@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import TrustBar from '../components/TrustBar.astro';
 import QuickQuoteForm from '../components/QuickQuoteForm.astro';
+import ServiceAreaMap from '../components/ServiceAreaMap.astro';
+import ReviewBadges from '../components/ReviewBadges.astro';
 ---
 
 <Layout 
@@ -26,6 +28,9 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
   </section>
 
   <TrustBar />
+
+  <!-- Interactive Map & Live Dispatch Checker -->
+  <ServiceAreaMap />
 
   <!-- Main Local Zones Section -->
   <section class="py-16 bg-surface">
@@ -391,6 +396,9 @@ import QuickQuoteForm from '../components/QuickQuoteForm.astro';
           </div>
         </div>
       </div>
+
+      <!-- Review Badges & Social Proof -->
+      <ReviewBadges />
 
       <!-- Contact / Quote Form Section -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

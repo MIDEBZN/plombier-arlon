@@ -1,0 +1,146 @@
+---
+// TrustBadges.astro: Detailed section for professional accreditations, certifications, and manufacturer partnerships
+interface TrustItem {
+  code: string;
+  name: string;
+  authority: string;
+  description: string;
+  icon: string;
+  badge: string;
+}
+
+const trustItems: TrustItem[] = [
+  {
+    code: "CSTC",
+    name: "Centre Scientifique & Technique",
+    authority: "CSTC Belgique",
+    description: "Application stricte des règles de l'art et des Notes d'Information Technique (NIT) belges pour la plomberie et le chauffage.",
+    icon: "verified",
+    badge: "Membre Agréé"
+  },
+  {
+    code: "G1 / G2 / L",
+    name: "Combustion Région Wallonne",
+    authority: "Service Public de Wallonie",
+    description: "Habilitation officielle d'État pour l'installation, le réglage et l'entretien périodique des générateurs de chaleur gaz et mazout.",
+    icon: "local_fire_department",
+    badge: "Habilitation d'État"
+  },
+  {
+    code: "BELGAQUA",
+    name: "Protection Sanitaire Eau",
+    authority: "Fédération Belge de l'Eau",
+    description: "Conformité stricte des clapets anti-pollution et des raccordements au réseau public de distribution d'eau potable (SWDE).",
+    icon: "water_drop",
+    badge: "Conformité Hygiène"
+  },
+  {
+    code: "RESCert",
+    name: "Énergies Renouvelables",
+    authority: "Organisme Certificateur Belge",
+    description: "Certification de qualification technique pour les chauffe-eau thermodynamiques et pompes à chaleur sanitaires.",
+    icon: "eco",
+    badge: "Certifié Éco"
+  },
+  {
+    code: "AXA 10 ANS",
+    name: "Garantie Décennale & RC Pro",
+    authority: "AXA Belgium (Police #730.456.789)",
+    description: "Couverture intégrale de 10 ans sur les étanchéités, conduites encastrées et travaux de rénovation structurelle.",
+    icon: "security",
+    badge: "Couverture 100%"
+  },
+  {
+    code: "BCE / SPF",
+    name: "Immatriculation Officielle",
+    authority: "BCE BE 0799.456.123",
+    description: "Entreprise enregistrée au Registre des Personnes Morales de Neufchâteau / Arlon, éligible aux aides primes régionales.",
+    icon: "badge",
+    badge: "Entreprise Enregistrée"
+  }
+];
+
+const partners = [
+  { name: "BWT", desc: "Leader mondial traitement de l'eau" },
+  { name: "Geberit", desc: "Systèmes encastrés & bâti-supports" },
+  { name: "Grohe", desc: "Robinetterie sanitaire de précision" },
+  { name: "Bulex", desc: "Chauffe-eau & chaudières belges" },
+  { name: "Vaillant", desc: "Chauffage haute performance" },
+  { name: "Van Marcke", desc: "Partenaire sanitaire de référence" }
+];
+---
+
+<section class="py-16 sm:py-24 bg-surface-container-low/50 border-t border-b border-outline-variant/30" id="trust-badges">
+  <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-12">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-[16px]">military_tech</span>
+        <span>Agréments Officiels & Normes de Sécurité</span>
+      </div>
+      <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight">
+        Les labels et garanties officielles de Plombier Arlon
+      </h2>
+      <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+        Ne confiez pas vos canalisations ou votre chaudière au premier venu. Nos artisans disposent de l'ensemble des certifications requises par les autorités belges et les compagnies d'assurance.
+      </p>
+    </div>
+
+    <!-- Accreditations Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {trustItems.map((item) => (
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold text-xs">
+                <span class="material-symbols-outlined text-[24px]">{item.icon}</span>
+              </div>
+              <span class="text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                {item.badge}
+              </span>
+            </div>
+
+            <div>
+              <span class="text-xs font-bold text-secondary tracking-wide uppercase">{item.code}</span>
+              <h3 class="font-bold text-base text-primary mt-0.5">{item.name}</h3>
+              <p class="text-[11px] text-outline font-medium mt-0.5">{item.authority}</p>
+            </div>
+
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-surface-container flex items-center gap-1.5 text-[11px] text-emerald-700 font-bold">
+            <span class="material-symbols-outlined text-[14px]">check_circle</span>
+            <span>Qualification vérifiée & en règle</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Manufacturer Partnerships Bar -->
+    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-outline-variant/40 shadow-sm space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-outline-variant/30 pb-4">
+        <div>
+          <h4 class="font-bold text-sm sm:text-base text-primary">Partenaires & Marques Installées en Belgique</h4>
+          <p class="text-xs text-on-surface-variant">Pièces d'origine constructeur et garanties fabricants directes</p>
+        </div>
+        <span class="text-xs font-bold text-secondary bg-secondary/10 px-3 py-1 rounded-full w-fit">
+          100% Pièces Certifiées Origine
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        {partners.map((partner) => (
+          <div class="bg-surface-container-low p-3.5 rounded-xl border border-outline-variant/30 text-center space-y-1 hover:border-primary/40 transition-all">
+            <p class="font-extrabold text-sm text-primary tracking-tight">{partner.name}</p>
+            <p class="text-[10px] text-on-surface-variant leading-tight">{partner.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

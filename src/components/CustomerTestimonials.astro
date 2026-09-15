@@ -1,0 +1,209 @@
+---
+// CustomerTestimonials.astro: Verified customer reviews from Arlon and surrounding communes
+interface Testimonial {
+  name: string;
+  location: string;
+  service: string;
+  rating: number;
+  date: string;
+  text: string;
+  badge: string;
+  delay: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Marc V.",
+    location: "Bonnert (Arlon 6700)",
+    service: "Dépannage Fuite Eau Tuyau Cuivre",
+    rating: 5,
+    date: "Il y a 1 semaine",
+    text: "Appelé un dimanche matin à 8h pour une fuite importante dans notre buanderie. Le technicien est arrivé en 22 minutes chrono avec tout le matériel pour remplacer le manchon cuivre fendu sous pression. Travail propre, facture détaillée conforme au devis annoncé par téléphone !",
+    badge: "Avis Vérifié Google",
+    delay: "Arrivée en 22 min"
+  },
+  {
+    name: "Élodie & Thomas L.",
+    location: "Arlon Centre (Place Léopold)",
+    service: "Remplacement Boiler d'Urgence",
+    rating: 5,
+    date: "Il y a 2 semaines",
+    text: "Notre chauffe-eau électrique s'est mis à fuir abondamment un jeudi soir. Plombier Arlon est venu sécuriser l'installation dans l'heure, et le lendemain matin le nouveau chauffe-eau Bulex était posé et raccordé. Chaleur et eau chaude retrouvées sans tracas. Merci !",
+    badge: "Client Résidentiel",
+    delay: "Sécurisé sous 35 min"
+  },
+  {
+    name: "Nathalie D.",
+    location: "Weyler (Arlon 6700)",
+    service: "Pose Adoucisseur d'Eau BWT",
+    rating: 5,
+    date: "Il y a 3 semaines",
+    text: "Avec une dureté d'eau de 34 °fH à Weyler, nos robinetteries et notre lave-linge étaient saturés de calcaire. L'artisan nous a conseillé un adoucisseur BWT compact sans nous pousser à la consommation. Pose soignée en une demi-journée, eau redevenue douce et soyeuse.",
+    badge: "Avis Vérifié Google",
+    delay: "Intervention Programmée"
+  },
+  {
+    name: "Julien B.",
+    location: "Steinfort (Frontière Luxembourg)",
+    service: "Débouchage Haute Pression & Caméra",
+    rating: 5,
+    date: "Il y a 1 mois",
+    text: "Résidant à Steinfort côté luxembourgeois, les entreprises locales me proposaient un rendez-vous dans 4 jours à un tarif exorbitant. Plombier Arlon est intervenu l'après-midi même avec son camion hydrocureur. Colonne nettoyée à fond et passage caméra pour vérifier. Impeccable !",
+    badge: "Avis Frontalier Vérifié",
+    delay: "Arrivée en 28 min"
+  },
+  {
+    name: "Frédéric M.",
+    location: "Messancy (6780)",
+    service: "Recherche de Fuite Invisible (Caméra Thermique)",
+    rating: 5,
+    date: "Il y a 1 mois",
+    text: "Taches d'humidité suspectes au plafond du salon. Ils ont localisé la fuite sous le carrelage de la douche à l'aide d'une caméra infrarouge thermique sans casser un seul carreau. Le rapport d'expertise détaillé a été transmis et remboursé à 100% par Ethias Assurances.",
+    badge: "Dossier Assurance Validé",
+    delay: "Arrivée en 30 min"
+  },
+  {
+    name: "Isabelle G.",
+    location: "Habay-la-Neuve (6720)",
+    service: "Rénovation Sanitaire & WC Suspendu",
+    rating: 5,
+    date: "Il y a 2 mois",
+    text: "Remplacement d'une vieille baignoire par une douche à l'italienne avec robinetterie thermostatique Grohe et WC suspendu Geberit. Respect des délais, finitions impeccables et chantier laissé parfaitement propre chaque soir. Une vraie équipe d'artisans de confiance !",
+    badge: "Projet Rénovation",
+    delay: "Chantier Clé en Main"
+  }
+];
+---
+
+<section class="py-16 sm:py-24 bg-surface-container-low/60 border-t border-b border-outline-variant/30" id="testimonials">
+  <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-12">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div class="max-w-2xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[16px]">verified</span>
+          <span>Témoignages Clients Réels & Vérifiés</span>
+        </div>
+        <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight">
+          Ce que nos clients d'Arlon & du Sud-Luxembourg disent de nous
+        </h2>
+        <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+          Transparence tarifaire, rapidité d'arrivée en urgence et soin artisanal : découvrez les retours authentiques de vos voisins après intervention.
+        </p>
+      </div>
+
+      <!-- Quick Trust Rating Score Card -->
+      <div class="bg-white p-5 rounded-2xl border border-outline-variant/40 shadow-sm flex items-center gap-5 shrink-0">
+        <div class="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500 font-extrabold text-2xl border border-amber-200">
+          4.9
+        </div>
+        <div class="space-y-1">
+          <div class="flex text-amber-400 text-base leading-none">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-xs font-bold text-primary">Score Google Reviews</p>
+          <p class="text-[11px] text-on-surface-variant">Plus de 184 avis vérifiés</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((item) => (
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary/30 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            
+            <!-- Card Header: Rating, Badge, Location -->
+            <div class="flex items-start justify-between gap-3">
+              <div class="space-y-1">
+                <div class="flex items-center gap-1">
+                  <div class="flex text-amber-400 text-sm leading-none">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="text-xs font-bold text-primary ml-1">5.0</span>
+                </div>
+                <p class="text-[11px] font-bold text-secondary flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">timer</span>
+                  {item.delay}
+                </p>
+              </div>
+
+              <span class="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-surface-container-high text-primary border border-outline-variant/30">
+                <svg class="w-3 h-3 text-emerald-600 fill-current" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                {item.badge}
+              </span>
+            </div>
+
+            <!-- Review Text -->
+            <blockquote class="text-xs sm:text-sm text-on-surface-variant leading-relaxed italic relative">
+              <span class="text-2xl text-outline-variant/60 font-serif leading-none absolute -top-2.5 -left-1">“</span>
+              <span class="relative z-10 pl-2 block">{item.text}</span>
+            </blockquote>
+
+            <!-- Service Tag -->
+            <div class="pt-2">
+              <span class="inline-block text-[11px] font-semibold bg-surface-container-low text-primary px-2.5 py-1 rounded-md border border-outline-variant/30">
+                🔧 {item.service}
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Card Footer: Customer Details & Date -->
+          <div class="pt-4 mt-4 border-t border-surface-container flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center">
+                {item.name.charAt(0)}
+              </div>
+              <div>
+                <p class="text-xs font-bold text-primary leading-tight">{item.name}</p>
+                <p class="text-[11px] text-on-surface-variant flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[13px] text-secondary">location_on</span>
+                  {item.location}
+                </p>
+              </div>
+            </div>
+            <span class="text-[10px] text-outline">{item.date}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Interactive Bottom Bar -->
+    <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+          <span class="material-symbols-outlined text-[28px]">rate_review</span>
+        </div>
+        <div>
+          <h3 class="font-bold text-sm text-primary">Vous avez récemment fait appel à Plombier Arlon ?</h3>
+          <p class="text-xs text-on-surface-variant">Votre retour nous aide à maintenir un niveau de service irréprochable dans toute la région.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <a 
+          href="https://g.page/r/plombier-arlon/review" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-white px-5 py-2.5 rounded-lg text-xs font-bold shadow-sm transition-all text-center"
+        >
+          <span class="material-symbols-outlined text-[16px]">edit</span>
+          <span>Déposer un avis Google</span>
+        </a>
+        <a 
+          href="tel:+32472902010" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white px-5 py-2.5 rounded-lg text-xs font-bold shadow-sm transition-all text-center"
+        >
+          <span class="material-symbols-outlined text-[16px]">call</span>
+          <span>Une urgence ? Appelez-nous</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

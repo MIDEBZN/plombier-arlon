@@ -1,0 +1,141 @@
+---
+// ResponseTimeStats.astro: Key statistics on arrival delays, first-visit resolution rate, and emergency readiness
+interface StatMetric {
+  value: string;
+  label: string;
+  sublabel: string;
+  icon: string;
+  highlight?: boolean;
+}
+
+const stats: StatMetric[] = [
+  {
+    value: "24 min",
+    label: "Délai Moyen d'Arrivée",
+    sublabel: "Constaté sur Arlon (6700) et faubourgs immédiats",
+    icon: "timer",
+    highlight: true
+  },
+  {
+    value: "24/7",
+    label: "Astreinte Continue",
+    sublabel: "Disponibilité jour, nuit, week-ends et jours fériés",
+    icon: "schedule"
+  },
+  {
+    value: "98.4%",
+    label: "Résolution 1er Passage",
+    sublabel: "Fourgons ateliers avec 800+ pièces détachées en stock",
+    icon: "task_alt"
+  },
+  {
+    value: "15+ Ans",
+    label: "Expérience Artisanale",
+    sublabel: "Entreprise locale implantée à Arlon depuis 2009",
+    icon: "history_edu"
+  },
+  {
+    value: "3 850+",
+    label: "Dépannages Réalisés",
+    sublabel: "Foyers, commerces et copropriétés en Sud-Luxembourg",
+    icon: "group"
+  },
+  {
+    value: "0 €",
+    label: "Devis Préalable Écrit",
+    sublabel: "Diagnostic transparent avant tout commencement de travail",
+    icon: "request_quote"
+  }
+];
+---
+
+<section class="py-16 sm:py-20 bg-primary text-white relative overflow-hidden" id="response-time-stats">
+  <!-- Subtle Background Gradients -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-tertiary opacity-90"></div>
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-12">
+    
+    <!-- Top Header & Live Dispatch Bar -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+      <div class="space-y-2 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider border border-white/15">
+          <span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+          <span>Chiffres Clés & Délais Constatés</span>
+        </div>
+        <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          La rapidité et la fiabilité au cœur de chaque intervention
+        </h2>
+      </div>
+
+      <!-- Real-Time Status Badge -->
+      <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/15 flex items-center gap-3 shrink-0">
+        <div class="relative">
+          <span class="h-3 w-3 rounded-full bg-emerald-400 block"></span>
+          <span class="h-3 w-3 rounded-full bg-emerald-400 animate-ping absolute inset-0"></span>
+        </div>
+        <div>
+          <p class="text-xs font-extrabold text-white leading-tight">Standard d'Astreinte : ACTIF</p>
+          <p class="text-[11px] text-surface-container-high">Départ d'urgence sous 5 minutes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats 6-Card Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+      {stats.map((stat) => (
+        <div class={`p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-3 transition-all ${
+          stat.highlight 
+            ? "bg-secondary text-white shadow-xl shadow-secondary/30 scale-105 border-2 border-white/30" 
+            : "bg-white/5 hover:bg-white/10 border border-white/10"
+        }`}>
+          <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[22px]">{stat.icon}</span>
+          </div>
+
+          <div class="space-y-1">
+            <span class="font-headline-xl text-3xl sm:text-4xl font-extrabold tracking-tight block">
+              {stat.value}
+            </span>
+            <h3 class="font-bold text-xs sm:text-sm tracking-tight leading-snug">
+              {stat.label}
+            </h3>
+            <p class="text-[11px] text-surface-container-highest/80 leading-tight pt-1">
+              {stat.sublabel}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Live Action Callout Banner -->
+    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/15 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-1 text-center md:text-left">
+        <h4 class="font-bold text-lg text-white">Une canalisation qui déborde ou une fuite en cours ?</h4>
+        <p class="text-xs sm:text-sm text-surface-container-highest">
+          Ne prenez pas le risque d'aggraver les dégâts des eaux. Notre artisan d'astreinte est joignable 24h/24.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 shrink-0">
+        <a 
+          href="tel:+32472902010" 
+          class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold text-sm shadow-lg hover:scale-105 transition-all"
+        >
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Appeler le 0472 90 20 10</span>
+        </a>
+        <a 
+          href="https://wa.me/32472902010?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20%C3%A0%20Arlon,%20voici%20la%20photo%20:" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-5 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all"
+        >
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Photo WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

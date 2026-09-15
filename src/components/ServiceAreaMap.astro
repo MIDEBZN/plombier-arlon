@@ -1,0 +1,314 @@
+---
+// ServiceAreaMap.astro: Interactive service area map, zones, and live dispatch postal code checker
+interface Zone {
+  id: string;
+  name: string;
+  delay: string;
+  tag: string;
+  color: string;
+  communes: string[];
+  description: string;
+}
+
+const zones: Zone[] = [
+  {
+    id: "zone-1",
+    name: "Zone 1 : Grand Arlon (6700)",
+    delay: "Moins de 20 min",
+    tag: "Départ Immédiat",
+    color: "secondary",
+    communes: ["Arlon Centre", "Bonnert", "Weyler", "Stockem", "Heinsch", "Viville", "Guirsch", "Toernich", "Autelbas", "Fouches", "Sampont", "Sterpenich"],
+    description: "Couverture prioritaire absolue depuis notre atelier Rue des Faubourgs. Véhicule d'intervention pré-équipé sur place 24h/24."
+  },
+  {
+    id: "zone-2",
+    name: "Zone 2 : Sud-Luxembourg Proche",
+    delay: "20 à 30 min",
+    tag: "Intervention Rapide",
+    color: "primary",
+    communes: ["Messancy (6780)", "Aubange & Athus (6790/6791)", "Habay-la-Neuve (6720)", "Attert (6717)", "Waltzing", "Halanzy", "Rachecourt"],
+    description: "Accès direct via les axes rapides N81, N4 et E411. Tarifs forfaitaires identiques sans surcoût kilométrique abusif."
+  },
+  {
+    id: "zone-3",
+    name: "Zone 3 : Corridor Frontalier & Communes Voisines",
+    delay: "25 à 35 min",
+    tag: "Tarifs Belges Avantageux",
+    color: "emerald",
+    communes: ["Étalle (6740)", "Léglise (6860)", "Martelange (6630)", "Steinfort (L-8401)", "Capellen & Windhof", "Kleinbettingen"],
+    description: "Dépannage d'urgence transfrontalier très sollicité par les résidents du Luxembourg recherchant la réactivité et les tarifs justes d'artisans belges agréés."
+  }
+];
+---
+
+<section class="py-16 sm:py-24 bg-surface" id="service-area-map">
+  <div class="max-w-[1240px] mx-auto px-margin sm:px-margin-md space-y-12">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-[16px]">map</span>
+        <span>Périmètre d'Intervention Garanti</span>
+      </div>
+      <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight">
+        Où intervient votre plombier à Arlon et en Province de Luxembourg ?
+      </h2>
+      <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+        Nos artisans plombiers et chauffagistes circulent en permanence sur Arlon et le Sud-Luxembourg avec des fourgons ateliers approvisionnés en pièces de rechange courantes.
+      </p>
+    </div>
+
+    <!-- Map & Interactive Hub Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Left: Interactive Vector Map (7 cols) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-outline-variant/40 shadow-sm flex flex-col justify-between space-y-6">
+        
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-base text-primary">Cartographie des Rayons d'Urgence</h3>
+            <p class="text-xs text-on-surface-variant">Rayons calculés en conditions réelles de circulation depuis Arlon</p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            2 Équipes en Ligne
+          </span>
+        </div>
+
+        <!-- Custom Styled SVG Map of Arlon & Surroundings -->
+        <div class="relative w-full h-[320px] sm:h-[380px] bg-slate-900 rounded-xl overflow-hidden shadow-inner border border-slate-700 flex items-center justify-center">
+          
+          <!-- Subtle Grid Pattern -->
+          <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+          <svg class="w-full h-full object-cover" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- Road Network Lines (E411, N81, N4) -->
+            <path d="M 50 200 Q 200 180 300 200 T 550 210" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 300 200 L 320 380" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 300 200 L 220 30" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 300 200 L 520 80" stroke="#475569" stroke-width="4" stroke-dasharray="6 6"/>
+
+            <!-- Road Labels -->
+            <text x="70" y="190" fill="#64748b" font-size="10" font-family="Plus Jakarta Sans">Autoroute E411 (Namur/Bruxelles)</text>
+            <text x="330" y="360" fill="#64748b" font-size="10" font-family="Plus Jakarta Sans">N81 (Messancy / Aubange)</text>
+            <text x="430" y="120" fill="#38bdf8" font-size="10" font-family="Plus Jakarta Sans" font-weight="bold">Frontière Luxembourg (N6 Steinfort)</text>
+
+            <!-- Radial Zone 3 (> 25-35 min) -->
+            <circle cx="300" cy="200" r="160" fill="#0284c7" fill-opacity="0.06" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+            <!-- Radial Zone 2 (20-30 min) -->
+            <circle cx="300" cy="200" r="110" fill="#14345f" fill-opacity="0.10" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+            <!-- Radial Zone 1 (< 20 min) -->
+            <circle cx="300" cy="200" r="60" fill="#bb0027" fill-opacity="0.12" stroke="#bb0027" stroke-width="2"/>
+
+            <!-- Satellite Markers -->
+            <!-- Steinfort (LU) -->
+            <g class="cursor-pointer">
+              <circle cx="480" cy="110" r="7" fill="#0284c7"/>
+              <circle cx="480" cy="110" r="3" fill="#ffffff"/>
+              <text x="495" y="114" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Steinfort (LU)</text>
+              <text x="495" y="127" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~25 min</text>
+            </g>
+
+            <!-- Messancy -->
+            <g class="cursor-pointer">
+              <circle cx="320" cy="310" r="7" fill="#3b82f6"/>
+              <circle cx="320" cy="310" r="3" fill="#ffffff"/>
+              <text x="335" y="314" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Messancy</text>
+              <text x="335" y="327" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~20 min</text>
+            </g>
+
+            <!-- Aubange / Athus -->
+            <g class="cursor-pointer">
+              <circle cx="300" cy="370" r="6" fill="#3b82f6"/>
+              <circle cx="300" cy="370" r="2.5" fill="#ffffff"/>
+              <text x="210" y="374" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Aubange & Athus</text>
+              <text x="250" y="387" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~25 min</text>
+            </g>
+
+            <!-- Habay-la-Neuve -->
+            <g class="cursor-pointer">
+              <circle cx="150" cy="150" r="6" fill="#3b82f6"/>
+              <circle cx="150" cy="150" r="2.5" fill="#ffffff"/>
+              <text x="80" y="145" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Habay-la-Neuve</text>
+              <text x="110" y="158" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~22 min</text>
+            </g>
+
+            <!-- Attert -->
+            <g class="cursor-pointer">
+              <circle cx="280" cy="80" r="6" fill="#3b82f6"/>
+              <circle cx="280" cy="80" r="2.5" fill="#ffffff"/>
+              <text x="295" y="84" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Attert</text>
+              <text x="295" y="96" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~18 min</text>
+            </g>
+
+            <!-- Étalle -->
+            <g class="cursor-pointer">
+              <circle cx="90" cy="240" r="6" fill="#0284c7"/>
+              <circle cx="90" cy="240" r="2.5" fill="#ffffff"/>
+              <text x="40" y="255" fill="#f8fafc" font-size="11" font-weight="bold" font-family="Plus Jakarta Sans">Étalle</text>
+              <text x="40" y="267" fill="#94a3b8" font-size="9" font-family="Plus Jakarta Sans">~30 min</text>
+            </g>
+
+            <!-- Central Hub: Arlon Atelier (Rue des Faubourgs) -->
+            <g>
+              <circle cx="300" cy="200" r="20" fill="#bb0027" fill-opacity="0.3" class="animate-ping"/>
+              <circle cx="300" cy="200" r="12" fill="#bb0027" stroke="#ffffff" stroke-width="2"/>
+              <circle cx="300" cy="200" r="5" fill="#ffffff"/>
+              
+              <!-- Hub Tooltip / Card -->
+              <rect x="235" y="145" width="130" height="36" rx="6" fill="#14345f" stroke="#334155" stroke-width="1"/>
+              <text x="300" y="160" fill="#ffffff" font-size="10" font-weight="bold" font-family="Plus Jakarta Sans" text-anchor="middle">ATELIER CENTRAL</text>
+              <text x="300" y="173" fill="#ffb3b1" font-size="9" font-family="Plus Jakarta Sans" text-anchor="middle">Arlon (Rue des Faubourgs)</text>
+            </g>
+
+          </svg>
+
+          <!-- Map Legend Overlay -->
+          <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md rounded-lg p-2.5 flex flex-wrap items-center justify-between text-[11px] text-slate-300 border border-slate-800">
+            <div class="flex items-center gap-4">
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Zone 1 (&lt; 20 min)</span>
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Zone 2 (&lt; 30 min)</span>
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Zone 3 (&lt; 35 min)</span>
+            </div>
+            <span class="font-bold text-white hidden sm:inline">Astreinte 24/7 permanente</span>
+          </div>
+
+        </div>
+
+        <!-- Live Camionnettes Dispatch Simulator -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+          <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-center gap-3">
+            <span class="material-symbols-outlined text-emerald-600 text-[24px]">local_shipping</span>
+            <div>
+              <p class="text-xs font-bold text-primary">Fourgon Atelier #1 (Hydrocureur)</p>
+              <p class="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                En stationnement Arlon Centre (Prêt au départ)
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary text-[24px]">build_circle</span>
+            <div>
+              <p class="text-xs font-bold text-primary">Fourgon Atelier #2 (Recherche de Fuite)</p>
+              <p class="text-[11px] text-on-surface-variant">
+                En veille active secteur Sud (Messancy / Aubange)
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Interactive Postal Code Checker & Zone Details (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+        
+        <!-- Postal Code Quick Checker Widget -->
+        <div class="bg-primary text-white p-6 sm:p-7 rounded-2xl shadow-xl space-y-4">
+          <div class="flex items-center gap-2 text-secondary-fixed text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[18px]">near_me</span>
+            <span>Vérification Immédiate de Disponibilité</span>
+          </div>
+
+          <h3 class="font-bold text-xl leading-tight">
+            Vérifiez le temps d'arrivée à votre adresse
+          </h3>
+
+          <p class="text-xs text-surface-container-highest leading-relaxed">
+            Entrez votre commune ou code postal belge / luxembourgeois pour connaître notre délai de prise en charge en temps réel.
+          </p>
+
+          <div class="space-y-3 pt-1">
+            <div class="flex gap-2">
+              <input 
+                id="postal-input"
+                type="text" 
+                placeholder="Ex : 6700, 6780, Steinfort..." 
+                class="flex-grow h-12 px-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white/20 transition-all font-semibold"
+              />
+              <button 
+                id="check-postal-btn"
+                type="button" 
+                class="h-12 px-5 bg-secondary hover:bg-secondary-container text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center shrink-0 cursor-pointer"
+              >
+                Tester
+              </button>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div id="postal-result" class="p-3.5 rounded-xl bg-white/10 border border-white/15 text-xs space-y-1">
+              <p class="font-bold text-emerald-300 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Zone couverte en astreinte directe 24h/24
+              </p>
+              <p class="text-surface-container-high text-[11px]" id="postal-result-text">
+                Délai moyen constaté sur Arlon & environs : <strong>20 à 35 minutes</strong>.
+              </p>
+            </div>
+          </div>
+
+          <a 
+            href="tel:+32472902010" 
+            class="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-surface-container text-primary font-bold text-sm py-3 px-4 rounded-xl shadow-md transition-all"
+          >
+            <span class="material-symbols-outlined text-[20px] text-secondary">call</span>
+            <span>Appeler le standard : 0472 90 20 10</span>
+          </a>
+        </div>
+
+        <!-- Zones Mini-List -->
+        <div class="space-y-3">
+          {zones.map((zone) => (
+            <div class="bg-white p-4 rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/40 transition-all">
+              <div class="flex items-center justify-between">
+                <h4 class="font-bold text-xs text-primary">{zone.name}</h4>
+                <span class="text-[11px] font-extrabold text-secondary bg-secondary/10 px-2 py-0.5 rounded">
+                  {zone.delay}
+                </span>
+              </div>
+              <p class="text-[11px] text-on-surface-variant mt-1 leading-snug">
+                {zone.communes.slice(0, 6).join(', ')}...
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const postalInput = document.getElementById('postal-input') as HTMLInputElement | null;
+  const checkBtn = document.getElementById('check-postal-btn');
+  const resultText = document.getElementById('postal-result-text');
+
+  if (postalInput && checkBtn && resultText) {
+    checkBtn.addEventListener('click', () => {
+      const val = postalInput.value.trim().toLowerCase();
+      if (!val) return;
+
+      if (val.includes('6700') || val.includes('arlon') || val.includes('bonnert') || val.includes('weyler') || val.includes('stockem')) {
+        resultText.innerHTML = "📍 <strong>Secteur Arlon Centre / Faubourgs</strong> : Fourgon atelier disponible à proximité immédiate. <strong>Arrivée en moins de 20 minutes garantie</strong>.";
+      } else if (val.includes('6780') || val.includes('messancy') || val.includes('6790') || val.includes('aubange') || val.includes('athus') || val.includes('habay') || val.includes('6720') || val.includes('attert') || val.includes('6717')) {
+        resultText.innerHTML = "📍 <strong>Secteur Sud-Luxembourg</strong> : Véhicule d'astreinte sur axes rapides N81 / E411. <strong>Arrivée en 20 à 30 minutes</strong>.";
+      } else if (val.includes('steinfort') || val.includes('8401') || val.includes('luxembourg') || val.includes('capellen') || val.includes('etalle') || val.includes('6740')) {
+        resultText.innerHTML = "📍 <strong>Corridor Frontalier & Communes Voisines</strong> : Dépannage transfrontalier actif. <strong>Arrivée en 25 à 35 minutes au tarif belge</strong>.";
+      } else {
+        resultText.innerHTML = `📍 Commune testée (${val}) : Prise en charge d'urgence confirmée en Province de Luxembourg. <strong>Arrivée moyenne 30 minutes</strong>.`;
+      }
+    });
+
+    postalInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        checkBtn.click();
+      }
+    });
+  }
+</script>

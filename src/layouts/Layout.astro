@@ -20,10 +20,10 @@ const {
   schemaType = 'Plumber'
 } = Astro.props;
 
-const siteUrl = 'https://plombier-arlon.be';
+const siteUrl = 'https://www.plombierarlon.be';
 const canonicalUrl = `${siteUrl}${canonicalPath ? canonicalPath : Astro.url.pathname}`;
 
-// Complete local business schema
+// Complete local business schema with full service catalog
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Plumber",
@@ -34,6 +34,8 @@ const jsonLd = {
   "telephone": "+32465286577",
   "email": "contact@plombierarlon.be",
   "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Bancontact, Credit Card, Bank Transfer",
   "image": `${siteUrl}/images/plombier-arlon-camionnette.webp`,
   "logo": `${siteUrl}/images/logo.png`,
   "address": {
@@ -62,10 +64,13 @@ const jsonLd = {
     { "@type": "AdministrativeArea", "name": "Bonnert" },
     { "@type": "AdministrativeArea", "name": "Weyler" },
     { "@type": "AdministrativeArea", "name": "Stockem" },
+    { "@type": "AdministrativeArea", "name": "Heinsch" },
     { "@type": "AdministrativeArea", "name": "Messancy" },
     { "@type": "AdministrativeArea", "name": "Aubange" },
+    { "@type": "AdministrativeArea", "name": "Athus" },
     { "@type": "AdministrativeArea", "name": "Habay" },
     { "@type": "AdministrativeArea", "name": "Attert" },
+    { "@type": "AdministrativeArea", "name": "Étalle" },
     { "@type": "City", "name": "Steinfort" },
     { "@type": "City", "name": "Capellen" }
   ],
@@ -74,6 +79,110 @@ const jsonLd = {
     "ratingValue": "4.9",
     "reviewCount": "184",
     "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Catalogue des Services de Plomberie & Chauffage Arlon",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Dépannage Plomberie d'Urgence",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dépannage Plomberie d'Urgence 24h/24",
+              "description": "Intervention d'urgence en moins de 30 minutes pour fuite d'eau, tuyau percé, vanne cassée ou inondation à Arlon et Sud-Luxembourg.",
+              "url": `${siteUrl}/services/depannage-urgence`
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Débouchage & Curage de Canalisations",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "95.00",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Débouchage & Hydrocurage Haute Pression",
+              "description": "Débouchage express de WC, canalisations, éviers, égouts et inspection vidéo par caméra endoscopique.",
+              "url": `${siteUrl}/services/debouchage`
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Recherche & Détection de Fuites",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "180.00",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Détection de Fuite d'Eau Non Destructive",
+              "description": "Recherche de fuite invisible par caméra thermique infrarouge, gaz traceur et corrélation acoustique avec rapport d'expertise assurance.",
+              "url": `${siteUrl}/services/detection-fuites`
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Chauffage & Chaudières",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "120.00",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entretien & Dépannage Chaudière / Boiler",
+              "description": "Entretien annuel agréé Région Wallonne (G1/G2/L), détartrage boiler et dépannage urgent de chauffage.",
+              "url": `${siteUrl}/services/chauffage-chaudieres`
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Installations Sanitaires & Rénovation",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rénovation de Salle de Bain & Sanitaires",
+              "description": "Pose de douche à l'italienne, WC suspendu Geberit, robinetterie thermostatique et plomberie sanitaire neuve.",
+              "url": `${siteUrl}/services/installations-sanitaires`
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Traitement de l'Eau & Adoucisseurs",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "1450.00",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation Adoucisseur d'Eau Anticalcaire",
+              "description": "Installation, réglage et entretien d'adoucisseurs d'eau volumétriques BWT pour lutter contre le calcaire sévère d'Arlon (+32 °fH).",
+              "url": `${siteUrl}/services/traitement-eau`
+            }
+          }
+        ]
+      }
+    ]
   }
 };
 ---
@@ -171,6 +280,9 @@ const jsonLd = {
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Page-Specific Head Injections (Service schemas, breadcrumbs, etc.) -->
+    <slot name="head" />
   </head>
 
   <body class="bg-background font-sans text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">

@@ -1,4 +1,37 @@
+# Robots.txt for Plombier Arlon (https://www.plombierarlon.be/)
+# Optimized for Web Crawlers, Search Engines & AI Search Assistants
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_astro/
 
-Sitemap: https://plombier-arlon.be/sitemap.xml
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI Retrieval & Answer Engine Bots (GEO / AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Canonical Host & Sitemap Directives
+Host: https://www.plombierarlon.be
+Sitemap: https://www.plombierarlon.be/sitemap.xml

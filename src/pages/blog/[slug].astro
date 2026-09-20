@@ -14,7 +14,7 @@ interface Props {
 }
 
 const { article } = Astro.props;
-const siteUrl = 'https://plombier-arlon.be';
+const siteUrl = 'https://www.plombierarlon.be';
 const canonicalUrl = `${siteUrl}/blog/${article.slug}`;
 
 // JSON-LD Structured Data: Article + FAQPage + BreadcrumbList
@@ -93,6 +93,7 @@ const articleSchema = {
 <Layout
   title={article.metaTitle}
   description={article.metaDescription}
+  canonicalPath={`/blog/${article.slug}`}
 >
   <!-- Inject Schema.org Graph in Head -->
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} is:inline slot="head" />

@@ -5,7 +5,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     slug: 'prix-plombier-arlon-2026',
     title: 'Combien coûte un plombier à Arlon en 2026 ?',
     metaTitle: 'Prix Plombier Arlon 2026 : Tarifs & Devis Dépannage',
-    metaDescription: "Quel est le prix d'un plombier à Arlon en 2026 ? Taux horaire, dépannage urgence soir/week-end, forfaits & devis gratuit au 0465 28 65 77.",
+    metaDescription: "Quel est le prix d'un plombier à Arlon en 2026 ? Taux horaire, dépannage urgence soir/week-end, forfaits & devis gratuit au 0465 93 71 87.",
     h1: 'Combien coûte un plombier à Arlon en 2026 ? Tarifs officiels et conseils d\'artisan',
     primaryKeyword: 'prix plombier arlon',
     secondaryKeywords: [
@@ -81,7 +81,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     </p>
     <div class="mt-4 pt-3 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-3 text-xs text-on-surface-variant">
       <span>📍 Zone : Arlon (6700) & communes limitrophes</span>
-      <a href="tel:0465286577" class="text-secondary font-bold hover:underline">Devis gratuit immédiat au 0465 28 65 77 &rarr;</a>
+      <a href="tel:0465937187" class="text-secondary font-bold hover:underline">Devis gratuit immédiat au 0465 93 71 87 &rarr;</a>
     </div>
   </div>
 
@@ -126,7 +126,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     slug: 'qui-paie-plombier-locataire-proprietaire-arlon',
     title: 'Qui paie le plombier à Arlon, le locataire ou le propriétaire ?',
     metaTitle: 'Qui paie le plombier à Arlon ? Locataire ou Propriétaire',
-    metaDescription: 'Répartition légale des frais de plomberie à Arlon selon le bail wallon : fuites, débouchage, boiler et robinetterie. Devis & dépannage au 0465 28 65 77.',
+    metaDescription: 'Répartition légale des frais de plomberie à Arlon selon le bail wallon : fuites, débouchage, boiler et robinetterie. Devis & dépannage au 0465 93 71 87.',
     h1: 'Qui paie le plombier à Arlon : locataire ou propriétaire ? Guide du bail wallon',
     primaryKeyword: 'qui paie plombier locataire proprietaire arlon',
     secondaryKeywords: [
@@ -223,7 +223,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
 
   <section id="demarches-en-urgence" class="space-y-4">
     <h2 class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">4. Que faire en urgence à Arlon ?</h2>
-    <p>En cas de fuite d'eau abondante la nuit ou le week-end, le locataire doit couper immédiatement la vanne d'arrêt principale de la maison. Si le propriétaire est injoignable, contactez notre service d'astreinte au <strong>0465 28 65 77</strong>. Nous réalisons une mise en sécurité conservatoire au tarif le plus strict et vous remettons une attestation technique détaillée à transmettre à votre bailleur et assurance.</p>
+    <p>En cas de fuite d'eau abondante la nuit ou le week-end, le locataire doit couper immédiatement la vanne d'arrêt principale de la maison. Si le propriétaire est injoignable, contactez notre service d'astreinte au <strong>0465 93 71 87</strong>. Nous réalisons une mise en sécurité conservatoire au tarif le plus strict et vous remettons une attestation technique détaillée à transmettre à votre bailleur et assurance.</p>
   </section>
 </div>
 `
@@ -232,7 +232,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     slug: 'tva-6-pourcent-plomberie-arlon-wallonie',
     title: 'Puis-je bénéficier de la TVA à 6 % pour des travaux de plomberie à Arlon ?',
     metaTitle: 'TVA 6 % Plomberie Arlon & Wallonie : Conditions & Éligibilité',
-    metaDescription: 'Comment payer 6 % de TVA au lieu de 21 % sur vos travaux de plomberie à Arlon ? Logement de +10 ans, attestations et devis d\'artisan au 0465 28 65 77.',
+    metaDescription: 'Comment payer 6 % de TVA au lieu de 21 % sur vos travaux de plomberie à Arlon ? Logement de +10 ans, attestations et devis d\'artisan au 0465 93 71 87.',
     h1: 'TVA réduite à 6 % sur la plomberie à Arlon : conditions, travaux éligibles et économies',
     primaryKeyword: 'tva 6 pourcent plomberie arlon wallonie',
     secondaryKeywords: [
@@ -323,7 +323,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     slug: 'primes-renovation-salle-de-bain-plomberie-wallonie-arlon',
     title: 'Existe-t-il des primes en Wallonie pour rénover une salle de bain ou la plomberie à Arlon ?',
     metaTitle: 'Primes Rénovation Plomberie & Salle de Bain Wallonie Arlon',
-    metaDescription: 'Quelles primes pour rénover vos sanitaires, boiler et plomberie à Arlon en Wallonie ? Primes Habitation, aides séniors et devis au 0465 28 65 77.',
+    metaDescription: 'Quelles primes pour rénover vos sanitaires, boiler et plomberie à Arlon en Wallonie ? Primes Habitation, aides séniors et devis au 0465 93 71 87.',
     h1: 'Primes et aides financières en Wallonie pour la plomberie et la salle de bain à Arlon',
     primaryKeyword: 'primes renovation salle de bain plomberie wallonie arlon',
     secondaryKeywords: [
@@ -399,7 +399,7 @@ export const clusterTarifsJuridique: BlogArticle[] = [
     slug: 'verifier-plombier-fiable-assure-bce-arlon',
     title: 'Comment vérifier qu’un plombier à Arlon est fiable, assuré et bien inscrit à la BCE ?',
     metaTitle: 'Comment vérifier un plombier à Arlon ? BCE, Assurances & Avis',
-    metaDescription: 'Évitez les arnaques de dépannage à Arlon : vérification du numéro BCE, assurances RC Pro/décennale, labels et avis clients. Conseils au 0465 28 65 77.',
+    metaDescription: 'Évitez les arnaques de dépannage à Arlon : vérification du numéro BCE, assurances RC Pro/décennale, labels et avis clients. Conseils au 0465 93 71 87.',
     h1: 'Comment vérifier qu\'un plombier à Arlon est fiable, agréé et enregistré à la BCE ?',
     primaryKeyword: 'verifier plombier fiable assure bce arlon',
     secondaryKeywords: [

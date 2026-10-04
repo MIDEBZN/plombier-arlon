@@ -5,7 +5,7 @@ export const clusterDebouchage: BlogArticle[] = [
     slug: 'prix-debouchage-wc-arlon',
     title: 'Combien coûte un débouchage de WC à Arlon ?',
     metaTitle: 'Prix Débouchage WC Arlon : Tarifs 2026 & Intervention Rapide',
-    metaDescription: 'Quel est le prix d\'un débouchage de WC à Arlon ? Forfait furet mécanique, hydrocurage haute pression et devis garanti. Appelez le 0465 28 65 77.',
+    metaDescription: 'Quel est le prix d\'un débouchage de WC à Arlon ? Forfait furet mécanique, hydrocurage haute pression et devis garanti. Appelez le 0465 93 71 87.',
     h1: 'Combien coûte un débouchage de WC à Arlon en 2026 ? Tarifs des méthodes mécaniques et haute pression',
     primaryKeyword: 'prix debouchage wc arlon',
     secondaryKeywords: [
@@ -60,7 +60,7 @@ export const clusterDebouchage: BlogArticle[] = [
       <span>Forfait Débouchage Garanti</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      WC totalement bloqué à Arlon ? N'attendez pas le débordement sur vos parquets. Notre technicien intervient avec matériel professionnel mécanique et haute pression sous 30 minutes au <strong>0465 28 65 77</strong>.
+      WC totalement bloqué à Arlon ? N'attendez pas le débordement sur vos parquets. Notre technicien intervient avec matériel professionnel mécanique et haute pression sous 30 minutes au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -102,7 +102,7 @@ export const clusterDebouchage: BlogArticle[] = [
     slug: 'prix-debouchage-canalisation-arlon',
     title: 'Combien coûte un débouchage de canalisation à Arlon ?',
     metaTitle: 'Prix Débouchage Canalisation Arlon : Hydrocurage & Tarifs 2026',
-    metaDescription: 'Combien coûte le curage ou débouchage de canalisation à Arlon ? Tarifs camion hydrocureur, furet et caméra d\'inspection. Appelez le 0465 28 65 77.',
+    metaDescription: 'Combien coûte le curage ou débouchage de canalisation à Arlon ? Tarifs camion hydrocureur, furet et caméra d\'inspection. Appelez le 0465 93 71 87.',
     h1: 'Combien coûte un débouchage de canalisation à Arlon en 2026 ? Grille tarifaire curage et hydrocurage',
     primaryKeyword: 'prix debouchage canalisation arlon',
     secondaryKeywords: [
@@ -152,7 +152,7 @@ export const clusterDebouchage: BlogArticle[] = [
       <span>Assainissement Haute Puissance</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Notre camion hydrocureur compact accède facilement aux cours et ruelles d'Arlon pour désobstruer vos canalisations jusqu'à 60 mètres de distance sous 200 bars de pression. Devis immédiat au <strong>0465 28 65 77</strong>.
+      Notre camion hydrocureur compact accède facilement aux cours et ruelles d'Arlon pour désobstruer vos canalisations jusqu'à 60 mètres de distance sous 200 bars de pression. Devis immédiat au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -171,7 +171,7 @@ export const clusterDebouchage: BlogArticle[] = [
     slug: 'odeur-canalisation-maison-quand-appeler-plombier-arlon',
     title: 'Pourquoi mes canalisations sentent-elles mauvais à Arlon et quand appeler un plombier ?',
     metaTitle: 'Mauvaises odeurs de canalisation à Arlon : Causes & Solutions',
-    metaDescription: 'Odeurs d\'égout ou d\'œuf pourri dans votre maison à Arlon ? Évent de ventilation, siphons désamorcés et diagnostic d\'artisan au 0465 28 65 77.',
+    metaDescription: 'Odeurs d\'égout ou d\'œuf pourri dans votre maison à Arlon ? Évent de ventilation, siphons désamorcés et diagnostic d\'artisan au 0465 93 71 87.',
     h1: 'Pourquoi vos canalisations sentent-elles mauvais à Arlon et quand faut-il appeler un professionnel ?',
     primaryKeyword: 'odeur canalisation maison quand appeler plombier arlon',
     secondaryKeywords: [
@@ -222,7 +222,7 @@ export const clusterDebouchage: BlogArticle[] = [
       <span>Confort & Hygiène de l'air</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      L'odeur d'égout n'est pas qu'une gêne olfactive : le sulfure d'hydrogène (H2S) est un gaz corrosif et irritant. Notre diagnostic étanchéité et pose d'aérateurs résout le problème définitivement au <strong>0465 28 65 77</strong>.
+      L'odeur d'égout n'est pas qu'une gêne olfactive : le sulfure d'hydrogène (H2S) est un gaz corrosif et irritant. Notre diagnostic étanchéité et pose d'aérateurs résout le problème définitivement au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -242,7 +242,7 @@ export const clusterDebouchage: BlogArticle[] = [
     slug: 'prix-inspection-camera-canalisations-arlon',
     title: 'Combien coûte une inspection caméra des canalisations à Arlon ?',
     metaTitle: 'Prix Inspection Caméra Canalisation Arlon : Devis & Vidéo HD',
-    metaDescription: 'Quel est le prix d\'une inspection caméra de canalisation à Arlon ? Diagnostic couleur HD, rapport pour assurance et devis au 0465 28 65 77.',
+    metaDescription: 'Quel est le prix d\'une inspection caméra de canalisation à Arlon ? Diagnostic couleur HD, rapport pour assurance et devis au 0465 93 71 87.',
     h1: 'Combien coûte une inspection caméra des canalisations à Arlon ? Tarifs du diagnostic vidéo HD',
     primaryKeyword: 'prix inspection camera canalisations arlon',
     secondaryKeywords: [
@@ -292,7 +292,7 @@ export const clusterDebouchage: BlogArticle[] = [
       <span>Diagnostic vidéo non destructif</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Visualisez l'intérieur de vos canalisations en haute définition sur notre écran de contrôle. Rapport vidéo et photos horodatées remis pour votre notaire ou assurance au <strong>0465 28 65 77</strong>.
+      Visualisez l'intérieur de vos canalisations en haute définition sur notre écran de contrôle. Rapport vidéo et photos horodatées remis pour votre notaire ou assurance au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -311,7 +311,7 @@ export const clusterDebouchage: BlogArticle[] = [
     slug: 'prix-debouchage-evier-arlon',
     title: 'Combien coûte le débouchage d’un évier à Arlon ?',
     metaTitle: 'Prix Débouchage Évier Arlon : Tarifs 2026 & Devis Garanti',
-    metaDescription: 'Évier de cuisine bouché à Arlon ? Découvrez le prix du débouchage professionnel par furet ou pompe. Intervention rapide sous 30 min au 0465 28 65 77.',
+    metaDescription: 'Évier de cuisine bouché à Arlon ? Découvrez le prix du débouchage professionnel par furet ou pompe. Intervention rapide sous 30 min au 0465 93 71 87.',
     h1: 'Combien coûte le débouchage d\'un évier de cuisine à Arlon en 2026 ? Tarifs et solutions durables',
     primaryKeyword: 'prix debouchage evier arlon',
     secondaryKeywords: [
@@ -361,7 +361,7 @@ export const clusterDebouchage: BlogArticle[] = [
       <span>Intervention Express Évier</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Évier engorgé à Arlon ? Nous nettoyons mécaniquement le siphon et la canalisation murale avec notre furet à spirale sans éclaboussure. Forfait dès 95 € HTVA au <strong>0465 28 65 77</strong>.
+      Évier engorgé à Arlon ? Nous nettoyons mécaniquement le siphon et la canalisation murale avec notre furet à spirale sans éclaboussure. Forfait dès 95 € HTVA au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 

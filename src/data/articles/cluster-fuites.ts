@@ -5,7 +5,7 @@ export const clusterFuites: BlogArticle[] = [
     slug: 'prix-detection-fuite-eau-infiltree-arlon',
     title: 'Combien coûte une détection de fuite d’eau cachée à Arlon ?',
     metaTitle: 'Prix Détection Fuite d’Eau Arlon : Caméra & Remboursé 100%',
-    metaDescription: 'Prix d\'une recherche de fuite d\'eau invisible à Arlon : caméra thermique, gaz traceur, rapport d\'expertise pour assurance. Appelez le 0465 28 65 77.',
+    metaDescription: 'Prix d\'une recherche de fuite d\'eau invisible à Arlon : caméra thermique, gaz traceur, rapport d\'expertise pour assurance. Appelez le 0465 93 71 87.',
     h1: 'Combien coûte une détection de fuite d\'eau cachée à Arlon ? Tarifs et prise en charge assurance',
     primaryKeyword: 'prix detection fuite eau infiltree arlon',
     secondaryKeywords: [
@@ -55,7 +55,7 @@ export const clusterFuites: BlogArticle[] = [
       <span>Agrément Compagnies d'Assurance</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Notre rapport d'expertise technique est directement reconnu par Ethias, AXA, AG Insurance, Baloise et DKV pour un remboursement sans franchise. Contactez nos experts au <strong>0465 28 65 77</strong>.
+      Notre rapport d'expertise technique est directement reconnu par Ethias, AXA, AG Insurance, Baloise et DKV pour un remboursement sans franchise. Contactez nos experts au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -74,7 +74,7 @@ export const clusterFuites: BlogArticle[] = [
     slug: 'pourquoi-pression-eau-faible-maison-arlon',
     title: 'Pourquoi la pression d’eau est-elle faible chez moi à Arlon ?',
     metaTitle: 'Pression d’eau faible à Arlon : Causes & Solutions d’Artisan',
-    metaDescription: 'Baisse de pression d\'eau à Arlon ? Réducteur de pression entartré, filtre bouché, fuite souterraine ou réseau SWDE. Diagnostic au 0465 28 65 77.',
+    metaDescription: 'Baisse de pression d\'eau à Arlon ? Réducteur de pression entartré, filtre bouché, fuite souterraine ou réseau SWDE. Diagnostic au 0465 93 71 87.',
     h1: 'Pourquoi la pression d\'eau est-elle faible dans votre maison à Arlon ? Diagnostic et solutions',
     primaryKeyword: 'pourquoi pression eau faible maison arlon',
     secondaryKeywords: [
@@ -124,7 +124,7 @@ export const clusterFuites: BlogArticle[] = [
       <span>Confort Sanitaire Quotidien</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Retrouvez un débit généreux sous la douche. Notre diagnostic manométrique mesure avec précision la pression statique et dynamique de votre habitation au <strong>0465 28 65 77</strong>.
+      Retrouvez un débit généreux sous la douche. Notre diagnostic manométrique mesure avec précision la pression statique et dynamique de votre habitation au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -144,7 +144,7 @@ export const clusterFuites: BlogArticle[] = [
     slug: 'assurance-habitation-remboursement-fuite-eau-arlon',
     title: 'Mon assurance habitation rembourse-t-elle la recherche ou la réparation d’une fuite à Arlon ?',
     metaTitle: 'Assurance et Fuite d’eau à Arlon : Remboursement & Expertise',
-    metaDescription: 'Votre assurance habitation couvre-t-elle la détection et réparation de fuite à Arlon ? Conseils, démarches et devis pour l\'expert au 0465 28 65 77.',
+    metaDescription: 'Votre assurance habitation couvre-t-elle la détection et réparation de fuite à Arlon ? Conseils, démarches et devis pour l\'expert au 0465 93 71 87.',
     h1: 'L\'assurance habitation rembourse-t-elle la recherche et la réparation de fuite d\'eau à Arlon ? Le guide d\'expert',
     primaryKeyword: 'assurance habitation remboursement fuite eau arlon',
     secondaryKeywords: [
@@ -194,7 +194,7 @@ export const clusterFuites: BlogArticle[] = [
       <span>Accompagnement Sinistre Assuré</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Nous rédigeons pour vous le rapport technique d'expertise complet (causes, photos thermiques, schémas, devis de remise en état) pour une indemnisation rapide par votre assureur au <strong>0465 28 65 77</strong>.
+      Nous rédigeons pour vous le rapport technique d'expertise complet (causes, photos thermiques, schémas, devis de remise en état) pour une indemnisation rapide par votre assureur au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -209,7 +209,7 @@ export const clusterFuites: BlogArticle[] = [
     slug: 'prix-reparation-robinet-qui-fuit-arlon',
     title: 'Combien coûte la réparation d’un robinet qui fuit à Arlon ?',
     metaTitle: 'Prix Réparation Robinet qui fuit Arlon : Tarifs & Dépannage',
-    metaDescription: 'Robinet ou mitigeur qui goutte à Arlon ? Prix de réparation, remplacement de cartouche céramique Grohe et devis au 0465 28 65 77.',
+    metaDescription: 'Robinet ou mitigeur qui goutte à Arlon ? Prix de réparation, remplacement de cartouche céramique Grohe et devis au 0465 93 71 87.',
     h1: 'Combien coûte la réparation d\'un robinet qui fuit à Arlon en 2026 ? Tarifs cartouches et pose',
     primaryKeyword: 'prix reparation robinet qui fuit arlon',
     secondaryKeywords: [
@@ -259,7 +259,7 @@ export const clusterFuites: BlogArticle[] = [
       <span>Économies d'eau immédiates</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Un robinet qui fuit goutte à goutte gaspille en moyenne 40 m³ d'eau par an, soit plus de 220 € sur votre facture SWDE. Réparation express le jour même au <strong>0465 28 65 77</strong>.
+      Un robinet qui fuit goutte à goutte gaspille en moyenne 40 m³ d'eau par an, soit plus de 220 € sur votre facture SWDE. Réparation express le jour même au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -278,7 +278,7 @@ export const clusterFuites: BlogArticle[] = [
     slug: 'prix-reparation-chasse-eau-qui-coule-arlon',
     title: 'Combien coûte la réparation d’une chasse d’eau qui coule à Arlon ?',
     metaTitle: 'Prix Réparation Chasse d’Eau qui coule Arlon : Devis & Pose',
-    metaDescription: 'Chasse d\'eau WC qui coule en continu à Arlon ? Remplacement flotteur, joint Geberit encastré et devis immédiat au 0465 28 65 77.',
+    metaDescription: 'Chasse d\'eau WC qui coule en continu à Arlon ? Remplacement flotteur, joint Geberit encastré et devis immédiat au 0465 93 71 87.',
     h1: 'Combien coûte la réparation d\'une chasse d\'eau qui coule en continu à Arlon en 2026 ?',
     primaryKeyword: 'prix reparation chasse eau qui coule arlon',
     secondaryKeywords: [
@@ -328,7 +328,7 @@ export const clusterFuites: BlogArticle[] = [
       <span>Alerte Surconsommation</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Une chasse d'eau qui coule en permanence peut gaspiller jusqu'à 600 litres d'eau par jour, soit un surcoût annuel de plus de 1 000 € sur votre facture d'eau. Intervention express sous 30 min au <strong>0465 28 65 77</strong>.
+      Une chasse d'eau qui coule en permanence peut gaspiller jusqu'à 600 litres d'eau par jour, soit un surcoût annuel de plus de 1 000 € sur votre facture d'eau. Intervention express sous 30 min au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 

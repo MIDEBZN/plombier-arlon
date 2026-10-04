@@ -5,7 +5,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
     slug: 'prix-renovation-salle-de-bain-arlon',
     title: 'Combien coûte une rénovation de salle de bain à Arlon ?',
     metaTitle: 'Prix Rénovation Salle de Bain Arlon : Devis Clé en Main 2026',
-    metaDescription: 'Combien coûte la rénovation complète d\'une salle de bain à Arlon ? Tarifs sanitaires, carrelage, plomberie et devis gratuit au 0465 28 65 77.',
+    metaDescription: 'Combien coûte la rénovation complète d\'une salle de bain à Arlon ? Tarifs sanitaires, carrelage, plomberie et devis gratuit au 0465 93 71 87.',
     h1: 'Combien coûte une rénovation de salle de bain à Arlon en 2026 ? Budget et conseils d\'artisan',
     primaryKeyword: 'prix renovation salle de bain arlon',
     secondaryKeywords: [
@@ -55,7 +55,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
       <span>Projet Clé en Main</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      De la conception 3D jusqu'au joint de silicone final : un seul interlocuteur artisan pour l'ensemble de votre salle de bain à Arlon. Devis détaillé sans engagement au <strong>0465 28 65 77</strong>.
+      De la conception 3D jusqu'au joint de silicone final : un seul interlocuteur artisan pour l'ensemble de votre salle de bain à Arlon. Devis détaillé sans engagement au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -74,7 +74,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
     slug: 'prix-installation-douche-italienne-arlon',
     title: 'Combien coûte l’installation d’une douche à l’italienne à Arlon ?',
     metaTitle: 'Prix Douche à l’Italienne Arlon : Tarifs & Pose 2026',
-    metaDescription: 'Combien coûte une douche à l\'italienne de plain-pied à Arlon ? Étanchéité Schlüter, caniveau inox, paroi verre et devis au 0465 28 65 77.',
+    metaDescription: 'Combien coûte une douche à l\'italienne de plain-pied à Arlon ? Étanchéité Schlüter, caniveau inox, paroi verre et devis au 0465 93 71 87.',
     h1: 'Combien coûte l\'installation d\'une douche à l\'italienne à Arlon en 2026 ? Tarifs receveur et étanchéité',
     primaryKeyword: 'prix installation douche italienne arlon',
     secondaryKeywords: [
@@ -124,7 +124,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
       <span>Garantie Étanchéité 10 Ans</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Une douche à l'italienne réussie ne tolère aucun défaut d'étanchéité sous peine de ravager le plafond du voisin ou de l'étage inférieur. Confiez votre installation à nos maîtres artisans au <strong>0465 28 65 77</strong>.
+      Une douche à l'italienne réussie ne tolère aucun défaut d'étanchéité sous peine de ravager le plafond du voisin ou de l'étage inférieur. Confiez votre installation à nos maîtres artisans au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -143,7 +143,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
     slug: 'prix-remplacement-baignoire-par-douche-arlon',
     title: 'Combien coûte le remplacement d’une baignoire par une douche à Arlon ?',
     metaTitle: 'Remplacement Baignoire par Douche Arlon : Prix & Travaux 2026',
-    metaDescription: 'Remplacez votre baignoire par une douche spacieuse et sécurisée à Arlon. Intervention en 48h, primes seniors possibles. Devis au 0465 28 65 77.',
+    metaDescription: 'Remplacez votre baignoire par une douche spacieuse et sécurisée à Arlon. Intervention en 48h, primes seniors possibles. Devis au 0465 93 71 87.',
     h1: 'Combien coûte le remplacement d\'une baignoire par une douche à Arlon en 2026 ? Travaux en 48h',
     primaryKeyword: 'prix remplacement baignoire par douche arlon',
     secondaryKeywords: [
@@ -193,7 +193,7 @@ export const clusterRenovationSanitaire: BlogArticle[] = [
       <span>Sécurité & Confort Quotidien</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Transformez votre baignoire en douche de plain-pied spacieuse avec receveur antidérapant PN24 classe C et barres de maintien ergonomiques. Devis gratuit au <strong>0465 28 65 77</strong>.
+      Transformez votre baignoire en douche de plain-pied spacieuse avec receveur antidérapant PN24 classe C et barres de maintien ergonomiques. Devis gratuit au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 

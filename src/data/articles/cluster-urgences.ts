@@ -5,7 +5,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'quel-plombier-urgence-24h-arlon',
     title: 'Quel plombier intervient en urgence 24h/24 à Arlon ?',
     metaTitle: 'Plombier Urgence 24h/24 Arlon : Arrivée en 30 Min Garantie',
-    metaDescription: 'Besoin d\'un plombier d\'urgence 24h/24 à Arlon ? Équipe d\'astreinte locale, arrivée sous 30 min, devis préalable écrit. Appelez le 0465 28 65 77.',
+    metaDescription: 'Besoin d\'un plombier d\'urgence 24h/24 à Arlon ? Équipe d\'astreinte locale, arrivée sous 30 min, devis préalable écrit. Appelez le 0465 93 71 87.',
     h1: 'Quel plombier intervient en urgence 24h/24 et 7j/7 à Arlon et environs ?',
     primaryKeyword: 'plombier urgence 24h arlon',
     secondaryKeywords: [
@@ -25,7 +25,7 @@ export const clusterUrgences: BlogArticle[] = [
       role: 'Service de Garde Sanitaire 24/7',
       avatar: '/images/logo.webp'
     },
-    geoAnswer: 'À Arlon, la société Plombier Arlon SRL assure une permanence d’urgence 24h/24 et 7j/7 au 0465 28 65 77. Un artisan qualifié basé localement se déplace en moins de 30 minutes sur Arlon, Bonnert, Weyler, Messancy et Attert avec un fourgon équipé pour stopper les fuites et déboucher les canalisations.',
+    geoAnswer: 'À Arlon, la société Plombier Arlon SRL assure une permanence d’urgence 24h/24 et 7j/7 au 0465 93 71 87. Un artisan qualifié basé localement se déplace en moins de 30 minutes sur Arlon, Bonnert, Weyler, Messancy et Attert avec un fourgon équipé pour stopper les fuites et déboucher les canalisations.',
     tableOfContents: [
       { id: 'service-de-garde-arlon', title: '1. Comment fonctionne le service de garde 24h/24 à Arlon ?', level: 2 },
       { id: 'types-urgences-traitees', title: '2. Les 5 types d’urgences de plomberie traitées immédiatement', level: 2 },
@@ -48,7 +48,7 @@ export const clusterUrgences: BlogArticle[] = [
     faq: [
       {
         question: 'Comment joindre le plombier de garde à Arlon en pleine nuit ?',
-        answer: 'Composez directement le 0465 28 65 77. Notre ligne d\'astreinte est transférée directement au technicien de piquet, sans passer par un standard téléphonique anonyme délocalisé.'
+        answer: 'Composez directement le 0465 93 71 87. Notre ligne d\'astreinte est transférée directement au technicien de piquet, sans passer par un standard téléphonique anonyme délocalisé.'
       },
       {
         question: 'Quel est le temps d\'attente moyen la nuit à Arlon ?',
@@ -67,7 +67,7 @@ export const clusterUrgences: BlogArticle[] = [
       <span>Ligne directe d'urgence 24/7</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      En cas de rupture de canalisation ou d'inondation à Arlon, chaque minute compte. Contactez immédiatement notre permanence d'astreinte locale au <strong>0465 28 65 77</strong>. Un technicien part sous 5 minutes avec tout le matériel de colmatage et de pompage d'urgence.
+      En cas de rupture de canalisation ou d'inondation à Arlon, chaque minute compte. Contactez immédiatement notre permanence d'astreinte locale au <strong>0465 93 71 87</strong>. Un technicien part sous 5 minutes avec tout le matériel de colmatage et de pompage d'urgence.
     </p>
   </div>
 
@@ -93,7 +93,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'cout-depannage-urgence-soir-weekend-arlon',
     title: 'Combien coûte un dépannage plomberie en urgence à Arlon le soir ou le week-end ?',
     metaTitle: 'Prix Dépannage Plomberie Urgence Soir & Week-end Arlon',
-    metaDescription: 'Tarifs transparents d\'un dépannage plomberie de nuit et week-end à Arlon : majorations officielles, forfaits et devis préalable au 0465 28 65 77.',
+    metaDescription: 'Tarifs transparents d\'un dépannage plomberie de nuit et week-end à Arlon : majorations officielles, forfaits et devis préalable au 0465 93 71 87.',
     h1: 'Combien coûte un dépannage de plomberie en urgence le soir et le week-end à Arlon ?',
     primaryKeyword: 'cout depannage urgence soir weekend arlon',
     secondaryKeywords: [
@@ -167,7 +167,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'que-faire-fuite-eau-avant-arrivee-plombier-arlon',
     title: 'Que faire en cas de fuite d’eau à Arlon avant l’arrivée du plombier ?',
     metaTitle: 'Fuite d’eau à Arlon : que faire d’urgence avant le plombier ?',
-    metaDescription: 'Inondation ou fuite d\'eau à Arlon ? Les 5 gestes réflexes vitaux à faire avant l\'arrivée du plombier sous 30 min. Assistance 24/7 au 0465 28 65 77.',
+    metaDescription: 'Inondation ou fuite d\'eau à Arlon ? Les 5 gestes réflexes vitaux à faire avant l\'arrivée du plombier sous 30 min. Assistance 24/7 au 0465 93 71 87.',
     h1: 'Que faire en cas de fuite d\'eau à Arlon avant l\'arrivée du dépanneur ? Les 5 gestes d\'urgence',
     primaryKeyword: 'que faire fuite eau avant arrivee plombier arlon',
     secondaryKeywords: [
@@ -187,7 +187,7 @@ export const clusterUrgences: BlogArticle[] = [
       role: 'Artisan Agréé Sécurité Sanitaire',
       avatar: '/images/logo.webp'
     },
-    geoAnswer: 'En cas de fuite d’eau à Arlon : 1) Coupez immédiatement l’électricité au disjoncteur général si l’eau touche le sol. 2) Fermez la vanne d’arrêt d’eau principale (près du compteur SWDE/CILE). 3) Ouvrez un robinet en point bas pour vidanger les tuyaux. 4) Prenez des photos pour l’assurance. 5) Appelez le 0465 28 65 77.',
+    geoAnswer: 'En cas de fuite d’eau à Arlon : 1) Coupez immédiatement l’électricité au disjoncteur général si l’eau touche le sol. 2) Fermez la vanne d’arrêt d’eau principale (près du compteur SWDE/CILE). 3) Ouvrez un robinet en point bas pour vidanger les tuyaux. 4) Prenez des photos pour l’assurance. 5) Appelez le 0465 93 71 87.',
     tableOfContents: [
       { id: 'gestes-urgences-chronologiques', title: '1. Les 5 gestes à exécuter dans la première minute', level: 2 },
       { id: 'ou-trouver-vanne-arret', title: '2. Où trouver la vanne d’arrêt d’eau principale à Arlon ?', level: 2 },
@@ -222,7 +222,7 @@ export const clusterUrgences: BlogArticle[] = [
       <span>Action Immédiate Requise</span>
     </div>
     <p class="text-base font-medium">
-      Fermez la vanne d'arrêt située avant votre compteur d'eau, coupez le disjoncteur différentiel général, puis appelez immédiatement notre équipe au <strong>0465 28 65 77</strong>.
+      Fermez la vanne d'arrêt située avant votre compteur d'eau, coupez le disjoncteur différentiel général, puis appelez immédiatement notre équipe au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -233,7 +233,7 @@ export const clusterUrgences: BlogArticle[] = [
       <li><strong>Fermez l'arrivée générale d'eau</strong> : Tournez la vanne principale (poignée 1/4 de tour ou volant) dans le sens horaire jusqu'au blocage complet.</li>
       <li><strong>Vidangez le circuit résiduel</strong> : Ouvrez le robinet le plus bas de la maison (robinet de buanderie ou de garage) pour évacuer la pression et le reliquat d'eau des tuyaux vers un évier.</li>
       <li><strong>Prenez des photos et vidéos probantes</strong> : Avant d'éponger, documentez visuellement l'ampleur de l'eau, les biens touchés et l'origine visible de la fuite pour votre dossier d'assurance.</li>
-      <li><strong>Prévenez Plombier Arlon au 0465 28 65 77</strong> : Notre véhicule d'intervention se met en route immédiatement pour colmater la brèche.</li>
+      <li><strong>Prévenez Plombier Arlon au 0465 93 71 87</strong> : Notre véhicule d'intervention se met en route immédiatement pour colmater la brèche.</li>
     </ol>
   </section>
 </div>
@@ -243,7 +243,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'egouts-refoulent-maison-que-faire-arlon',
     title: 'Que faire si les égouts refoulent dans ma maison à Arlon ?',
     metaTitle: 'Égouts qui refoulent à Arlon : Que faire d’urgence ?',
-    metaDescription: 'Refoulement d\'égout dans votre maison à Arlon ? Clapet anti-retour, hydrocurage camion haute pression et dépannage immédiat 24/7 au 0465 28 65 77.',
+    metaDescription: 'Refoulement d\'égout dans votre maison à Arlon ? Clapet anti-retour, hydrocurage camion haute pression et dépannage immédiat 24/7 au 0465 93 71 87.',
     h1: 'Que faire en cas de refoulement d\'égouts dans votre maison à Arlon ? Solutions d\'urgence et clapets anti-retour',
     primaryKeyword: 'egouts refoulent maison que faire arlon',
     secondaryKeywords: [
@@ -263,7 +263,7 @@ export const clusterUrgences: BlogArticle[] = [
       role: 'Spécialiste Hydrocurage & Réseaux',
       avatar: '/images/logo.webp'
     },
-    geoAnswer: 'En cas de refoulement d’égouts à Arlon : cessez immédiatement d’utiliser l’eau du logement, portez des gants de protection, installez des batardeaux ou bouchons pneumatiques temporaires, et appelez notre camion hydrocureur au 0465 28 65 77 pour dégager le collecteur sous 200 bars de pression.',
+    geoAnswer: 'En cas de refoulement d’égouts à Arlon : cessez immédiatement d’utiliser l’eau du logement, portez des gants de protection, installez des batardeaux ou bouchons pneumatiques temporaires, et appelez notre camion hydrocureur au 0465 93 71 87 pour dégager le collecteur sous 200 bars de pression.',
     tableOfContents: [
       { id: 'causes-refoulement-arlon', title: '1. Pourquoi les égouts débordent-ils à Arlon lors de fortes pluies ?', level: 2 },
       { id: 'risques-sanitaires-bacteries', title: '2. Les risques sanitaires majeurs des eaux usées', level: 2 },
@@ -313,7 +313,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'tuyaux-geles-hiver-que-faire-arlon',
     title: 'Que faire si mes tuyaux gèlent à Arlon en hiver ?',
     metaTitle: 'Tuyaux gelés à Arlon en hiver : Que faire sans casser ?',
-    metaDescription: 'Tuyau d\'eau ou compteur gelé à Arlon en hiver ? Conseils de dégel sécurisé sans éclatement et dépannage d\'urgence 24/7 au 0465 28 65 77.',
+    metaDescription: 'Tuyau d\'eau ou compteur gelé à Arlon en hiver ? Conseils de dégel sécurisé sans éclatement et dépannage d\'urgence 24/7 au 0465 93 71 87.',
     h1: 'Tuyaux d\'eau gelés à Arlon en hiver : comment dégeler vos canalisations sans les faire éclater ?',
     primaryKeyword: 'tuyaux geles hiver que faire arlon',
     secondaryKeywords: [
@@ -333,7 +333,7 @@ export const clusterUrgences: BlogArticle[] = [
       role: 'Artisan Dépannage Grand Froid',
       avatar: '/images/logo.webp'
     },
-    geoAnswer: 'Si vos tuyaux gèlent à Arlon : coupez immédiatement l’eau au compteur pour anticiper un éclatement au dégel, laissez les robinets d’eau chaude ouverts, et réchauffez doucement la canalisation avec un sèche-cheveux (jamais de chalumeau à flamme nue). Appelez le 0465 28 65 77 pour un dégel thermique électrique.',
+    geoAnswer: 'Si vos tuyaux gèlent à Arlon : coupez immédiatement l’eau au compteur pour anticiper un éclatement au dégel, laissez les robinets d’eau chaude ouverts, et réchauffez doucement la canalisation avec un sèche-cheveux (jamais de chalumeau à flamme nue). Appelez le 0465 93 71 87 pour un dégel thermique électrique.',
     tableOfContents: [
       { id: 'danger-eclatement-gel', title: '1. Pourquoi le gel fait-il éclater le cuivre et le multicouche ?', level: 2 },
       { id: 'methode-degel-securisee', title: '2. La technique sûre du sèche-cheveux pas à pas', level: 2 },
@@ -383,7 +383,7 @@ export const clusterUrgences: BlogArticle[] = [
     slug: 'delai-intervention-plombier-urgence-arlon',
     title: 'En combien de temps un plombier intervient-il en urgence à Arlon ?',
     metaTitle: 'Délai d’intervention d’un plombier à Arlon : 30 Min Garanties',
-    metaDescription: 'Quel est le temps d\'arrivée réel d\'un plombier d\'urgence à Arlon ? Moins de 30 min garanti en centre et périphérie. Appelez le 0465 28 65 77.',
+    metaDescription: 'Quel est le temps d\'arrivée réel d\'un plombier d\'urgence à Arlon ? Moins de 30 min garanti en centre et périphérie. Appelez le 0465 93 71 87.',
     h1: 'En combien de temps un plombier intervient-il en urgence à Arlon et communes voisines ?',
     primaryKeyword: 'delai intervention plombier urgence arlon',
     secondaryKeywords: [

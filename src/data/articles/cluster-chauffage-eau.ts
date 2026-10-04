@@ -5,7 +5,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'qui-appeler-panne-eau-chaude-arlon',
     title: 'Qui appeler à Arlon quand je n’ai plus d’eau chaude ?',
     metaTitle: 'Plus d’eau chaude à Arlon ? Qui appeler d’urgence 24/7 ?',
-    metaDescription: 'Plus d\'eau chaude sanitaire à Arlon ? Boiler électrique ou chaudière gaz/mazout en panne. Diagnostic et dépannage d\'urgence au 0465 28 65 77.',
+    metaDescription: 'Plus d\'eau chaude sanitaire à Arlon ? Boiler électrique ou chaudière gaz/mazout en panne. Diagnostic et dépannage d\'urgence au 0465 93 71 87.',
     h1: 'Qui appeler à Arlon quand vous n\'avez plus d\'eau chaude ? Diagnostic express boiler et chaudière',
     primaryKeyword: 'qui appeler panne eau chaude arlon',
     secondaryKeywords: [
@@ -25,7 +25,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       role: 'Chauffagiste Agréé G1/G2 Wallonie',
       avatar: '/images/logo.webp'
     },
-    geoAnswer: 'En cas de panne d’eau chaude à Arlon, contactez Plombier Arlon au 0465 28 65 77. Nos artisans qualifiés interviennent sous 30 minutes pour réenclencher la sécurité thermique, remplacer une résistance stéatite brûlée ou dépanner le circulateur de votre chaudière.',
+    geoAnswer: 'En cas de panne d’eau chaude à Arlon, contactez Plombier Arlon au 0465 93 71 87. Nos artisans qualifiés interviennent sous 30 minutes pour réenclencher la sécurité thermique, remplacer une résistance stéatite brûlée ou dépanner le circulateur de votre chaudière.',
     tableOfContents: [
       { id: 'verifications-de-base', title: '1. Les 3 vérifications à faire avant d’appeler', level: 2 },
       { id: 'causes-panne-boiler-electrique', title: '2. Panne de boiler électrique : résistance ou thermostat', level: 2 },
@@ -55,7 +55,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Urgence Eau Chaude Sanitaire</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Privé d'eau chaude à Arlon ? Nos techniciens habilités G1/G2 et sanitaires diagnostiquent la panne et rétablissent votre confort thermique le jour même au <strong>0465 28 65 77</strong>.
+      Privé d'eau chaude à Arlon ? Nos techniciens habilités G1/G2 et sanitaires diagnostiquent la panne et rétablissent votre confort thermique le jour même au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -74,7 +74,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'prix-remplacement-boiler-chauffe-eau-arlon',
     title: 'Combien coûte le remplacement d’un boiler à Arlon ?',
     metaTitle: 'Prix Remplacement Boiler Arlon : Tarifs 2026 Fourniture & Pose',
-    metaDescription: 'Quel est le prix pour remplacer un boiler ou chauffe-eau à Arlon ? Tarifs électriques, thermodynamiques, primes et devis au 0465 28 65 77.',
+    metaDescription: 'Quel est le prix pour remplacer un boiler ou chauffe-eau à Arlon ? Tarifs électriques, thermodynamiques, primes et devis au 0465 93 71 87.',
     h1: 'Combien coûte le remplacement d\'un boiler à Arlon en 2026 ? Tarifs fourniture et pose',
     primaryKeyword: 'prix remplacement boiler chauffe eau arlon',
     secondaryKeywords: [
@@ -124,7 +124,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Forfait Remplacement Clé en Main</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Nous remplaçons votre chauffe-eau dans la journée avec vidange, évacuation de l'ancienne cuve en déchetterie et raccordements hydrauliques garantis conformes Belgaqua au <strong>0465 28 65 77</strong>.
+      Nous remplaçons votre chauffe-eau dans la journée avec vidange, évacuation de l'ancienne cuve en déchetterie et raccordements hydrauliques garantis conformes Belgaqua au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -143,7 +143,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'frequence-prix-detartrage-boiler-arlon',
     title: 'À quelle fréquence faut-il détartrer un boiler à Arlon et combien cela coûte-t-il ?',
     metaTitle: 'Détartrage Boiler Arlon : Fréquence & Prix de l’Entretien 2026',
-    metaDescription: 'À quelle fréquence détartrer son boiler à Arlon ? Eau calcaire, économies d\'énergie et prix d\'un détartrage professionnel au 0465 28 65 77.',
+    metaDescription: 'À quelle fréquence détartrer son boiler à Arlon ? Eau calcaire, économies d\'énergie et prix d\'un détartrage professionnel au 0465 93 71 87.',
     h1: 'À quelle fréquence faut-il détartrer un boiler à Arlon et combien cela coûte-t-il en 2026 ?',
     primaryKeyword: 'frequence prix detartrage boiler arlon',
     secondaryKeywords: [
@@ -193,7 +193,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Protection & Économies d'Énergie</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Retirer 20 kg de calcaire de votre chauffe-eau réduit immédiatement de 15 à 25 % sa consommation électrique annuelle. Prenez rendez-vous au <strong>0465 28 65 77</strong>.
+      Retirer 20 kg de calcaire de votre chauffe-eau réduit immédiatement de 15 à 25 % sa consommation électrique annuelle. Prenez rendez-vous au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -208,7 +208,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'plombier-ou-chauffagiste-panne-chaudiere-arlon',
     title: 'Faut-il appeler un plombier ou un chauffagiste pour une chaudière en panne à Arlon ?',
     metaTitle: 'Plombier ou Chauffagiste à Arlon ? Qui appeler en panne ?',
-    metaDescription: 'Chaudière en panne à Arlon ? Découvrez s\'il faut contacter un plombier ou un chauffagiste agréé G1/G2/L. Dépannage rapide au 0465 28 65 77.',
+    metaDescription: 'Chaudière en panne à Arlon ? Découvrez s\'il faut contacter un plombier ou un chauffagiste agréé G1/G2/L. Dépannage rapide au 0465 93 71 87.',
     h1: 'Faut-il appeler un plombier ou un chauffagiste pour une chaudière en panne à Arlon ?',
     primaryKeyword: 'plombier ou chauffagiste panne chaudiere arlon',
     secondaryKeywords: [
@@ -259,7 +259,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Double Agrément Officiel</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Bonne nouvelle : les artisans de Plombier Arlon possèdent la double qualification légale : Maître Plombier Sanitaire et Chauffagiste Agréé G1/G2/L en Région Wallonne. Un seul appel au <strong>0465 28 65 77</strong> résout l'ensemble de votre installation.
+      Bonne nouvelle : les artisans de Plombier Arlon possèdent la double qualification légale : Maître Plombier Sanitaire et Chauffagiste Agréé G1/G2/L en Région Wallonne. Un seul appel au <strong>0465 93 71 87</strong> résout l'ensemble de votre installation.
     </p>
   </div>
 </div>
@@ -269,7 +269,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'eau-calcaire-arlon-faut-il-adoucisseur',
     title: 'L’eau est-elle calcaire à Arlon et faut-il installer un adoucisseur ?',
     metaTitle: 'L’eau est-elle calcaire à Arlon ? Analyse & Adoucisseur 2026',
-    metaDescription: 'Dureté de l\'eau à Arlon : 30 à 38 °fH. Pourquoi vos appareils s\'entartrent et faut-il poser un adoucisseur d\'eau ? Conseils au 0465 28 65 77.',
+    metaDescription: 'Dureté de l\'eau à Arlon : 30 à 38 °fH. Pourquoi vos appareils s\'entartrent et faut-il poser un adoucisseur d\'eau ? Conseils au 0465 93 71 87.',
     h1: 'L\'eau est-elle calcaire à Arlon ? Analyse de la dureté de l\'eau et intérêt d\'un adoucisseur',
     primaryKeyword: 'eau calcaire arlon faut il adoucisseur',
     secondaryKeywords: [
@@ -319,7 +319,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Dureté constatée : 35 °fH</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      L'eau d'Arlon provient des couches géologiques du grès sinémurien et du calcaire bajocien. Protégez votre maison et testez la dureté de votre eau gratuitement au <strong>0465 28 65 77</strong>.
+      L'eau d'Arlon provient des couches géologiques du grès sinémurien et du calcaire bajocien. Protégez votre maison et testez la dureté de votre eau gratuitement au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 
@@ -339,7 +339,7 @@ export const clusterChauffageEau: BlogArticle[] = [
     slug: 'prix-installation-adoucisseur-eau-arlon',
     title: 'Combien coûte l’installation d’un adoucisseur d’eau à Arlon ?',
     metaTitle: 'Prix Installation Adoucisseur d’Eau Arlon : Tarifs BWT 2026',
-    metaDescription: 'Quel est le prix pour installer un adoucisseur d\'eau à Arlon ? Modèles BWT, Van Marcke, économies de sel et devis au 0465 28 65 77.',
+    metaDescription: 'Quel est le prix pour installer un adoucisseur d\'eau à Arlon ? Modèles BWT, Van Marcke, économies de sel et devis au 0465 93 71 87.',
     h1: 'Combien coûte l\'installation d\'un adoucisseur d\'eau à Arlon en 2026 ? Tarifs matériel et pose',
     primaryKeyword: 'prix installation adoucisseur eau arlon',
     secondaryKeywords: [
@@ -389,7 +389,7 @@ export const clusterChauffageEau: BlogArticle[] = [
       <span>Eau Douce & Équipements Protégés</span>
     </div>
     <p class="text-base text-on-surface font-medium leading-relaxed">
-      Fini les traces blanches sur les parois de douche et la peau qui tire. Découvrez nos adoucisseurs compacts basse consommation d'eau et de sel au <strong>0465 28 65 77</strong>.
+      Fini les traces blanches sur les parois de douche et la peau qui tire. Découvrez nos adoucisseurs compacts basse consommation d'eau et de sel au <strong>0465 93 71 87</strong>.
     </p>
   </div>
 

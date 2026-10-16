@@ -25,7 +25,7 @@ export default {
         "inverse-primary": "#abc7fb",
         "surface-container-high": "#e1e8ff",
         "surface-container-low": "#f1f3ff",
-        "outline": "#747780",
+        "outline": "#4a505c",
         "on-secondary-fixed-variant": "#92001c",
         "primary-fixed-dim": "#abc7fb",
         "surface-dim": "#d1daf4",

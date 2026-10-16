@@ -25,12 +25,14 @@
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_subject" value="Nouvelle Demande d'Intervention - Plombier Arlon" />
     <input type="hidden" name="_template" value="table" />
-    <input type="text" name="_honey" style="display:none" />
+    <input type="text" id="quote-honey" name="_honey" style="display:none" tabindex="-1" aria-hidden="true" autocomplete="off" aria-label="Ne pas remplir" />
 
     <div>
-      <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Votre Nom & Prénom *</label>
+      <label for="quote-nom" class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Votre Nom & Prénom *</label>
       <input 
+        id="quote-nom"
         name="nom"
+        autocomplete="name"
         class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
         placeholder="Ex : Jean Dupont" 
         required 
@@ -39,9 +41,11 @@
     </div>
 
     <div>
-      <label class="block font-label-sm text-label-sm text-secondary font-extrabold mb-1">Numéro de Téléphone (Rappel immédiat) *</label>
+      <label for="quote-phone" class="block font-label-sm text-label-sm text-secondary font-extrabold mb-1">Numéro de Téléphone (Rappel immédiat) *</label>
       <input 
+        id="quote-phone"
         name="telephone"
+        autocomplete="tel"
         class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#bb0027] border border-secondary/30 transition-all font-semibold" 
         placeholder="0470 00 00 00 ou +32 ..." 
         required 
@@ -51,9 +55,11 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
       <div>
-        <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Commune / Code Postal *</label>
+        <label for="quote-commune" class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Commune / Code Postal *</label>
         <input 
+          id="quote-commune"
           name="commune"
+          autocomplete="address-level2"
           class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
           placeholder="Ex : 6700 Arlon, Messancy..." 
           required 
@@ -62,8 +68,9 @@
       </div>
 
       <div>
-        <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Type d'Intervention</label>
+        <label for="quote-service" class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Type d'Intervention</label>
         <select 
+          id="quote-service"
           name="service"
           class="w-full h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all"
         >
@@ -79,8 +86,9 @@
     </div>
 
     <div>
-      <label class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Description Rapide du Problème</label>
+      <label for="quote-desc" class="block font-label-sm text-label-sm text-primary mb-1 font-bold">Description Rapide du Problème</label>
       <textarea 
+        id="quote-desc"
         name="description"
         class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#14345f] border border-outline-variant/40 transition-all" 
         placeholder="Précisez la nature de la panne (ex: fuite sous l'évier, WC qui déborde...)" 
@@ -91,9 +99,10 @@
     <button 
       class="w-full h-12 mt-1 bg-secondary hover:bg-secondary-container text-white font-label-md text-label-md rounded-lg shadow-lg flex items-center justify-center gap-space-xs transition-all font-bold cursor-pointer" 
       type="submit"
+      aria-label="Envoyer ma demande d'intervention"
     >
       <span>Envoyer ma demande d'intervention</span>
-      <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
     </button>
 
     <div class="text-center pt-2 space-y-1">

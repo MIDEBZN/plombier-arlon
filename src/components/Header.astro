@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <div class="flex items-center gap-space-md font-label-sm text-label-sm">
-        <div class="flex items-center gap-1 text-amber-400">
+        <div class="flex items-center gap-1 text-amber-400" aria-hidden="true">
           <span>★★★★★</span>
           <span class="text-white font-medium text-xs ml-1">4.9/5 (180+ avis Google vérifiés)</span>
         </div>
@@ -113,9 +113,11 @@ const currentPath = Astro.url.pathname;
         id="mobile-menu-toggle"
         type="button" 
         aria-label="Ouvrir le menu de navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
         class="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container-low transition-colors"
       >
-        <span class="material-symbols-outlined text-[28px]" id="menu-icon">menu</span>
+        <span class="material-symbols-outlined text-[28px]" id="menu-icon" aria-hidden="true">menu</span>
       </button>
     </div>
   </div>
@@ -157,6 +159,7 @@ const currentPath = Astro.url.pathname;
     toggleBtn.addEventListener('click', () => {
       const isHidden = menu.classList.toggle('hidden');
       menuIcon.textContent = isHidden ? 'menu' : 'close';
+      toggleBtn.setAttribute('aria-expanded', String(!isHidden));
     });
   }
 </script>

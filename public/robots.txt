@@ -4,7 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_astro/
 
 # Major Search Engine Crawlers
 User-agent: Googlebot
@@ -16,8 +15,11 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# AI Retrieval & Answer Engine Bots (GEO / AEO)
+# AI Retrieval & Answer Engine Bots (GEO / AEO Search)
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -31,6 +33,19 @@ Allow: /
 
 User-agent: Google-Extended
 Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Training Scrapers (Disallow to conserve server bandwidth and protect content)
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
 
 # Canonical Host & Sitemap Directives
 Host: https://www.plombierarlon.be

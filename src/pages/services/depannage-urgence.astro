@@ -268,10 +268,11 @@ import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
           <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
             <summary class="font-bold text-sm sm:text-base text-primary cursor-pointer flex items-center justify-between list-none">
               <span>La réparation d'urgence est-elle remboursée par l'assurance habitation ?</span>
-              <summary-p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed block">
-                Oui. Dans la majorité des polices d'assurance incendie et dégât des eaux belges (AXA, Ethias, AG...), les frais de recherche de fuite et les conséquences de la fuite sont remboursés. Nous vous fournissons la facture acquittée avec descriptif technique précis.
-              </summary-p>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+              Oui. Dans la majorité des polices d'assurance incendie et dégât des eaux belges (AXA, Ethias, AG...), les frais de recherche de fuite et les conséquences de la fuite sont remboursés. Consultez notre dossier complet sur le <a href="/blog/assurance-habitation-remboursement-fuite-eau-arlon" class="text-secondary font-semibold underline hover:text-primary">remboursement d'une fuite par l'assurance habitation</a>.
+            </p>
           </details>
 
           <details class="group bg-white rounded-xl border border-outline-variant/40 p-5 open:shadow-sm">
@@ -280,9 +281,60 @@ import QuickQuoteForm from '../../components/QuickQuoteForm.astro';
               <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
             <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
-              Coupez immédiatement l'eau à la vanne d'arrêt générale (située avant ou après votre compteur d'eau SWDE). Si l'eau risque de toucher des prises ou appareils électriques, coupez le disjoncteur général. Prenez des photos pour l'assurance et aérez les pièces touchées.
+              Coupez immédiatement l'eau à la vanne d'arrêt générale (située avant ou après votre compteur d'eau SWDE). Si l'eau risque de toucher des prises ou appareils électriques, coupez le disjoncteur général. Suivez les 5 gestes réflexes dans notre guide <a href="/blog/que-faire-fuite-eau-avant-arrivee-plombier-arlon" class="text-secondary font-semibold underline hover:text-primary">que faire en cas de fuite d'eau avant l'arrivée du plombier</a>.
             </p>
           </details>
+        </div>
+      </div>
+
+      <!-- Contextual Internal Linking / Knowledge Hub -->
+      <div class="space-y-6">
+        <div class="space-y-2">
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">Dossiers & Conseils Pratiques</span>
+          <h2 class="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary">
+            Guides & Tarifs d'Urgence Plomberie à Arlon
+          </h2>
+          <p class="text-sm text-on-surface-variant max-w-3xl">
+            Retrouvez nos analyses détaillées sur la réglementation wallonne, les tarifs transparents et les conseils de sécurité immédiats pour gérer un sinistre sanitaire.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <a href="/blog/quel-plombier-urgence-24h-arlon" class="group bg-white p-5 rounded-2xl border border-outline-variant/40 hover:border-secondary hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">Astreinte 24h</span>
+              <h3 class="font-bold text-sm text-primary group-hover:text-secondary transition-colors">Quel plombier appeler en urgence 24h à Arlon ?</h3>
+              <p class="text-xs text-on-surface-variant line-clamp-3">Critères de choix, numéros fiables et pièges à éviter lors d'un dépannage de nuit ou de week-end.</p>
+            </div>
+            <span class="text-xs font-semibold text-secondary mt-3 inline-flex items-center gap-1">Lire le guide <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
+
+          <a href="/blog/cout-depannage-urgence-soir-weekend-arlon" class="group bg-white p-5 rounded-2xl border border-outline-variant/40 hover:border-secondary hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">Tarification</span>
+              <h3 class="font-bold text-sm text-primary group-hover:text-secondary transition-colors">Coût d'un dépannage d'urgence soir et week-end</h3>
+              <p class="text-xs text-on-surface-variant line-clamp-3">Majoration horaire légale, frais de déplacement et grille tarifaire transparente en province de Luxembourg.</p>
+            </div>
+            <span class="text-xs font-semibold text-secondary mt-3 inline-flex items-center gap-1">Lire le guide <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
+
+          <a href="/blog/que-faire-fuite-eau-avant-arrivee-plombier-arlon" class="group bg-white p-5 rounded-2xl border border-outline-variant/40 hover:border-secondary hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">Gestes Réflexes</span>
+              <h3 class="font-bold text-sm text-primary group-hover:text-secondary transition-colors">Que faire avant l'arrivée du plombier ?</h3>
+              <p class="text-xs text-on-surface-variant line-clamp-3">Coupure de vanne générale SWDE, sécurisation du coffret électrique et photos pour l'assureur.</p>
+            </div>
+            <span class="text-xs font-semibold text-secondary mt-3 inline-flex items-center gap-1">Lire le guide <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
+
+          <a href="/blog/delai-intervention-plombier-urgence-arlon" class="group bg-white p-5 rounded-2xl border border-outline-variant/40 hover:border-secondary hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">Délais Réels</span>
+              <h3 class="font-bold text-sm text-primary group-hover:text-secondary transition-colors">Délais d'intervention réels sur le Grand Arlon</h3>
+              <p class="text-xs text-on-surface-variant line-clamp-3">Temps de route estimés pour Bonnert, Weyler, Stockem, Messancy et axes autoroutiers E411 / E25.</p>
+            </div>
+            <span class="text-xs font-semibold text-secondary mt-3 inline-flex items-center gap-1">Lire le guide <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
         </div>
       </div>
 

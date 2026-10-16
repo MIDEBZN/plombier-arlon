@@ -17,77 +17,69 @@ const { article } = Astro.props;
 const siteUrl = 'https://www.plombierarlon.be';
 const canonicalUrl = `${siteUrl}/blog/${article.slug}`;
 
-// JSON-LD Structured Data: Article + FAQPage + BreadcrumbList
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Article',
-      '@id': `${canonicalUrl}#article`,
-      'isPartOf': {
-        '@type': 'WebPage',
-        '@id': canonicalUrl,
-      },
-      'headline': article.h1,
-      'description': article.metaDescription,
-      'inLanguage': 'fr-BE',
-      'mainEntityOfPage': canonicalUrl,
-      'datePublished': `${article.publishDate}T08:00:00+02:00`,
-      'dateModified': `${article.updatedDate}T12:00:00+02:00`,
-      'author': {
-        '@type': 'Organization',
-        'name': 'Plombier Arlon',
-        'url': siteUrl,
-      },
-      'publisher': {
-        '@type': 'Organization',
-        'name': 'Plombier Arlon',
-        'logo': {
-          '@type': 'ImageObject',
-          'url': `${siteUrl}/images/logo.png`,
-        },
-      },
-      'image': `${siteUrl}/images/og-plombier-arlon.webp`,
-      'keywords': [article.primaryKeyword, ...article.secondaryKeywords].join(', '),
+// JSON-LD Structured Data: Article (avec auteur Person E-E-A-T & speakable AEO) + BreadcrumbList
+const articleSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${canonicalUrl}#article`,
+    'isPartOf': {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
     },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${canonicalUrl}#breadcrumb`,
-      'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Accueil',
-          'item': siteUrl,
-        },
-        {
-          '@type': 'ListItem',
-          'position': 2,
-          'name': 'Blog & Guides',
-          'item': `${siteUrl}/blog`,
-        },
-        {
-          '@type': 'ListItem',
-          'position': 3,
-          'name': article.title,
-          'item': canonicalUrl,
-        },
-      ],
+    'headline': article.h1,
+    'description': article.metaDescription,
+    'inLanguage': 'fr-BE',
+    'mainEntityOfPage': canonicalUrl,
+    'datePublished': `${article.publishDate}T08:00:00+02:00`,
+    'dateModified': `${article.updatedDate}T12:00:00+02:00`,
+    'author': {
+      '@type': 'Person',
+      'name': 'Marc De Becker',
+      'jobTitle': 'Artisan Plombier-Chauffagiste Qualifié',
+      'url': `${siteUrl}/about`,
     },
-    {
-      '@type': 'FAQPage',
-      '@id': `${canonicalUrl}#faq`,
-      'mainEntity': article.faq.map((item) => ({
-        '@type': 'Question',
-        'name': item.question,
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': item.answer,
-        },
-      })),
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Plombier Arlon',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': `${siteUrl}/images/logo.png`,
+      },
     },
-  ],
-};
+    'image': `${siteUrl}/images/og-plombier-arlon.webp`,
+    'keywords': [article.primaryKeyword, ...article.secondaryKeywords].join(', '),
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['h1', '.prose h2', '.prose p:first-of-type', '#reponse-rapide']
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl}#breadcrumb`,
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Accueil',
+        'item': siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Blog & Guides',
+        'item': `${siteUrl}/blog`,
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': article.title,
+        'item': canonicalUrl,
+      },
+    ],
+  },
+];
 ---
 
 <Layout

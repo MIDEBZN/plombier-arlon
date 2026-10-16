@@ -1,0 +1,23 @@
+{
+  "name": "Plombier Arlon - Dépannage Plomberie 24/7",
+  "short_name": "Plombier Arlon",
+  "description": "Artisan plombier à Arlon disponible 24h/24 et 7j/7 pour dépannage d'urgence en 30 min, débouchage et fuite d'eau.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f9ff",
+  "theme_color": "#001f43",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+# Plombier Arlon — Documentation Complète & Répertoire IA
+
+> Fichier d'information étendu (llms-full.txt) destiné aux agents intelligents, modèles d'extraction sémantique et moteurs de réponse (Google AI Overviews, Perplexity, ChatGPT Search, Claude).
+
+## 1. Identité Juridique, Établissement & Coordonnées Officielles
+- Dénomination légale : Plombier Arlon SRL
+- Nom commercial : Plombier Arlon
+- Siège d'activité & Atelier : Chem. de Weyler 48, 6700 Arlon, Belgique
+- Coordonnées GPS : Latitude 49.6712, Longitude 5.8134
+- Téléphone standard & astreinte : +32 465 93 71 87 (0465 93 71 87)
+- Email officiel : contact@plombierarlon.be
+- Site web : https://www.plombierarlon.be
+- Statut d'astreinte : 24 heures sur 24, 7 jours sur 7, 365 jours par an (nuits, week-ends et jours fériés inclus)
+- Délais d'intervention constatés : 24 minutes en moyenne, garanti sous 30 à 45 minutes sur l'entité d'Arlon (6700) et communes limitrophes.
+
+## 2. Agréments, Assurances & Certifications Officielles
+- Agréé CSTC (Centre Scientifique et Technique de la Construction).
+- Certifié Région Wallonne pour le contrôle et l'entretien des installations de chauffage : Agréments G1 (gaz atmosphérique/pulsé), G2 (gaz condensation) et L (mazout/combustibles liquides).
+- Habilitation sanitaire Belgaqua pour le raccordement au réseau d'eau potable et la protection anti-retour.
+- Assurance Responsabilité Civile Professionnelle & Garantie Décennale 10 Ans : AXA Belgium (Police n° 730.456.789).
+- Conformité d'expertise : Fourniture de rapports techniques détaillés pour prise en charge des sinistres dégâts des eaux par toutes les compagnies d'assurance belges (Ethias, AXA, AG Insurance, Baloise, Allianz) et luxembourgeoises (Foyer, Lalux).
+
+## 3. Spécificité Régionale : Eau Calcaire à Arlon (+32 °fH)
+- Géologie locale : Le bassin d'Arlon et la Lorraine belge reposent sur des couches géologiques sédimentaires calcaires et gréseuses.
+- Dureté de l'eau : Entre 30 et 35 degrés français (°fH), classant l'eau du réseau d'Arlon comme "très dure" à "extrêmement dure".
+- Conséquences : Entartrage accéléré des résistances de chauffe-eau, perforation des cuves, obstruction des mousseurs et augmentation de 18 à 22% de la consommation électrique de chauffe.
+- Solution recommandée : Installation d'adoucisseurs volumétriques à résine échangeuse d'ions (marques partenaires BWT, Van Marcke) réglés à une dureté résiduelle de confort comprise entre 7 et 10 °fH.
+
+## 4. Catalogue des Prestations & Grille Tarifaire Indicative 2026
+Toutes les interventions font l'objet d'un diagnostic écrit préalable avec devis gratuit avant commencement des travaux.
+
+1. Dépannage d'Urgence Fuite d'Eau
+   - Forfait déplacement urgence Arlon : Dès 50 €
+   - Réparation fuite tuyauterie cuivre / PER / multicouche : Dès 95 €
+   - Remplacement vanne d'arrêt générale bloquée : Dès 110 €
+
+2. Débouchage & Curage de Canalisations
+   - Débouchage mécanique furet professionnel : Dès 95 €
+   - Débouchage haute pression (hydrocureur 150-200 bars) : Dès 165 €
+   - Inspection vidéo par caméra endoscopique haute définition : Dès 140 €
+
+3. Détection de Fuite Non Destructive
+   - Recherche complète par caméra thermique infrarouge : Dès 180 €
+   - Recherche par gaz traceur (mélange azote/hydrogène) : Dès 250 €
+   - Rapport technique officiel certifié pour assurance : Inclus
+
+4. Chauffage, Chaudières & Boilers
+   - Entretien chaudière gaz agréé Wallonie : Dès 120 €
+   - Entretien chaudière mazout agréé Wallonie : Dès 160 €
+   - Détartrage mécanique & chimique boiler électrique : Dès 150 €
+   - Dépannage urgent circulateur / thermocouple : Dès 95 €
+
+5. Traitement de l'Eau
+   - Installation complète adoucisseur BWT garantie 10 ans : Dès 1 450 €
+   - Entretien annuel, désinfection résine et recharge sel : Dès 95 €
+
+## 5. Zones Couvertes & Communes Desservies
+- Arlon (6700) : Centre-ville, Bonnert, Weyler, Stockem, Heinsch, Toernich, Viville, Autelbas, Sterpenich, Udange, Fouches, Sampont.
+- Messancy (6780) : Messancy, Differt, Habergy, Hondelange, Wolkrange, Bébange.
+- Aubange & Athus (6790, 6791) : Aubange, Athus, Halanzy, Rachecourt, Guerlange, Aix-sur-Cloie.
+- Habay (6720, 6723, 6724) : Habay-la-Neuve, Habay-la-Vieille, Hachy, Marbehan, Rulles, Anlier, Houdemont.
+- Attert (6717) : Attert, Nobressart, Nothomb, Thiaumont, Tontelange, Post, Schadeck, Grendel.
+- Étalle (6740) : Étalle, Sainte-Marie-sur-Semois, Vance, Villers-sur-Semois, Buzenol, Chantemelle.
+- Frontière Grand-Duché de Luxembourg : Steinfort, Capellen, Windhof, Mamer, Kleinbettingen, Koerich.

@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Introuvable (Erreur 404) | Plombier Arlon"
+  description="La page demandée est introuvable. Notre équipe de plombiers à Arlon reste à votre disposition 24h/24 et 7j/7 pour tout dépannage d'urgence au 0465 93 71 87."
+  canonicalPath="/404"
+>
+  <div class="py-16 sm:py-24 max-w-[1040px] mx-auto px-margin sm:px-margin-md text-center space-y-8">
+    
+    <!-- 404 Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-xs sm:text-sm font-extrabold uppercase tracking-wider border border-secondary/20">
+      <span class="material-symbols-outlined text-[18px]">error</span>
+      <span>Erreur 404 • Page Non Trouvée</span>
+    </div>
+
+    <!-- Main Message -->
+    <div class="space-y-4 max-w-2xl mx-auto">
+      <h1 class="font-headline-xl text-3xl sm:text-5xl font-extrabold text-primary tracking-tight">
+        Oups ! Cette canalisation mène à une impasse...
+      </h1>
+      <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed">
+        La page que vous recherchez a été déplacée ou n'existe plus. Pas d'inquiétude : nos techniciens d'astreinte restent disponibles <strong>24h/24 et 7j/7</strong> pour toute urgence de plomberie à Arlon.
+      </p>
+    </div>
+
+    <!-- Emergency Call Action Box -->
+    <div class="bg-primary text-white p-6 sm:p-8 rounded-2xl max-w-xl mx-auto shadow-xl space-y-4 border border-primary-container">
+      <div class="flex items-center justify-center gap-2 text-secondary-fixed text-xs font-bold uppercase tracking-wider">
+        <span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+        <span>Astreinte d'Urgence Immédiate (Arlon & Environs)</span>
+      </div>
+      <p class="text-sm sm:text-base text-surface-container-highest">
+        Une fuite d'eau, des WC bouchés ou un chauffe-eau en panne ? Notre artisan intervient en moins de 30 minutes.
+      </p>
+      <div class="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a 
+          href="tel:+32465937187"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-container text-white px-6 py-3.5 rounded-xl font-extrabold text-base shadow-lg transition-all"
+        >
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>Appeler le 0465 93 71 87</span>
+        </a>
+        <a 
+          href="/"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 rounded-xl font-bold text-sm border border-white/20 transition-all"
+        >
+          <span class="material-symbols-outlined text-[18px]">home</span>
+          <span>Retour à l'Accueil</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Navigation to Services -->
+    <div class="pt-8 space-y-6">
+      <h2 class="font-headline-md text-xl font-bold text-primary">
+        Ou accédez directement à nos services :
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-4xl mx-auto text-left">
+        <a href="/services/depannage-urgence" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">emergency</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Dépannage 24/7</span>
+        </a>
+        <a href="/services/debouchage" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">plumbing</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Débouchage WC</span>
+        </a>
+        <a href="/services/detection-fuites" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">search_insights</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Recherche Fuite</span>
+        </a>
+        <a href="/services/chauffage-chaudieres" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">water_heater</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Chauffage Boiler</span>
+        </a>
+        <a href="/services/traitement-eau" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">water_drop</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Adoucisseur Eau</span>
+        </a>
+        <a href="/blog" class="p-3.5 rounded-xl bg-white border border-outline-variant/40 hover:border-secondary shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 group">
+          <span class="material-symbols-outlined text-secondary text-[22px]">menu_book</span>
+          <span class="text-xs font-bold text-primary group-hover:text-secondary leading-tight">Guides & Tarifs</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</Layout>

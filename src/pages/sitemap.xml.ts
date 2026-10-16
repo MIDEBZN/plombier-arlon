@@ -32,6 +32,10 @@ const staticPages = [
   // Tier 5: Direct Conversion & Institutional Pages
   { url: '/contact', changefreq: 'monthly', priority: '0.80' },
   { url: '/about', changefreq: 'monthly', priority: '0.70' },
+
+  // Tier 6: Legal & Compliance
+  { url: '/mentions-legales', changefreq: 'yearly', priority: '0.30' },
+  { url: '/politique-de-confidentialite', changefreq: 'yearly', priority: '0.30' },
 ];
 
 // Key cornerstone blog articles get higher priority
